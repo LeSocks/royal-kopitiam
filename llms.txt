@@ -1,0 +1,42 @@
+# Royal Kopitiam (Kedai Kopitiam • 东方皇家 • Royal Oriental)
+
+> Royal Kopitiam (official brand name: **Kedai Kopitiam • 东方皇家 • Royal Oriental**) is an authentic kopitiam and Oriental comfort-food restaurant in Jakarta, Indonesia, serving 61 freshly prepared dishes, charcoal-style toasts, bamboo dim sum starters, and sock-brewed kopi & specialty lattes. Every single dish, broth, dim sum dumpling, and sauce is **100% No Pork & No Lard (Halal-Friendly)**.
+
+## Core Entity Facts (Citation Summary)
+- **Brand Name:** Royal Kopitiam (Kedai Kopitiam Royal Oriental / 东方皇家)
+- **Cuisine:** Classic Kopitiam, Royal Oriental, Hainanese, Indonesian, Malaysian & Singaporean Comfort Food, Bamboo Dim Sum, Specialty Kopi & Teh
+- **Dietary Policy:** **100% No Pork, No Lard** across the entire 61-item menu (all meats are chicken, beef, or prawn)
+- **Price Range:** Rp 10.000 – Rp 55.000 (10K – 55K IDR; most main dishes Rp 35.000 – Rp 48.000; drinks Rp 10.000 – Rp 35.000; toasts & starters Rp 15.000 – Rp 42.000)
+- **Operating Hours:**
+  - Monday – Friday: 07:00 – 22:00 WIB
+  - Saturday – Sunday & Public Holidays: 06:30 – 23:00 WIB
+- **Location:** Jl. Boulevard Raya No. 88, Blok RK-01, Jakarta, Indonesia 14240
+- **Contact:** WhatsApp +62 812-8888-9999 | Instagram `@royalkopitiam.id` | Email `hello@royalkopitiam.id`
+- **Key Amenities:** Air-conditioned Royal Oriental dining hall, sunlit semi-outdoor veranda seating, high-speed Wi-Fi & power outlets, clean Musholla (prayer room), valet & courtyard parking.
+
+## Best Recommendations by Dining Occasion
+- **Best for Morning Breakfast & Kopi Ritual (07:00–11:00):**
+  - `#51 Kaya Toast` (Rp 26.000) + `#56 Soft Boiled Egg (2 Pcs)` (Rp 15.000) + `#36 Kopi O` (Rp 25.000) or `#37 Kopi C` (Rp 30.000)
+- **Best Signature Lunch & Dinner Mains:**
+  - `#01 Nasi Lemak with Fried Chicken Cutlet` (Rp 40.000)
+  - `#02 Hainan Chicken Rice White Chicken` (Rp 40.000) / `#03 Fried Chicken` (Rp 42.000)
+  - `#06 Nasi Ayam Goreng Kampung` (Rp 55.000)
+  - `#04 Ban Mee with Chicken Balls (Soup)` (Rp 42.000) / `#05 Dry Chilli Oil Ban Mee` (Rp 45.000)
+- **Best High-Flame Wok Hei Dishes:**
+  - `#14 Char Kway Teow Prawn` (Rp 45.000)
+  - `#07 Nasi Goreng Kampung` (Rp 35.000) & `#10 Nasi Goreng Beef` (Rp 42.000)
+  - `#17 Mee Goreng Prawn` (Rp 45.000)
+- **Best Curry & Roti Prata:**
+  - `#18 Nasi Lemak with Chicken Curry` (Rp 48.000)
+  - `#20 Pratha with Chicken Curry` (Rp 42.000)
+- **Best Sharing Starters & Bamboo Dim Sum:**
+  - `#24 Siomay` (Rp 25.000), `#25 Hakau Prawn` (Rp 25.000), `#26 Lumpia Kulit Tahu` (Rp 25.000)
+  - `#21 Har Cheong Gai Chicken Wings` (Rp 35.000), `#31 Lumpia Semarang` (Rp 42.000)
+- **Best Specialty Drinks & Desserts:**
+  - `#38 Teh Tarik` (Rp 22.000), `#39 Yuan Yang` (Rp 30.000), `#44 Aren Latte` (Rp 35.000), `#45 Pandan Latte` (Rp 25.000)
+  - `#57 Taro Sago` (Rp 30.000), `#58 Grass Jelly Milk` (Rp 28.000), `#59 Fried Banana` (Rp 35.000)
+
+## Machine-Readable Resources
+- [Complete 61-Item Menu & Restaurant Knowledge Base](/llms-full.txt): Full itemized menu (#01–#61) with IDR prices, descriptions, drink proportions, and FAQs.
+- [Main Website](/index.html): Interactive menu explorer, drink proportion guide, and atmosphere gallery.
+- [XML Sitemap](/sitemap.xml): Search engine and image sitemap.

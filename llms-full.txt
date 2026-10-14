@@ -1,0 +1,162 @@
+# Royal Kopitiam (Kedai Kopitiam • 东方皇家 • Royal Oriental) — Complete Knowledge Base & Official 61-Item Menu
+
+> Official machine-readable reference for AI assistants, search engines, and answer engines (ChatGPT, Perplexity, Google Gemini / AI Overviews, Claude, Copilot).
+
+## 1. Brand & Restaurant Identity
+- **Name:** Royal Kopitiam
+- **Official Full Title:** Kedai Kopitiam Royal Oriental (东方皇家 — Dōng Fāng Huáng Jiā)
+- **Concept:** A sunlit, welcoming kopitiam and Royal Oriental kitchen pairing traditional sock-brewed kopi, golden Kaya Toast, and soft-boiled kampung eggs with high-flame wok dishes, Hainan Chicken Rice, golden curries, and steamed bamboo dim sum.
+- **Halal / Dietary Guarantee:** **100% No Pork, No Lard**. Every soup stock, dim sum dumpling, wok glaze, curry paste, and marinade is prepared strictly without pork, bacon, or animal lard.
+- **Currency & Pricing Format:** Indonesian Rupiah (IDR). Menu boards display prices in `"K"` units where `1 K = Rp 1.000` (e.g., `40 K = Rp 40.000`).
+- **Address:** Jl. Boulevard Raya No. 88, Blok RK-01, Kelapa Gading / Senopati Area, Jakarta, Indonesia 14240
+- **Operating Hours:**
+  - Monday to Friday: 07:00 – 22:00 WIB
+  - Saturday, Sunday & Holidays: 06:30 – 23:00 WIB
+- **Contact Channels:**
+  - WhatsApp: +62 812-8888-9999
+  - Instagram: @royalkopitiam.id
+  - Email: hello@royalkopitiam.id
+
+---
+
+## 2. Complete Official Menu (Items #01 to #61)
+
+### Category 1: Signature Dishes (招牌名菜 • Items #01 – #06)
+- **#01 Nasi Lemak with Fried Chicken Cutlet — 40 K (Rp 40.000)** [Signature, Best Seller, Spicy]
+  Fragrant coconut milk rice served with a golden-crispy marinated chicken cutlet, house-made sweet-spicy sambal, crisp cucumber slices, and warm savory broth.
+- **#02 Hainan Chicken Rice White Chicken — 40 K (Rp 40.000)** [Signature, Chef's Pick]
+  Silky poached Hainan white chicken topped with crispy golden garlic bits, served alongside aromatic ginger-poached rice, dark soy chili dip, and clear chicken soup.
+- **#03 Hainan Chicken Rice Fried Chicken — 42 K (Rp 42.000)** [Signature, Best Seller]
+  Crispy-skinned golden fried chicken cutlet over fragrant Hainan ginger-garlic rice, accompanied by tangy chili sauce and comforting broth.
+- **#04 Ban Mee with Chicken Balls (Soup) — 42 K (Rp 42.000)** [Signature, Comfort Bowl]
+  Handmade flat Ban Mee noodles in a rich, slow-simmered broth topped with bouncy chicken meatballs, braised mushrooms, greens, and sliced red chilies.
+- **#05 Dry Chilli Oil Ban Mee with Chicken Ball — 45 K (Rp 45.000)** [Signature, Spicy]
+  Springy Ban Mee noodles tossed dry in our aromatic house-infused roasted chilli oil, savory soy glaze, tender chicken meatballs, and crisp greens.
+- **#06 Nasi Ayam Goreng Kampung — 55 K (Rp 55.000)** [Signature, Royal Special, Spicy]
+  Traditional spice-marinated free-range kampung chicken fried to golden perfection and topped with crunchy rempah crumbs (kremesan), steamed rice, fresh lalapan, and fiery sambal terasi.
+
+### Category 2: Nasi Goreng (特色炒饭 • Items #07 – #11)
+- **#07 Nasi Goreng Kampung — 35 K (Rp 35.000)** [Best Seller, Wok Hei, Spicy]
+  Homestyle kampung fried rice wok-tossed with aromatic shallots, bird's eye chili, long beans, egg, and crisp prawn crackers.
+- **#08 Nasi Goreng Singapore — 40 K (Rp 40.000)** [Wok Hei]
+  Singapore-style fragrant wok-fried rice with light golden seasoning, tender chicken, egg ribbons, and crisp seasonal vegetables.
+- **#09 Nasi Goreng Chicken — 37 K (Rp 37.000)** [Wok Hei]
+  Smoky wok-seared fried rice loaded with tender marinated chicken slices, egg, crisp greens, pickled acar, and crackers.
+- **#10 Nasi Goreng Beef — 42 K (Rp 42.000)** [Chef's Pick, Wok Hei]
+  Rich, savory fried rice seared over high flame with tender sliced beef, caramelized soy, egg, fresh lettuce, and crispy kerupuk.
+- **#11 Nasi Goreng Prawn — 45 K (Rp 45.000)** [Seafood, Wok Hei]
+  High-flame wok-fried rice with plump, juicy prawns, garlic, egg, scallions, and crisp crackers.
+
+### Category 3: Char Kway Teow (炒粿条 • Items #12 – #14)
+- **#12 Char Kway Teow Chicken — 37 K (Rp 37.000)** [Wok Hei]
+  Silky flat rice noodles wok-fried at high heat with tender chicken, crunchy bean sprouts, chives, egg, and our signature sweet-savory dark soy glaze.
+- **#13 Char Kway Teow Beef — 42 K (Rp 42.000)** [Best Seller, Wok Hei]
+  Smoky flat kway teow noodles seared with succulent sliced beef, egg, garlic chives, and crisp bean sprouts.
+- **#14 Char Kway Teow Prawn — 45 K (Rp 45.000)** [Signature, Seafood, Wok Hei, Spicy]
+  High-flame Char Kway Teow crowned with plump seared prawns, smoky caramelized dark soy, egg, garlic chives, and bean sprouts.
+
+### Category 4: Mee Goreng (招牌炒面 • Items #15 – #17)
+- **#15 Mee Goreng Chicken — 37 K (Rp 37.000)** [Wok Hei]
+  Wok-tossed yellow noodles coated in savory house seasoning with tender chicken, egg, greens, pickled acar, and crackers.
+- **#16 Mee Goreng Beef — 42 K (Rp 42.000)** [Wok Hei, Spicy]
+  Full-flavored wok-seared yellow noodles with sliced beef, aromatic spices, crisp vegetables, and prawn crackers.
+- **#17 Mee Goreng Prawn — 45 K (Rp 45.000)** [Best Seller, Seafood, Spicy]
+  Springy yellow noodles wok-fried with succulent prawns, savory-spicy house sauce, choy sum, tomatoes, and crackers.
+
+### Category 5: Curry & Prata (咖喱与印度煎饼 • Items #18 – #20)
+- **#18 Nasi Lemak with Chicken Curry — 48 K (Rp 48.000)** [Signature, Chef's Pick, Spicy]
+  Aromatic pandan-coconut Nasi Lemak paired with slow-braised chicken leg & potato curry in rich, velvety coconut rempah gravy.
+- **#19 Chicken Curry Noodle — 45 K (Rp 45.000)** [Comfort Bowl, Spicy]
+  Warm noodles bathed in our fragrant, creamy golden curry broth with tender bone-in chicken and soft-braised potatoes.
+- **#20 Pratha with Chicken Curry — 42 K (Rp 42.000)** [Best Seller, Spicy]
+  Flaky, golden-crisp layered roti pratha served hot with a generous bowl of rich house chicken curry and sambal on the side.
+
+### Category 6: Starter & Dim Sum (精选小食与点心 • Items #21 – #35)
+- **#21 Har Cheong Gai Chicken Wings — 35 K (Rp 35.000)** [Best Seller, Crispy]
+  Signature fermented prawn-paste chicken wings fried to an ultra-shattering golden crunch while staying juicy inside.
+- **#22 Fried Spring Roll — 35 K (Rp 35.000)** [Crispy]
+  Golden-crisp Oriental spring rolls stuffed with seasoned vegetables and chicken, served with sweet-tangy dipping sauce.
+- **#23 Cakwe with Ice Cream — 20 K (Rp 20.000)** [Chef's Pick, Sweet & Savory]
+  Warm, crispy fried Chinese crullers (cakwe) paired with a cool, creamy scoop of vanilla ice cream and caramel drizzle.
+- **#24 Siomay — 25 K (Rp 25.000)** [Dim Sum]
+  Steamed open-top chicken & prawn dim sum dumplings served piping hot in a traditional bamboo basket.
+- **#25 Hakau Prawn — 25 K (Rp 25.000)** [Dim Sum, Best Seller]
+  Delicate translucent crystal dumplings filled with whole, snappy seasoned prawns, steamed fresh in bamboo baskets.
+- **#26 Lumpia Kulit Tahu — 25 K (Rp 25.000)** [Dim Sum, Crispy]
+  Savory chicken and prawn filling wrapped in delicate beancurd skin and fried until golden and flaky.
+- **#27 Fried Wonton — 25 K (Rp 25.000)** [Crispy]
+  Crispy golden wonton parcels with savory seasoned filling, served with sweet chili dipping sauce.
+- **#28 Onde Onde Kacang Hijau — 25 K (Rp 25.000)** [Heritage Snack]
+  Warm sesame-crusted glutinous rice balls with a fragrant, sweet mung bean (kacang hijau) center.
+- **#29 Pratha — 25 K (Rp 25.000)** [Kopitiam Classic]
+  Pan-griddled flaky layered flatbread, crisp on the outside and tender within.
+- **#30 Pratha with Condensed Milk — 28 K (Rp 28.000)** [Kopitiam Classic, Sweet]
+  Hot, flaky pan-seared pratha generously drizzled with sweet creamy condensed milk.
+- **#31 Lumpia Semarang — 42 K (Rp 42.000)** [Chef's Pick, Heritage Snack]
+  Authentic Semarang-style crispy spring rolls filled with savory braised bamboo shoots (rebung) and chicken, served with sweet garlic sauce and pickled shallots.
+- **#32 Crispy Mushroom — 29 K (Rp 29.000)** [Crispy, Vegetarian Friendly]
+  Lightly battered oyster mushrooms fried to golden crispness and tossed with savory seasoning.
+- **#33 Crispy Cassava — 29 K (Rp 29.000)** [Heritage Snack, Vegetarian Friendly]
+  Fluffy inside, golden-crisp outside — traditional fried singkong wedges ideal for sharing over kopi.
+- **#34 French Fries — 30 K (Rp 30.000)** [Crispy]
+  Crisp golden shoestring fries lightly salted and served hot with chili and tomato dipping sauces.
+- **#35 Potato Wedges — 30 K (Rp 30.000)** [Crispy]
+  Thick-cut skin-on potato wedges seasoned with herbs and fried to a fluffy golden crunch.
+
+### Category 7: Drink (传统咖啡与特饮 • Items #36 – #50)
+- **#36 Kopi O (咖啡乌) — 25 K (Rp 25.000)** [Signature, Kopitiam Kopi]
+  85% sock-brewed dark roast coffee + 15% cane sugar. Bold, dark, and aromatic without dairy.
+- **#37 Kopi C (咖啡丝) — 30 K (Rp 30.000)** [Best Seller, Kopitiam Kopi]
+  65% sock-brewed coffee + 25% silky evaporated milk + 10% light sugar syrup.
+- **#38 Teh Tarik (拉茶) — 22 K (Rp 22.000)** [Best Seller, Kopitiam Classic]
+  20% pulled froth + 55% Ceylon black tea + 25% condensed & evaporated milk.
+- **#39 Yuan Yang (鸳鸯) — 30 K (Rp 30.000)** [Signature, Kopitiam Kopi]
+  45% pulled black milk tea + 35% sock-brewed dark coffee + 20% creamy sweetened milk.
+- **#40 Milo Dino — 20 K (Rp 20.000)** [Best Seller]
+  Iced creamy chocolate malt drink crowned with a generous mountain of crunchy Milo powder.
+- **#41 Americano — 20 K (Rp 20.000)** [Espresso Bar]
+  Clean, aromatic double-shot espresso over hot water or ice.
+- **#42 Cappucinno — 30 K (Rp 30.000)** [Espresso Bar]
+  Rich espresso topped with velvety steamed milk and microfoam.
+- **#43 Caffé Latte — 30 K (Rp 30.000)** [Espresso Bar]
+  Smooth espresso blended with creamy milk, served hot or iced.
+- **#44 Aren Latte (椰糖拿铁) — 35 K (Rp 35.000)** [Signature, Best Seller]
+  25% double espresso + 50% chilled fresh milk + 25% organic Indonesian Gula Aren palm sugar.
+- **#45 Pandan Latte (斑兰拿铁) — 25 K (Rp 25.000)** [Signature, Chef's Pick]
+  25% double espresso + 50% velvety chilled fresh milk + 25% house-extracted pandan reduction.
+- **#46 Ice / Hot Tea (Sweet or Unsweet) — 22 K (Rp 22.000)** [Refreshing]
+  Freshly brewed aromatic house tea served hot or over ice.
+- **#47 Ice Lemon Tea — 25 K (Rp 25.000)** [Refreshing, Best Seller]
+  Brisk brewed black tea chilled over ice with fresh lemon wheels.
+- **#48 Secret Garden — 25 K (Rp 25.000)** [Signature, Refreshing]
+  Signature specialty iced tea infusion blending fragrant floral notes and crisp citrus refreshment.
+- **#49 Soft Drink — 15 K (Rp 15.000)** [Refreshing]
+  Chilled carbonated soft drinks served with ice.
+- **#50 Bottle Water — 10 K (Rp 10.000)** [Pure]
+  Chilled or room-temperature mineral water.
+
+### Category 8: Toast (传统烤面包与半熟蛋 • Items #51 – #56)
+- **#51 Kaya Toast — 26 K (Rp 26.000)** [Signature, Best Seller, Morning Ritual]
+  Double-layered golden-toasted bread spread with slow-cooked pandan-coconut srikaya jam and slabs of cold salted butter.
+- **#52 Milo Toast — 26 K (Rp 26.000)** [Best Seller, Sweet]
+  Warm thick-cut toast draped in condensed milk glaze and piled with malty Milo powder.
+- **#53 Tuna Mayo Toast — 26 K (Rp 26.000)** [Savory]
+  Hearty toasted sandwich packed with seasoned flaky tuna, creamy mayo, melted cheese, and scallions.
+- **#54 Peanut Butter Toast — 26 K (Rp 26.000)** [Kopitiam Classic]
+  Crisp golden toast slathered with rich roasted chunky peanut butter.
+- **#55 Peanut Butter Jelly Toast — 26 K (Rp 26.000)** [Sweet & Nutty]
+  Golden toasted bread layered with creamy peanut butter and bright ruby fruit preserve.
+- **#56 Soft Boiled Egg (2 Pcs) — 15 K (Rp 15.000)** [Signature, Morning Ritual]
+  Two kampung-style eggs coddled to velvety runny-yolk perfection, served with dark soy sauce and white pepper.
+
+### Category 9: Dessert (精选甜品 • Items #57 – #61)
+- **#57 Taro Sago — 30 K (Rp 30.000)** [Signature, Best Seller]
+  Chilled, velvety taro cream soup studded with translucent chewy sago pearls.
+- **#58 Grass Jelly Milk — 28 K (Rp 28.000)** [Refreshing]
+  Cooling herbal grass jelly cubes (cincau) swimming in sweet chilled milk over ice.
+- **#59 Fried Banana — 35 K (Rp 35.000)** [Best Seller, Warm Dessert]
+  Caramelized ripe bananas fried in a lacy, crisp golden batter.
+- **#60 Ice Cream 1 Scoop — 15 K (Rp 15.000)** [Sweet]
+  Single generous scoop of classic creamy ice cream.
+- **#61 Ice Cream 2 Scoops — 25 K (Rp 25.000)** [Sweet]
+  Double scoops of chilled, creamy ice cream.

@@ -1,0 +1,41 @@
+# Royal Kopitiam (Kedai Kopitiam • 东方皇家 • Royal Oriental)
+# SEO & Generative Engine Optimization (GEO) Crawler Policy
+
+User-agent: *
+Allow: /
+
+# Explicitly allow AI Answer Engines & Generative Search Crawlers
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Sitemaps & LLM Context Discovery
+Sitemap: https://royalkopitiam.id/sitemap.xml
+# LLMs-Txt: https://royalkopitiam.id/llms.txt
+# LLMs-Full-Txt: https://royalkopitiam.id/llms-full.txt

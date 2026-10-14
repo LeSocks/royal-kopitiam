@@ -1,0 +1,10 @@
+{
+  "name": "royal-kopitiam-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Official showcase & interactive 61-item menu website for Royal Kopitiam (Kedai Kopitiam • 东方皇家 • Royal Oriental)",
+  "scripts": {
+    "start": "python -m http.server 8080",
+    "dev": "python -m http.server 8080"
+  }
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+>
+  <url>
+    <loc>https://royalkopitiam.id/</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/brand/logo_royal_kopitiam.png</image:loc>
+      <image:title>Royal Kopitiam — Kedai Kopitiam 东方皇家 Royal Oriental Logo</image:title>
+      <image:caption>Official logo of Royal Kopitiam (Kedai Kopitiam Royal Oriental), 100% No Pork No Lard.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/gallery/atmo-interior-hall.png</image:loc>
+      <image:title>The Royal Oriental Dining Hall at Royal Kopitiam</image:title>
+      <image:caption>Sunlit interior dining hall with heritage green timber framing and marble kopitiam tables.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/food/dish-hainan-white.jpg</image:loc>
+      <image:title>#02 Hainan Chicken Rice White Chicken at Royal Kopitiam</image:title>
+      <image:caption>Silky poached Hainan chicken rice served with fragrant ginger rice, chili dip, and clear broth.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/food/dish-nasi-lemak-cutlet.jpg</image:loc>
+      <image:title>#01 Nasi Lemak with Fried Chicken Cutlet at Royal Kopitiam</image:title>
+      <image:caption>Fragrant pandan coconut rice plated with golden fried chicken cutlet and sambal.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/food/dish-kaya-toast.jpg</image:loc>
+      <image:title>#51 Kaya Toast at Royal Kopitiam</image:title>
+      <image:caption>Charcoal-grilled golden toast layered with house pandan srikaya jam and cold salted butter.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/food/dish-ckt-prawn.jpg</image:loc>
+      <image:title>#14 Char Kway Teow Prawn at Royal Kopitiam</image:title>
+      <image:caption>High-flame wok-seared Char Kway Teow with plump prawns, chives, and bean sprouts.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/food/dish-dimsum-siomay-hakau.jpg</image:loc>
+      <image:title>#24 Siomay &amp; #25 Hakau Prawn Bamboo Dim Sum at Royal Kopitiam</image:title>
+      <image:caption>Steaming bamboo dim sum baskets with chicken-prawn Siomay, Hakau Prawn, and Lumpia Kulit Tahu.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://royalkopitiam.id/assets/food/drink-kopi-o-c.jpg</image:loc>
+      <image:title>#36 Kopi O &amp; #37 Kopi C at Royal Kopitiam</image:title>
+      <image:caption>Sock-brewed traditional kopitiam coffee served in floral porcelain cups.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://royalkopitiam.id/llms.txt</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://royalkopitiam.id/llms-full.txt</loc>
+    <lastmod>2026-10-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
