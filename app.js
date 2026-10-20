@@ -178,7 +178,7 @@
       </div>
       <img
         class="category-spotlight__img"
-        src="${cat.bannerImage}"
+        src="${cat.bannerImage}?v=20261020-61"
         alt="${cat.name} preview"
         loading="lazy"
         decoding="async"
@@ -241,7 +241,7 @@
                   <div class="classic-cat-block__header">
                     <span class="royal-plaque-pill">${floretHTML()} ${cat.name} ${floretHTML()}</span>
                   </div>
-                  <img class="classic-cat-block__photo" src="${cat.bannerImage}" alt="${cat.name}" loading="lazy" />
+                  <img class="classic-cat-block__photo" src="${cat.bannerImage}?v=20261020-61" alt="${cat.name}" loading="lazy" />
                   <div>
                     ${catItems
                       .map(
@@ -285,7 +285,7 @@
                   <span class="dish-num-badge">${item.number}</span>
                   <div class="dish-card__badges">${badgesHTML}</div>
                   <img
-                    src="${item.image}"
+                    src="${item.image}?v=20261020-61"
                     alt="${item.number}. ${item.name}"
                     loading="lazy"
                     decoding="async"
@@ -369,7 +369,7 @@
       <div class="modal-body">
         <div class="dish-modal-grid">
           <div class="dish-modal-photo">
-            <img src="${item.image}" alt="${item.name}" style="width: 100%; height: auto;" />
+            <img src="${item.image}?v=20261020-61" alt="${item.name}" style="width: 100%; height: auto;" />
           </div>
           <div>
             <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 0.85rem; border-bottom: 2px dashed var(--border-warm); margin-bottom: 1rem;">
