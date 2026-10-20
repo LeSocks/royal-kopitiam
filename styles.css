@@ -856,10 +856,9 @@ a {
   border: 2px solid var(--border-strong);
   border-top: 5px solid var(--royal-green);
   border-radius: 18px;
-  padding: clamp(1.1rem, 2.2vw, 1.45rem);
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0.55rem;
   box-shadow: var(--shadow-sm);
   min-width: 0;
   transition: transform 0.24s var(--ease-out), box-shadow 0.24s var(--ease-out), border-color 0.2s ease;
@@ -873,6 +872,83 @@ a {
 .combo-card--featured {
   border-top-color: var(--royal-red);
   background: linear-gradient(180deg, #fffdf8 0%, #fbf3df 100%);
+}
+
+/* Interactive Multi-Dish Visual Mosaic Header */
+.combo-card__mosaic {
+  width: 100%;
+  height: 196px;
+  display: grid;
+  gap: 3px;
+  background: var(--royal-green-deep);
+  border-bottom: 2px solid var(--border-strong);
+  overflow: hidden;
+}
+
+.combo-card__mosaic--3 {
+  grid-template-columns: 1.25fr 0.95fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.combo-card__mosaic--3 .combo-mosaic-tile--main {
+  grid-row: 1 / 3;
+}
+
+.combo-card__mosaic--2 {
+  grid-template-columns: 1.2fr 0.8fr;
+  grid-template-rows: 1fr;
+}
+
+.combo-card__mosaic--4 {
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.combo-mosaic-tile {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  background: #1a1512;
+  cursor: pointer;
+  display: block;
+}
+
+.combo-mosaic-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.45s var(--ease-out);
+}
+
+.combo-mosaic-tile:hover img {
+  transform: scale(1.08);
+}
+
+.combo-mosaic-badge {
+  position: absolute;
+  left: 0.45rem;
+  bottom: 0.45rem;
+  background: rgba(18, 14, 11, 0.78);
+  backdrop-filter: blur(4px);
+  color: var(--royal-cream-light);
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.14rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 253, 248, 0.28);
+  letter-spacing: 0.02em;
+  pointer-events: none;
+}
+
+.combo-card__body {
+  padding: clamp(1rem, 2vw, 1.35rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.52rem;
+  flex: 1;
 }
 
 .combo-card__top {
@@ -957,15 +1033,24 @@ a {
 .combo-item-pill {
   display: inline-flex;
   align-items: center;
-  gap: 0.32rem;
-  padding: 0.28rem 0.62rem;
-  border-radius: 8px;
+  gap: 0.36rem;
+  padding: 0.22rem 0.62rem 0.22rem 0.26rem;
+  border-radius: 999px;
   background: #fff;
   border: 1.5px solid var(--border-warm);
   font-size: 0.76rem;
   font-weight: 700;
   color: var(--ink-dark);
   transition: all 0.18s ease;
+}
+
+.combo-item-pill__thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--royal-green);
+  flex-shrink: 0;
 }
 
 .combo-item-pill strong {
