@@ -96,7 +96,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css?v=20261020-visual" />
+    <link rel="stylesheet" href="styles.css?v=20261020-res2" />
 
     <!-- ==================================================================
          COMPREHENSIVE SCHEMA.ORG JSON-LD GRAPH (Restaurant, Menu, FAQPage,
@@ -744,8 +744,8 @@
                 </div>
                 <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
                   <h3 class="combo-card__title">The Royal Family Gathering</h3>
-                  <button type="button" class="combo-reserve-link" data-open-reservation="6–8 Pax">
-                    Book Round Table →
+                  <button type="button" class="combo-reserve-link" data-open-reservation="4">
+                    Book Table →
                   </button>
                 </div>
                 <p class="combo-card__desc">
@@ -1346,26 +1346,25 @@
       </div>
 
       <form class="modal-body reservation-form" id="reservationForm">
-        <!-- 1. Number of Guests -->
-        <div class="res-field-group">
-          <label class="res-label">1. Number of Guests</label>
-          <div class="res-pill-group" id="resPaxGroup" role="radiogroup" aria-label="Number of Guests">
-            <button type="button" class="res-pill" data-res-pax="2 Pax">2 Pax</button>
-            <button type="button" class="res-pill is-active" data-res-pax="4 Pax">4 Pax</button>
-            <button type="button" class="res-pill" data-res-pax="6–8 Pax">6–8 Pax</button>
-            <button type="button" class="res-pill" data-res-pax="10+ Group / VIP">10+ Group</button>
-          </div>
-        </div>
-
-        <!-- 2. Date & Dining Session -->
+        <!-- 1. Number of Guests & Guest Name -->
         <div class="res-two-col">
           <div class="res-field-group">
-            <label class="res-label" for="resDateInput">2. Visit Date</label>
-            <div style="display: flex; gap: 0.45rem; margin-bottom: 0.45rem;">
-              <button type="button" class="res-quick-date is-active" data-quick-date="today">Today</button>
-              <button type="button" class="res-quick-date" data-quick-date="tomorrow">Tomorrow</button>
+            <label class="res-label" for="resPaxInput">1. Number of Guests (Pax)</label>
+            <div class="res-number-stepper">
+              <button type="button" class="res-stepper-btn" id="resPaxMinusBtn" aria-label="Decrease guest count">−</button>
+              <input
+                type="number"
+                id="resPaxInput"
+                class="res-input res-input--pax"
+                min="1"
+                max="100"
+                step="1"
+                value="4"
+                required
+              />
+              <span class="res-stepper-unit">Guests</span>
+              <button type="button" class="res-stepper-btn" id="resPaxPlusBtn" aria-label="Increase guest count">+</button>
             </div>
-            <input type="date" id="resDateInput" class="res-input" required />
           </div>
 
           <div class="res-field-group">
@@ -1380,37 +1379,50 @@
           </div>
         </div>
 
-        <!-- 3. Dining Session -->
-        <div class="res-field-group">
-          <label class="res-label">3. Preferred Dining Session</label>
-          <div class="res-pill-group res-pill-group--2col" id="resTimeGroup" role="radiogroup" aria-label="Preferred Dining Session">
-            <button type="button" class="res-pill" data-res-time="Morning Kopi & Toast (07:30 WIB)">
-              ☀️ Morning Kopi (07:30)
-            </button>
-            <button type="button" class="res-pill is-active" data-res-time="Lunch Gathering (12:30 WIB)">
-              🍲 Lunch (12:30)
-            </button>
-            <button type="button" class="res-pill" data-res-time="Afternoon Kopi & Dim Sum (15:30 WIB)">
-              🫖 Afternoon Tea (15:30)
-            </button>
-            <button type="button" class="res-pill" data-res-time="Evening Dinner Feast (19:00 WIB)">
-              🏮 Dinner Feast (19:00)
-            </button>
+        <!-- 2. Visit Date & 3. Preferred Hour -->
+        <div class="res-two-col">
+          <div class="res-field-group">
+            <label class="res-label" for="resDateInput">2. Visit Date</label>
+            <div style="display: flex; gap: 0.45rem; margin-bottom: 0.4rem;">
+              <button type="button" class="res-quick-date is-active" data-quick-date="today">Today</button>
+              <button type="button" class="res-quick-date" data-quick-date="tomorrow">Tomorrow</button>
+            </div>
+            <input type="date" id="resDateInput" class="res-input" required />
+          </div>
+
+          <div class="res-field-group">
+            <label class="res-label" for="resTimeInput">3. Preferred Hour (07:00 – 21:30 WIB)</label>
+            <div class="res-hour-chips" id="resQuickHourGroup">
+              <button type="button" class="res-quick-date" data-quick-hour="08:00">08:00</button>
+              <button type="button" class="res-quick-date" data-quick-hour="10:00">10:00</button>
+              <button type="button" class="res-quick-date is-active" data-quick-hour="12:00">12:00</button>
+              <button type="button" class="res-quick-date" data-quick-hour="15:00">15:00</button>
+              <button type="button" class="res-quick-date" data-quick-hour="19:00">19:00</button>
+            </div>
+            <input
+              type="time"
+              id="resTimeInput"
+              class="res-input"
+              min="07:00"
+              max="21:30"
+              value="12:00"
+              required
+            />
           </div>
         </div>
 
-        <!-- 4. Seating Area Preference -->
+        <!-- 4. Seating Preference (Strictly Indoor, Outdoor, VIP Room) -->
         <div class="res-field-group">
           <label class="res-label">4. Seating Preference</label>
           <div class="res-pill-group" id="resSeatGroup" role="radiogroup" aria-label="Seating Preference">
-            <button type="button" class="res-pill is-active" data-res-seat="Indoor AC Dining Hall">
-              ❄️ Indoor AC Hall
+            <button type="button" class="res-pill is-active" data-res-seat="Indoor">
+              ❄️ Indoor
             </button>
-            <button type="button" class="res-pill" data-res-seat="Breezy Semi-Outdoor Veranda">
-              🌿 Breezy Veranda
+            <button type="button" class="res-pill" data-res-seat="Outdoor">
+              🌿 Outdoor
             </button>
-            <button type="button" class="res-pill" data-res-seat="Round Marble Sharing Table">
-              ⭕ Round Table
+            <button type="button" class="res-pill" data-res-seat="VIP Room">
+              👑 VIP Room
             </button>
           </div>
         </div>
@@ -1441,7 +1453,7 @@
     </dialog>
 
     <!-- Scripts -->
-    <script src="siteData.js?v=20261020-features"></script>
-    <script src="app.js?v=20261020-features"></script>
+    <script src="siteData.js?v=20261020-res2"></script>
+    <script src="app.js?v=20261020-res2"></script>
   </body>
 </html>

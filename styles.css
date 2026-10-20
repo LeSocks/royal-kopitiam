@@ -2411,12 +2411,83 @@ dialog.royal-modal::backdrop {
 
 .res-pill-group {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
-  gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.55rem;
 }
 
 .res-pill-group--2col {
   grid-template-columns: repeat(2, 1fr);
+}
+
+/* Custom Guest Count Stepper */
+.res-number-stepper {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid var(--border-strong);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.16s ease, box-shadow 0.16s ease;
+}
+
+.res-number-stepper:focus-within {
+  border-color: var(--royal-green);
+  box-shadow: 0 0 0 3px rgba(15, 89, 34, 0.14);
+}
+
+.res-stepper-btn {
+  width: 42px;
+  height: 41px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--royal-cream);
+  color: var(--royal-green-deep);
+  font-size: 1.15rem;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.res-stepper-btn:hover {
+  background: var(--royal-green);
+  color: #fff;
+}
+
+.res-input--pax {
+  border: none !important;
+  border-radius: 0 !important;
+  text-align: center;
+  font-size: 1rem !important;
+  font-weight: 800 !important;
+  padding: 0.45rem 0.25rem !important;
+  box-shadow: none !important;
+  -moz-appearance: textfield;
+}
+
+.res-input--pax::-webkit-outer-spin-button,
+.res-input--pax::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.res-stepper-unit {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--ink-muted);
+  padding-right: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  pointer-events: none;
+}
+
+.res-hour-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.4rem;
 }
 
 .res-pill {

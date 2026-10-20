@@ -832,16 +832,22 @@
     if (!modal || !form) return;
 
     const closeBtn = document.getElementById("closeReservationModalBtn");
+    const paxInput = document.getElementById("resPaxInput");
+    const paxMinusBtn = document.getElementById("resPaxMinusBtn");
+    const paxPlusBtn = document.getElementById("resPaxPlusBtn");
+    const paxUnitEl = form.querySelector(".res-stepper-unit");
     const dateInput = document.getElementById("resDateInput");
+    const timeInput = document.getElementById("resTimeInput");
     const nameInput = document.getElementById("resNameInput");
     const notesInput = document.getElementById("resNotesInput");
     const previewEl = document.getElementById("resWhatsappPreviewText");
 
     const resState = {
-      pax: "4 Pax",
+      paxCount: 4,
+      pax: "4 Guests",
       dateStr: "",
-      time: "Lunch Gathering (12:30 WIB)",
-      seat: "Indoor AC Dining Hall",
+      time: "12:00 WIB",
+      seat: "Indoor",
       name: "",
       notes: ""
     };
@@ -853,7 +859,31 @@
       return `${yyyy}-${mm}-${dd}`;
     }
 
+    function getTodayISO() {
+      return toISODate(new Date());
+    }
+
+    function setGuestCount(rawVal, syncInput = true) {
+      let count = parseInt(rawVal, 10);
+      if (Number.isNaN(count) || count < 1) count = 1;
+      if (count > 100) count = 100;
+      resState.paxCount = count;
+      resState.pax = `${count} ${count === 1 ? "Guest" : "Guests"}`;
+      if (syncInput && paxInput) {
+        paxInput.value = String(count);
+      }
+      if (paxUnitEl) {
+        paxUnitEl.textContent = count === 1 ? "Guest" : "Guests";
+      }
+      updatePreview();
+    }
+
     function setQuickDate(mode) {
+      const todayISO = getTodayISO();
+      if (dateInput) {
+        dateInput.min = todayISO;
+      }
+
       const targetDate = new Date();
       if (mode === "tomorrow") {
         targetDate.setDate(targetDate.getDate() + 1);
@@ -867,16 +897,28 @@
       updatePreview();
     }
 
+    function setPreferredTime(hhmm) {
+      if (!hhmm) return;
+      resState.time = `${hhmm} WIB`;
+      if (timeInput && timeInput.value !== hhmm) {
+        timeInput.value = hhmm;
+      }
+      form.querySelectorAll("[data-quick-hour]").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.getAttribute("data-quick-hour") === hhmm);
+      });
+      updatePreview();
+    }
+
     function buildWhatsAppMessage() {
       const guestLine = resState.name.trim() ? `• Guest Name: ${resState.name.trim()}\n` : "";
       const noteLine = resState.notes.trim() ? `• Special Notes: ${resState.notes.trim()}\n` : "";
       return (
         `Hello Royal Kopitiam (东方皇家)! I would like to reserve a table:\n` +
         `${guestLine}` +
-        `• Party Size: ${resState.pax}\n` +
-        `• Date: ${resState.dateStr}\n` +
-        `• Dining Session: ${resState.time}\n` +
-        `• Seating Area: ${resState.seat}\n` +
+        `• Number of Guests: ${resState.pax}\n` +
+        `• Visit Date: ${resState.dateStr}\n` +
+        `• Preferred Time: ${resState.time}\n` +
+        `• Seating Preference: ${resState.seat}\n` +
         `${noteLine}` +
         `Please let me know if this table is available. Thank you!`
       );
@@ -902,10 +944,28 @@
       });
     }
 
-    bindPillGroup("resPaxGroup", "data-res-pax", "pax");
-    bindPillGroup("resTimeGroup", "data-res-time", "time");
+    // Seating preference pills (Indoor, Outdoor, VIP Room)
     bindPillGroup("resSeatGroup", "data-res-seat", "seat");
 
+    // Guest count stepper & free number input
+    paxMinusBtn?.addEventListener("click", () => {
+      setGuestCount(resState.paxCount - 1, true);
+    });
+
+    paxPlusBtn?.addEventListener("click", () => {
+      setGuestCount(resState.paxCount + 1, true);
+    });
+
+    paxInput?.addEventListener("input", () => {
+      if (paxInput.value === "") return;
+      setGuestCount(paxInput.value, false);
+    });
+
+    paxInput?.addEventListener("blur", () => {
+      setGuestCount(paxInput.value || 1, true);
+    });
+
+    // Quick date buttons & date picker (past dates disabled)
     form.querySelectorAll("[data-quick-date]").forEach((btn) => {
       btn.addEventListener("click", () => {
         setQuickDate(btn.getAttribute("data-quick-date"));
@@ -913,9 +973,40 @@
     });
 
     dateInput?.addEventListener("change", () => {
-      resState.dateStr = dateInput.value;
-      form.querySelectorAll("[data-quick-date]").forEach((b) => b.classList.remove("is-active"));
+      const todayISO = getTodayISO();
+      dateInput.min = todayISO;
+      if (dateInput.value && dateInput.value < todayISO) {
+        dateInput.value = todayISO;
+      }
+      resState.dateStr = dateInput.value || todayISO;
+
+      const tomorrowDate = new Date();
+      tomorrowDate.setDate(tomorrowDate.getDate() + 1);
+      const tomorrowISO = toISODate(tomorrowDate);
+
+      form.querySelectorAll("[data-quick-date]").forEach((b) => {
+        const mode = b.getAttribute("data-quick-date");
+        const isMatch =
+          (mode === "today" && resState.dateStr === todayISO) ||
+          (mode === "tomorrow" && resState.dateStr === tomorrowISO);
+        b.classList.toggle("is-active", isMatch);
+      });
       updatePreview();
+    });
+
+    // Quick hour chips & actual hour input
+    form.querySelectorAll("[data-quick-hour]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setPreferredTime(btn.getAttribute("data-quick-hour"));
+      });
+    });
+
+    timeInput?.addEventListener("input", () => {
+      setPreferredTime(timeInput.value);
+    });
+
+    timeInput?.addEventListener("change", () => {
+      setPreferredTime(timeInput.value);
     });
 
     nameInput?.addEventListener("input", () => {
@@ -932,16 +1023,21 @@
 
     document.querySelectorAll("[data-open-reservation]").forEach((trigger) => {
       trigger.addEventListener("click", () => {
+        // Refresh min date whenever modal opens so past dates are always disabled
+        const todayISO = getTodayISO();
+        if (dateInput) {
+          dateInput.min = todayISO;
+          if (!dateInput.value || dateInput.value < todayISO) {
+            setQuickDate("today");
+          }
+        }
+
         const presetPax = trigger.getAttribute("data-open-reservation");
         if (presetPax && presetPax.trim().length > 0) {
-          resState.pax = presetPax;
-          resState.seat = "Round Marble Sharing Table";
-          document.querySelectorAll("[data-res-pax]").forEach((b) => {
-            b.classList.toggle("is-active", b.getAttribute("data-res-pax") === presetPax);
-          });
-          document.querySelectorAll("[data-res-seat]").forEach((b) => {
-            b.classList.toggle("is-active", b.getAttribute("data-res-seat") === resState.seat);
-          });
+          const matchNum = presetPax.match(/\d+/);
+          if (matchNum) {
+            setGuestCount(parseInt(matchNum[0], 10), true);
+          }
         }
         updatePreview();
         if (!modal.open) modal.showModal();
@@ -956,7 +1052,9 @@
       modal.close();
     });
 
+    setGuestCount(4, true);
     setQuickDate("today");
+    setPreferredTime("12:00");
   }
 
   // ==========================================================================
