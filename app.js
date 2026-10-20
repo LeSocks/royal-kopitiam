@@ -90,8 +90,28 @@
   }
 
   // ==========================================================================
-  // 2. COMPLETE 61-ITEM INTERACTIVE MENU EXPLORER
+  // 2. COMPLETE 61-ITEM INTERACTIVE MENU EXPLORER & DIETARY HELPERS
   // ==========================================================================
+  const KID_FRIENDLY_NUMBERS = new Set([
+    "02", "03", "04", "08", "09", "12", "23", "24", "25", "27", "28", "29",
+    "30", "33", "34", "35", "40", "51", "52", "54", "55", "56", "57", "58",
+    "59", "60", "61"
+  ]);
+
+  const PRAWN_SEAFOOD_NUMBERS = new Set([
+    "01", "05", "07", "08", "11", "14", "17", "21", "24", "25", "26"
+  ]);
+
+  function isKidFriendly(item) {
+    return !item.spicy && KID_FRIENDLY_NUMBERS.has(item.number);
+  }
+
+  function getSeafoodLabel(item) {
+    if (item.number === "53") return "🐟 Contains Tuna";
+    if (PRAWN_SEAFOOD_NUMBERS.has(item.number)) return "🦐 Contains Prawn/Seafood";
+    return "";
+  }
+
   function getFilteredMenuItems() {
     const q = state.searchQuery.trim().toLowerCase();
 
@@ -111,6 +131,10 @@
         if (!item.spicy) return false;
       } else if (state.activeQuickFilter === "wokhei") {
         if (!item.badges.includes("Wok Hei")) return false;
+      } else if (state.activeQuickFilter === "kidfriendly") {
+        if (!isKidFriendly(item)) return false;
+      } else if (state.activeQuickFilter === "seafood") {
+        if (!getSeafoodLabel(item)) return false;
       } else if (state.activeQuickFilter === "morning") {
         const isMorning =
           item.category === "toast" ||
@@ -121,7 +145,11 @@
       }
 
       if (q) {
-        const hay = `${item.number} ${item.name} ${item.categoryLabel} ${item.description} ${item.badges.join(" ")}`.toLowerCase();
+        const dietarySearch = [
+          isKidFriendly(item) ? "kid friendly non spicy" : "",
+          getSeafoodLabel(item)
+        ].join(" ");
+        const hay = `${item.number} ${item.name} ${item.categoryLabel} ${item.description} ${item.badges.join(" ")} ${dietarySearch}`.toLowerCase();
         if (!hay.includes(q)) return false;
       }
 
@@ -251,6 +279,8 @@
                           <span class="classic-item-row__name">
                             ${item.name}
                             ${item.spicy ? '<span title="Spicy" style="color: var(--royal-red); font-size: 0.78rem;">🌶</span>' : ""}
+                            ${getSeafoodLabel(item) ? '<span title="' + getSeafoodLabel(item) + '" style="font-size: 0.76rem;">🦐</span>' : ""}
+                            ${isKidFriendly(item) ? '<span title="Kid-Friendly (Non-Spicy)" style="font-size: 0.74rem;">👶</span>' : ""}
                           </span>
                           <span class="classic-item-row__price">${formatPriceK(item.priceK)}</span>
                         </div>
@@ -274,10 +304,20 @@
       <div class="menu-grid">
         ${items
           .map((item) => {
+            const seafoodLabel = getSeafoodLabel(item);
+            const kidFriendly = isKidFriendly(item);
             const badgesHTML = [
               ...item.badges.slice(0, 2).map((b) => `<span class="dish-badge">${b}</span>`),
-              item.spicy ? `<span class="dish-badge dish-badge--spicy">Spicy</span>` : ""
+              item.spicy ? `<span class="dish-badge dish-badge--spicy">🌶 Spicy</span>` : ""
             ].join("");
+
+            const dietaryRowHTML = [
+              kidFriendly ? `<span class="dietary-tag dietary-tag--kid">👶 Kid-Friendly</span>` : "",
+              seafoodLabel ? `<span class="dietary-tag dietary-tag--seafood">${seafoodLabel}</span>` : "",
+              item.spicy ? `<span class="dietary-tag dietary-tag--spicy">🌶 Spicy</span>` : ""
+            ]
+              .filter(Boolean)
+              .join("");
 
             return `
               <article class="dish-card" data-dish-num="${item.number}" tabindex="0" role="button" aria-label="Inspect dish ${item.number}: ${item.name}">
@@ -297,6 +337,7 @@
                     <h4 class="dish-card__title">${item.name}</h4>
                     <span class="dish-card__price">${formatPriceK(item.priceK)}</span>
                   </div>
+                  ${dietaryRowHTML ? `<div class="dish-dietary-row">${dietaryRowHTML}</div>` : ""}
                   <p class="dish-card__desc">${item.description}</p>
                   <div class="dish-card__footer">
                     <span style="color: var(--royal-green);">${formatPriceIDR(item.priceK)}</span>
@@ -399,6 +440,16 @@
               ${
                 item.spicy
                   ? `<span style="background: var(--royal-red-tint); color: var(--royal-red); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid var(--royal-red);">🌶 Spicy Profile</span>`
+                  : ""
+              }
+              ${
+                isKidFriendly(item)
+                  ? `<span style="background: rgba(15, 89, 34, 0.09); color: var(--royal-green-deep); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid rgba(15, 89, 34, 0.3);">👶 Kid-Friendly (Non-Spicy)</span>`
+                  : ""
+              }
+              ${
+                getSeafoodLabel(item)
+                  ? `<span style="background: rgba(234, 88, 12, 0.12); color: #9a3412; font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid rgba(234, 88, 12, 0.35);">${getSeafoodLabel(item)}</span>`
                   : ""
               }
             </div>
@@ -773,6 +824,142 @@
   }
 
   // ==========================================================================
+  // 6B. 10-SECOND TABLE RESERVATION MINI-MODAL (DIRECT TO WHATSAPP)
+  // ==========================================================================
+  function initReservationModal() {
+    const modal = document.getElementById("reservationModal");
+    const form = document.getElementById("reservationForm");
+    if (!modal || !form) return;
+
+    const closeBtn = document.getElementById("closeReservationModalBtn");
+    const dateInput = document.getElementById("resDateInput");
+    const nameInput = document.getElementById("resNameInput");
+    const notesInput = document.getElementById("resNotesInput");
+    const previewEl = document.getElementById("resWhatsappPreviewText");
+
+    const resState = {
+      pax: "4 Pax",
+      dateStr: "",
+      time: "Lunch Gathering (12:30 WIB)",
+      seat: "Indoor AC Dining Hall",
+      name: "",
+      notes: ""
+    };
+
+    function toISODate(d) {
+      const yyyy = d.getFullYear();
+      const mm = String(d.getMonth() + 1).padStart(2, "0");
+      const dd = String(d.getDate()).padStart(2, "0");
+      return `${yyyy}-${mm}-${dd}`;
+    }
+
+    function setQuickDate(mode) {
+      const targetDate = new Date();
+      if (mode === "tomorrow") {
+        targetDate.setDate(targetDate.getDate() + 1);
+      }
+      resState.dateStr = toISODate(targetDate);
+      if (dateInput) dateInput.value = resState.dateStr;
+
+      form.querySelectorAll("[data-quick-date]").forEach((btn) => {
+        btn.classList.toggle("is-active", btn.getAttribute("data-quick-date") === mode);
+      });
+      updatePreview();
+    }
+
+    function buildWhatsAppMessage() {
+      const guestLine = resState.name.trim() ? `• Guest Name: ${resState.name.trim()}\n` : "";
+      const noteLine = resState.notes.trim() ? `• Special Notes: ${resState.notes.trim()}\n` : "";
+      return (
+        `Hello Royal Kopitiam (东方皇家)! I would like to reserve a table:\n` +
+        `${guestLine}` +
+        `• Party Size: ${resState.pax}\n` +
+        `• Date: ${resState.dateStr}\n` +
+        `• Dining Session: ${resState.time}\n` +
+        `• Seating Area: ${resState.seat}\n` +
+        `${noteLine}` +
+        `Please let me know if this table is available. Thank you!`
+      );
+    }
+
+    function updatePreview() {
+      if (previewEl) {
+        previewEl.textContent = buildWhatsAppMessage();
+      }
+    }
+
+    function bindPillGroup(groupSelector, attrName, stateKey) {
+      const group = document.getElementById(groupSelector);
+      if (!group) return;
+      group.querySelectorAll(`[${attrName}]`).forEach((btn) => {
+        btn.addEventListener("click", () => {
+          resState[stateKey] = btn.getAttribute(attrName);
+          group.querySelectorAll(`[${attrName}]`).forEach((b) => {
+            b.classList.toggle("is-active", b === btn);
+          });
+          updatePreview();
+        });
+      });
+    }
+
+    bindPillGroup("resPaxGroup", "data-res-pax", "pax");
+    bindPillGroup("resTimeGroup", "data-res-time", "time");
+    bindPillGroup("resSeatGroup", "data-res-seat", "seat");
+
+    form.querySelectorAll("[data-quick-date]").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        setQuickDate(btn.getAttribute("data-quick-date"));
+      });
+    });
+
+    dateInput?.addEventListener("change", () => {
+      resState.dateStr = dateInput.value;
+      form.querySelectorAll("[data-quick-date]").forEach((b) => b.classList.remove("is-active"));
+      updatePreview();
+    });
+
+    nameInput?.addEventListener("input", () => {
+      resState.name = nameInput.value;
+      updatePreview();
+    });
+
+    notesInput?.addEventListener("input", () => {
+      resState.notes = notesInput.value;
+      updatePreview();
+    });
+
+    closeBtn?.addEventListener("click", () => modal.close());
+
+    document.querySelectorAll("[data-open-reservation]").forEach((trigger) => {
+      trigger.addEventListener("click", () => {
+        const presetPax = trigger.getAttribute("data-open-reservation");
+        if (presetPax && presetPax.trim().length > 0) {
+          resState.pax = presetPax;
+          resState.seat = "Round Marble Sharing Table";
+          document.querySelectorAll("[data-res-pax]").forEach((b) => {
+            b.classList.toggle("is-active", b.getAttribute("data-res-pax") === presetPax);
+          });
+          document.querySelectorAll("[data-res-seat]").forEach((b) => {
+            b.classList.toggle("is-active", b.getAttribute("data-res-seat") === resState.seat);
+          });
+        }
+        updatePreview();
+        if (!modal.open) modal.showModal();
+      });
+    });
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const waNum = DATA.restaurantInfo.contact.whatsappNumber;
+      const encoded = encodeURIComponent(buildWhatsAppMessage());
+      window.open(`https://wa.me/${waNum}?text=${encoded}`, "_blank", "noopener");
+      modal.close();
+    });
+
+    setQuickDate("today");
+  }
+
+  // ==========================================================================
   // 7. DYNAMIC 61-ITEM SCHEMA.ORG MENU JSON-LD (SEO & GEO STRUCTURED DATA)
   // ==========================================================================
   function injectDynamicMenuJsonLd() {
@@ -834,6 +1021,7 @@
     renderKopiRitualSection();
     renderGallery();
     initEventListeners();
+    initReservationModal();
     injectDynamicMenuJsonLd();
   });
 })();

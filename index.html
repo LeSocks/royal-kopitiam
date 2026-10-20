@@ -96,7 +96,7 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="styles.css?v=20261020-61" />
+    <link rel="stylesheet" href="styles.css?v=20261020-features" />
 
     <!-- ==================================================================
          COMPREHENSIVE SCHEMA.ORG JSON-LD GRAPH (Restaurant, Menu, FAQPage,
@@ -399,6 +399,9 @@
               <a href="#menu" class="btn btn--primary">
                 Explore Menu →
               </a>
+              <button type="button" class="btn btn--green" data-open-reservation>
+                📅 Reserve a Table
+              </button>
               <a href="#vibes" class="btn btn--outline">
                 See Restaurant Vibes
               </a>
@@ -633,6 +636,89 @@
             </p>
           </div>
 
+          <!-- Curated First-Timer & Pairing Combos Strip -->
+          <div class="curated-combos-strip" aria-label="Curated First-Timer and Pairing Combinations">
+            <!-- Combo 1: Morning Ritual -->
+            <article class="combo-card">
+              <div class="combo-card__top">
+                <span class="combo-card__eyebrow">☀️ MORNING RITUAL • SOLO SET</span>
+                <span class="combo-card__price">66 K <small>(Rp 66.000)</small></span>
+              </div>
+              <h3 class="combo-card__title">The Classic Kopitiam Morning</h3>
+              <p class="combo-card__desc">
+                Our quintessential breakfast trio — crisp charcoal-grilled pandan srikaya butter toast, velvety kampung soft-boiled eggs, and aromatic dark sock-brewed Kopi O.
+              </p>
+              <div class="combo-card__items" aria-label="Included dishes in The Classic Kopitiam Morning">
+                <button type="button" class="combo-item-pill" data-open-dish="51">
+                  <strong>#51</strong> Kaya Toast <span>26 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="56">
+                  <strong>#56</strong> Soft Boiled Egg (2 Pcs) <span>15 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="36">
+                  <strong>#36</strong> Kopi O <span>25 K</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Combo 2: Signature Solo Lunch -->
+            <article class="combo-card">
+              <div class="combo-card__top">
+                <span class="combo-card__eyebrow">★ ALL-DAY FAVORITE • SOLO SET</span>
+                <span class="combo-card__price">70 K <small>(Rp 70.000)</small></span>
+              </div>
+              <h3 class="combo-card__title">The Royal Hainan Signature</h3>
+              <p class="combo-card__desc">
+                Silky poached white chicken over fragrant ginger-garlic rice with clear broth and house chili-ginger dip, paired with a smooth cup of evaporated-milk Kopi C.
+              </p>
+              <div class="combo-card__items" aria-label="Included dishes in The Royal Hainan Signature">
+                <button type="button" class="combo-item-pill" data-open-dish="02">
+                  <strong>#02</strong> Hainan Chicken Rice White <span>40 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="37">
+                  <strong>#37</strong> Kopi C <span>30 K</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- Combo 3: Family & Friends Sharing Table -->
+            <article class="combo-card combo-card--featured">
+              <div class="combo-card__top">
+                <span class="combo-card__eyebrow">🏮 SHARED TABLE FEAST • 3–4 PAX</span>
+                <span class="combo-card__price">204 K <small>(Rp 204.000)</small></span>
+              </div>
+              <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap;">
+                <h3 class="combo-card__title">The Royal Family Gathering</h3>
+                <button type="button" class="combo-reserve-link" data-open-reservation="6–8 Pax">
+                  Book Round Table →
+                </button>
+              </div>
+              <p class="combo-card__desc">
+                Built for sharing around the marble table — crispy Ayam Goreng Kampung, smoky Wok Hei Char Kway Teow Prawn, three bamboo dim sum favorites, and Crispy Mushroom.
+              </p>
+              <div class="combo-card__items" aria-label="Included dishes in The Royal Family Gathering">
+                <button type="button" class="combo-item-pill" data-open-dish="06">
+                  <strong>#06</strong> Ayam Goreng Kampung <span>55 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="14">
+                  <strong>#14</strong> Char Kway Teow Prawn <span>45 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="24">
+                  <strong>#24</strong> Siomay <span>25 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="25">
+                  <strong>#25</strong> Hakau Prawn <span>25 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="26">
+                  <strong>#26</strong> Lumpia Kulit Tahu <span>25 K</span>
+                </button>
+                <button type="button" class="combo-item-pill" data-open-dish="32">
+                  <strong>#32</strong> Crispy Mushroom <span>29 K</span>
+                </button>
+              </div>
+            </article>
+          </div>
+
           <!-- Full-Width Controls Bar -->
           <div class="menu-controls">
             <div class="menu-controls__top">
@@ -690,6 +776,12 @@
                 </button>
                 <button type="button" class="quick-chip" data-quick-filter="wokhei">
                   🔥 Wok Hei Specials
+                </button>
+                <button type="button" class="quick-chip" data-quick-filter="kidfriendly">
+                  👶 Kid-Friendly (Non-Spicy)
+                </button>
+                <button type="button" class="quick-chip" data-quick-filter="seafood">
+                  🦐 Prawn &amp; Seafood
                 </button>
                 <button type="button" class="quick-chip" data-quick-filter="spicy">
                   🌶 Spicy Favorites
@@ -1058,6 +1150,13 @@
           </div>
 
           <div style="display: flex; gap: 0.85rem; flex-wrap: wrap;">
+            <button
+              type="button"
+              class="btn btn--primary"
+              data-open-reservation
+            >
+              📅 Reserve a Table (10s)
+            </button>
             <a
               href="https://maps.google.com"
               target="_blank"
@@ -1071,7 +1170,7 @@
               href="https://wa.me/6281288889999"
               target="_blank"
               rel="noopener"
-              class="btn btn--primary"
+              class="btn btn--outline"
               data-whatsapp-link
             >
               Chat via WhatsApp
@@ -1170,8 +1269,117 @@
       <div id="galleryLightboxContent"></div>
     </dialog>
 
+    <!-- 3. 10-Second Table Reservation Mini-Modal (Direct to WhatsApp) -->
+    <dialog class="royal-modal" id="reservationModal" aria-label="Reserve a Table at Royal Kopitiam">
+      <div class="modal-header">
+        <div>
+          <span style="font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--royal-red);">
+            INSTANT WHATSAPP TABLE BOOKING • 东方皇家
+          </span>
+          <h3 style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink-dark); line-height: 1.15;">
+            Reserve Your Table at Royal Kopitiam
+          </h3>
+        </div>
+        <button type="button" class="modal-close-btn" id="closeReservationModalBtn" aria-label="Close reservation modal">✕</button>
+      </div>
+
+      <form class="modal-body reservation-form" id="reservationForm">
+        <!-- 1. Number of Guests -->
+        <div class="res-field-group">
+          <label class="res-label">1. Number of Guests</label>
+          <div class="res-pill-group" id="resPaxGroup" role="radiogroup" aria-label="Number of Guests">
+            <button type="button" class="res-pill" data-res-pax="2 Pax">2 Pax</button>
+            <button type="button" class="res-pill is-active" data-res-pax="4 Pax">4 Pax</button>
+            <button type="button" class="res-pill" data-res-pax="6–8 Pax">6–8 Pax</button>
+            <button type="button" class="res-pill" data-res-pax="10+ Group / VIP">10+ Group</button>
+          </div>
+        </div>
+
+        <!-- 2. Date & Dining Session -->
+        <div class="res-two-col">
+          <div class="res-field-group">
+            <label class="res-label" for="resDateInput">2. Visit Date</label>
+            <div style="display: flex; gap: 0.45rem; margin-bottom: 0.45rem;">
+              <button type="button" class="res-quick-date is-active" data-quick-date="today">Today</button>
+              <button type="button" class="res-quick-date" data-quick-date="tomorrow">Tomorrow</button>
+            </div>
+            <input type="date" id="resDateInput" class="res-input" required />
+          </div>
+
+          <div class="res-field-group">
+            <label class="res-label" for="resNameInput">Your Name</label>
+            <input
+              type="text"
+              id="resNameInput"
+              class="res-input"
+              placeholder="e.g., Bapak / Ibu Budi"
+              autocomplete="name"
+            />
+          </div>
+        </div>
+
+        <!-- 3. Dining Session -->
+        <div class="res-field-group">
+          <label class="res-label">3. Preferred Dining Session</label>
+          <div class="res-pill-group res-pill-group--2col" id="resTimeGroup" role="radiogroup" aria-label="Preferred Dining Session">
+            <button type="button" class="res-pill" data-res-time="Morning Kopi & Toast (07:30 WIB)">
+              ☀️ Morning Kopi (07:30)
+            </button>
+            <button type="button" class="res-pill is-active" data-res-time="Lunch Gathering (12:30 WIB)">
+              🍲 Lunch (12:30)
+            </button>
+            <button type="button" class="res-pill" data-res-time="Afternoon Kopi & Dim Sum (15:30 WIB)">
+              🫖 Afternoon Tea (15:30)
+            </button>
+            <button type="button" class="res-pill" data-res-time="Evening Dinner Feast (19:00 WIB)">
+              🏮 Dinner Feast (19:00)
+            </button>
+          </div>
+        </div>
+
+        <!-- 4. Seating Area Preference -->
+        <div class="res-field-group">
+          <label class="res-label">4. Seating Preference</label>
+          <div class="res-pill-group" id="resSeatGroup" role="radiogroup" aria-label="Seating Preference">
+            <button type="button" class="res-pill is-active" data-res-seat="Indoor AC Dining Hall">
+              ❄️ Indoor AC Hall
+            </button>
+            <button type="button" class="res-pill" data-res-seat="Breezy Semi-Outdoor Veranda">
+              🌿 Breezy Veranda
+            </button>
+            <button type="button" class="res-pill" data-res-seat="Round Marble Sharing Table">
+              ⭕ Round Table
+            </button>
+          </div>
+        </div>
+
+        <!-- 5. Optional Special Request -->
+        <div class="res-field-group">
+          <label class="res-label" for="resNotesInput">5. Optional Notes (Baby Chair, Birthday, Favorite Dishes)</label>
+          <input
+            type="text"
+            id="resNotesInput"
+            class="res-input"
+            placeholder="e.g., Need 1 baby chair, pre-order #02 Hainan Chicken Rice..."
+          />
+        </div>
+
+        <!-- Live WhatsApp Message Preview -->
+        <div class="res-preview-box">
+          <div class="res-preview-box__label">WhatsApp Message Preview</div>
+          <div class="res-preview-box__text" id="resWhatsappPreviewText"></div>
+        </div>
+
+        <div class="res-actions-row">
+          <button type="submit" class="btn btn--green" style="width: 100%; justify-content: center; font-size: 0.96rem;">
+            💬 Send Reservation via WhatsApp →
+          </button>
+        </div>
+      </form>
+    </dialog>
+
     <!-- Scripts -->
-    <script src="siteData.js?v=20261020-61"></script>
-    <script src="app.js?v=20261020-61"></script>
+    <script src="siteData.js?v=20261020-features"></script>
+    <script src="app.js?v=20261020-features"></script>
   </body>
 </html>

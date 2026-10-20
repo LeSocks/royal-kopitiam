@@ -842,6 +842,149 @@ a {
   contain-intrinsic-size: 1px 1600px;
 }
 
+/* Curated First-Timer & Pairing Combos Strip */
+.curated-combos-strip {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1rem, 2vw, 1.45rem);
+  margin-bottom: 1.75rem;
+}
+
+.combo-card {
+  background: var(--royal-cream-light);
+  border: 2px solid var(--border-strong);
+  border-top: 5px solid var(--royal-green);
+  border-radius: 18px;
+  padding: clamp(1.1rem, 2.2vw, 1.45rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  box-shadow: var(--shadow-sm);
+  min-width: 0;
+  transition: transform 0.24s var(--ease-out), box-shadow 0.24s var(--ease-out), border-color 0.2s ease;
+}
+
+.combo-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.combo-card--featured {
+  border-top-color: var(--royal-red);
+  background: linear-gradient(180deg, #fffdf8 0%, #fbf3df 100%);
+}
+
+.combo-card__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.combo-card__eyebrow {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--royal-green);
+  background: var(--royal-green-tint);
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+}
+
+.combo-card--featured .combo-card__eyebrow {
+  color: var(--royal-red);
+  background: var(--royal-red-tint);
+}
+
+.combo-card__price {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: var(--royal-red);
+  white-space: nowrap;
+}
+
+.combo-card__price small {
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--ink-muted);
+}
+
+.combo-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.15rem, 1.6vw, 1.32rem);
+  font-weight: 800;
+  color: var(--royal-green-deep);
+  line-height: 1.2;
+}
+
+.combo-reserve-link {
+  font-size: 0.76rem;
+  font-weight: 800;
+  color: var(--royal-red);
+  background: var(--royal-red-tint);
+  border: 1px solid var(--border-crimson);
+  padding: 0.18rem 0.6rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+}
+
+.combo-reserve-link:hover {
+  background: var(--royal-red);
+  color: #fff;
+}
+
+.combo-card__desc {
+  font-size: 0.84rem;
+  color: var(--ink-muted);
+  line-height: 1.5;
+  flex: 1;
+}
+
+.combo-card__items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.42rem;
+  margin-top: 0.35rem;
+  padding-top: 0.65rem;
+  border-top: 1px dashed var(--border-warm);
+}
+
+.combo-item-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.32rem;
+  padding: 0.28rem 0.62rem;
+  border-radius: 8px;
+  background: #fff;
+  border: 1.5px solid var(--border-warm);
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+  transition: all 0.18s ease;
+}
+
+.combo-item-pill strong {
+  color: var(--royal-red);
+  font-weight: 800;
+}
+
+.combo-item-pill span {
+  color: var(--royal-green);
+  font-weight: 800;
+  margin-left: 0.15rem;
+}
+
+.combo-item-pill:hover {
+  border-color: var(--royal-red);
+  background: var(--royal-red-tint);
+  transform: translateY(-1px);
+}
+
 .menu-controls {
   display: flex;
   flex-direction: column;
@@ -1200,6 +1343,54 @@ a {
   background: var(--royal-red);
   color: #fff;
   border-color: #fff;
+}
+
+.dish-badge--kid {
+  background: #fef9e7;
+  color: #0f5922;
+  border-color: #0f5922;
+}
+
+.dish-badge--seafood {
+  background: #fff3e0;
+  color: #9a3412;
+  border-color: #ea580c;
+}
+
+.dish-dietary-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.dietary-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 0.14rem 0.52rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+}
+
+.dietary-tag--kid {
+  background: rgba(15, 89, 34, 0.09);
+  color: var(--royal-green-deep);
+  border: 1px solid rgba(15, 89, 34, 0.25);
+}
+
+.dietary-tag--seafood {
+  background: rgba(234, 88, 12, 0.1);
+  color: #9a3412;
+  border: 1px solid rgba(234, 88, 12, 0.3);
+}
+
+.dietary-tag--spicy {
+  background: var(--royal-red-tint);
+  color: var(--royal-red);
+  border: 1px solid var(--border-crimson);
 }
 
 .dish-card__body {
@@ -2105,6 +2296,130 @@ dialog.royal-modal::backdrop {
   background: var(--royal-cream);
 }
 
+/* 10-Second Table Reservation Mini-Modal Styles */
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+}
+
+.res-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.res-label {
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--royal-green-deep);
+}
+
+.res-two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.res-pill-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+  gap: 0.5rem;
+}
+
+.res-pill-group--2col {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.res-pill {
+  padding: 0.6rem 0.75rem;
+  border-radius: 12px;
+  background: var(--royal-cream);
+  border: 1.5px solid var(--border-warm);
+  font-weight: 800;
+  font-size: 0.84rem;
+  color: var(--ink-dark);
+  text-align: center;
+  transition: all 0.18s ease;
+}
+
+.res-pill:hover {
+  border-color: var(--royal-green);
+  color: var(--royal-green);
+}
+
+.res-pill.is-active {
+  background: var(--royal-green);
+  color: var(--royal-cream-light);
+  border-color: var(--royal-green);
+  box-shadow: 0 3px 10px rgba(15, 89, 34, 0.2);
+}
+
+.res-quick-date {
+  padding: 0.24rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 800;
+  background: var(--royal-cream);
+  border: 1.5px solid var(--border-warm);
+  color: var(--ink-muted);
+  transition: all 0.16s ease;
+}
+
+.res-quick-date.is-active {
+  background: var(--royal-red);
+  color: #fff;
+  border-color: var(--royal-red);
+}
+
+.res-input {
+  width: 100%;
+  padding: 0.6rem 0.85rem;
+  border-radius: 12px;
+  border: 1.5px solid var(--border-strong);
+  background: #fff;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-dark);
+}
+
+.res-input:focus {
+  outline: none;
+  border-color: var(--royal-green);
+  box-shadow: 0 0 0 3px rgba(15, 89, 34, 0.14);
+}
+
+.res-preview-box {
+  background: var(--royal-cream);
+  border: 1.5px dashed var(--royal-green);
+  border-radius: 14px;
+  padding: 0.8rem 1rem;
+}
+
+.res-preview-box__label {
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--royal-green);
+  margin-bottom: 0.25rem;
+}
+
+.res-preview-box__text {
+  font-size: 0.82rem;
+  color: var(--ink-body);
+  line-height: 1.48;
+  white-space: pre-line;
+}
+
+.res-actions-row {
+  padding-top: 0.25rem;
+}
+
 /* ==========================================================================
    COMPREHENSIVE MULTI-DEVICE RESPONSIVE BREAKPOINTS
    (4K / Ultrawide -> Desktop -> Laptop -> Tablet -> Large Phone -> Small Phone)
@@ -2135,6 +2450,7 @@ dialog.royal-modal::backdrop {
   .story-full-grid,
   .ritual-widescreen-grid,
   .geo-faq-grid,
+  .curated-combos-strip,
   .visit-bleed-section {
     grid-template-columns: 1fr;
     min-height: auto;
@@ -2217,7 +2533,9 @@ dialog.royal-modal::backdrop {
   .footer-grid,
   .story-pillars-wide,
   .amenities-grid,
-  .story-collage {
+  .story-collage,
+  .res-two-col,
+  .res-pill-group--2col {
     grid-template-columns: 1fr;
   }
 
