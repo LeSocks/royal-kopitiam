@@ -9,3 +9,6 @@ node_modules/
 # Unused legacy menu board crops
 assets/menu-crops/
 assets/menu-boards/
+
+# Local CMS snapshots cache
+cms-history.json

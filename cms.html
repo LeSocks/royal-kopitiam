@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMS Studio — Royal Kopitiam (Kedai Kopitiam • 东方皇家 • Royal Oriental)</title>
+    <link rel="icon" type="image/png" href="assets/brand/logo_royal_kopitiam.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,600&family=Noto+Serif+SC:wght@600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css?v=20261021-cms" />
+    <link rel="stylesheet" href="cms.css?v=20261021-cms" />
+    <style>
+      body[data-cms-standalone] {
+        margin: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: #14110f;
+        display: grid;
+        grid-template-columns: minmax(560px, 52vw) 1fr;
+      }
+      @media (max-width: 1100px) {
+        body[data-cms-standalone] {
+          grid-template-columns: 1fr;
+        }
+        .cms-live-preview-pane {
+          display: none !important;
+        }
+      }
+      #cmsStandaloneMount .cms-studio-Shell {
+        position: static !important;
+        width: 100% !important;
+        height: 100vh !important;
+        transform: none !important;
+        border-left: none !important;
+        border-right: 3px solid #c7922e;
+        box-shadow: none !important;
+      }
+      .cms-live-preview-pane {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background: #1d1815;
+      }
+      .cms-preview-toolbar {
+        background: #120f0d;
+        color: #f7f1e3;
+        padding: 0.55rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 0.78rem;
+        font-weight: 800;
+      }
+      .cms-preview-stage {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem;
+        overflow: hidden;
+      }
+      #cmsStandalonePreviewFrame {
+        width: 100%;
+        height: 100%;
+        border: 2px solid #3c322b;
+        border-radius: 12px;
+        background: #fdfaf3;
+        transition: width 0.25s ease;
+      }
+    </style>
+  </head>
+  <body data-cms-standalone="true">
+    <div id="cmsStandaloneMount"></div>
+
+    <div class="cms-live-preview-pane">
+      <div class="cms-preview-toolbar">
+        <span>⚡ LIVE INTERACTIVE WEBSITE PREVIEW (Updates as you type)</span>
+        <div style="display: flex; gap: 0.35rem;">
+          <button type="button" class="cms-top-btn" data-vp-width="100%">🖥️ Desktop</button>
+          <button type="button" class="cms-top-btn" data-vp-width="768px">📱 Tablet</button>
+          <button type="button" class="cms-top-btn" data-vp-width="390px">📲 Mobile</button>
+        </div>
+      </div>
+      <div class="cms-preview-stage">
+        <iframe id="cmsStandalonePreviewFrame" src="index.html?preview=1" title="Live Royal Kopitiam Preview"></iframe>
+      </div>
+    </div>
+
+    <script src="siteData.js?v=20261021-cms"></script>
+    <script src="app.js?v=20261021-cms"></script>
+    <script src="cms.js?v=20261021-cms"></script>
+    <script>
+      document.querySelectorAll("[data-vp-width]").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const frame = document.getElementById("cmsStandalonePreviewFrame");
+          if (frame) frame.style.width = btn.getAttribute("data-vp-width");
+        });
+      });
+    </script>
+  </body>
+</html>
