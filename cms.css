@@ -141,7 +141,7 @@ body.cms-inspect-mode .cms-inspect-banner {
 .cms-topbar {
   background: #083b14;
   color: #fdfaf3;
-  padding: 0.7rem 1.1rem;
+  padding: 0.65rem 1.1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -156,15 +156,14 @@ body.cms-inspect-mode .cms-inspect-banner {
   gap: 0.65rem;
 }
 
-.cms-topbar__badge {
-  background: #c7922e;
-  color: #16110b;
-  font-size: 0.68rem;
-  font-weight: 900;
-  padding: 0.2rem 0.55rem;
+.cms-topbar__logo {
+  height: 30px;
+  width: auto;
+  background: #fdfaf3;
+  padding: 0.16rem 0.35rem;
   border-radius: 6px;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
+  object-fit: contain;
+  display: block;
 }
 
 .cms-topbar__title {
@@ -173,14 +172,6 @@ body.cms-inspect-mode .cms-inspect-banner {
   font-weight: 800;
   color: #fff;
   line-height: 1.15;
-}
-
-.cms-topbar__status {
-  font-size: 0.72rem;
-  color: #e6d5b8;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
 }
 
 .cms-topbar__actions {
@@ -316,26 +307,21 @@ body.cms-inspect-mode .cms-inspect-banner {
 /* Section Panels & Cards inside Workspace */
 .cms-section-header {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
-  padding-bottom: 0.85rem;
-  margin-bottom: 1.1rem;
-  border-bottom: 2px solid #e6d7be;
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1.5px solid #e6d7be;
 }
 
 .cms-section-title {
   font-family: var(--font-display, "Fraunces", serif);
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 800;
   color: #083b14;
-  margin-bottom: 0.2rem;
-}
-
-.cms-section-desc {
-  font-size: 0.82rem;
-  color: #5c4e43;
+  margin: 0;
 }
 
 .cms-card {

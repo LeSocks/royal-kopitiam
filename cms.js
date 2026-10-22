@@ -446,10 +446,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Header, Navigation & Brand Theme</h2>
-          <p class="cms-section-desc">Customize the top navigation bar, brand logo, section visibility, and color palette.</p>
-        </div>
+        <h2 class="cms-section-title">Header, Navigation & Brand Theme</h2>
       </div>
 
       <div class="cms-card">
@@ -484,7 +481,7 @@
           </div>
         </div>
         <div class="cms-field">
-          <label class="cms-label">Custom Live Status Pill Text (Leave empty for auto open/close hours)</label>
+          <label class="cms-label">Custom Live Status Pill Text</label>
           <input
             type="text"
             class="cms-input"
@@ -521,7 +518,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">Page Section Visibility (Show / Hide Sections)</div>
+          <div class="cms-card__title">Page Section Visibility</div>
         </div>
         <div class="cms-grid-2">
           ${sectionsList
@@ -688,10 +685,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Hero Banner & Visual Stage</h2>
-          <p class="cms-section-desc">Edit the top hero copy, badges, CTA buttons, key stats, 3 showcase photos, and bottom strip.</p>
-        </div>
+        <h2 class="cms-section-title">Hero Banner & Visual Stage</h2>
       </div>
 
       <div class="cms-card">
@@ -732,25 +726,25 @@
 
         <div class="cms-grid-2">
           <div class="cms-field">
-            <label class="cms-label">Headline Part 1 (Standard)</label>
+            <label class="cms-label">Headline Part 1</label>
             <input type="text" class="cms-input" id="heroTitlePrefix" value="${escHtml(hero.titlePrefix)}" />
           </div>
           <div class="cms-field">
-            <label class="cms-label">Headline Part 2 (Italic Red/Serif)</label>
+            <label class="cms-label">Headline Part 2</label>
             <input type="text" class="cms-input" id="heroTitleItalic" value="${escHtml(hero.titleItalic)}" />
           </div>
           <div class="cms-field">
-            <label class="cms-label">Headline Part 3 (Connector)</label>
+            <label class="cms-label">Headline Part 3</label>
             <input type="text" class="cms-input" id="heroTitleMiddle" value="${escHtml(hero.titleMiddle)}" />
           </div>
           <div class="cms-field">
-            <label class="cms-label">Headline Part 4 (Royal Green Highlight)</label>
+            <label class="cms-label">Headline Part 4</label>
             <input type="text" class="cms-input" id="heroTitleHighlight" value="${escHtml(hero.titleHighlight)}" />
           </div>
         </div>
 
         <div class="cms-field">
-          <label class="cms-label">Hero Subtitle Copy (HTML allowed: &lt;strong&gt;, &lt;em&gt;)</label>
+          <label class="cms-label">Hero Subtitle Copy</label>
           <textarea class="cms-textarea" id="heroSubtitle">${escHtml(hero.subtitle)}</textarea>
         </div>
 
@@ -779,7 +773,7 @@
             (panel, idx) => `
             <div style="padding: 0.75rem; background: #fbf7ee; border: 1px solid #e2d4bd; border-radius: 11px; margin-bottom: 0.75rem;">
               <div style="font-size: 0.78rem; font-weight: 800; color: #083b14; margin-bottom: 0.5rem;">
-                Stage Panel ${idx + 1} (${idx === 0 ? "Top Wide Banner" : idx === 1 ? "Bottom-Left Card" : "Bottom-Right Card"})
+                Stage Panel ${idx + 1}
               </div>
               ${renderImagePickerField({
                 id: `heroPanelImg_${idx}`,
@@ -941,10 +935,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Our Story, Collage Photos & Heritage Pillars</h2>
-          <p class="cms-section-desc">Edit the editorial story text, 5 collage images/crests, and 4 pillar cards.</p>
-        </div>
+        <h2 class="cms-section-title">Our Story, Collage Photos & Heritage Pillars</h2>
       </div>
 
       <div class="cms-card">
@@ -960,11 +951,11 @@
           <input type="text" class="cms-input" id="storyTitle" value="${escHtml(s.title)}" />
         </div>
         <div class="cms-field">
-          <label class="cms-label">Lead Paragraph (HTML allowed)</label>
+          <label class="cms-label">Lead Paragraph</label>
           <textarea class="cms-textarea" id="storyLead">${escHtml(s.leadParagraph)}</textarea>
         </div>
         <div class="cms-field">
-          <label class="cms-label">Second Paragraph (HTML allowed)</label>
+          <label class="cms-label">Second Paragraph</label>
           <textarea class="cms-textarea" id="storyBody">${escHtml(s.bodyParagraph)}</textarea>
         </div>
       </div>
@@ -975,14 +966,14 @@
         </div>
         ${renderImagePickerField({
           id: "storyMainPhoto",
-          label: "Main Collage Photo (Top Left)",
+          label: "Main Collage Photo",
           currentValue: s.mainPhoto,
           folder: "gallery",
           prefix: "story-main"
         })}
         ${renderImagePickerField({
           id: "storySubPhoto",
-          label: "Secondary Collage Photo (Bottom Left)",
+          label: "Secondary Collage Photo",
           currentValue: s.subPhoto,
           folder: "gallery",
           prefix: "story-sub"
@@ -1097,10 +1088,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Curated Packages & Combos</h2>
-          <p class="cms-section-desc">Create, edit, or reorder combo packages. Pick included dishes visually — the photo mosaic and item pills update automatically!</p>
-        </div>
+        <h2 class="cms-section-title">Curated Packages & Combos</h2>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddPackageBtn">+ Add New Package</button>
       </div>
 
@@ -1152,7 +1140,7 @@
                 </label>
 
                 <div class="cms-field" style="margin-bottom: 0;">
-                  <label class="cms-label">Package Price (in K)</label>
+                  <label class="cms-label">Package Price</label>
                   <input
                     type="number"
                     class="cms-input"
@@ -1178,14 +1166,14 @@
                   <input type="text" class="cms-input" data-pkg-reslabel="${idx}" value="${escHtml(pkg.reserveBtnText || "Reserve Table")}" />
                 </div>
                 <div class="cms-field" style="margin-bottom: 0;">
-                  <label class="cms-label">Preset Guests (Pax)</label>
+                  <label class="cms-label">Preset Guests</label>
                   <input type="number" class="cms-input" data-pkg-respax="${idx}" value="${escHtml(pkg.reservePax || 4)}" />
                 </div>
               </div>
 
               <div class="cms-field">
                 <label class="cms-label">
-                  <span>Included Dishes in Package (${resolvedDishes.length} items — First 4 appear in Mosaic)</span>
+                  <span>Included Dishes</span>
                 </label>
                 <div class="cms-selected-pills">
                   ${resolvedDishes
@@ -1437,10 +1425,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Menu Items, Pictures & Pairings (${items.length} Items)</h2>
-          <p class="cms-section-desc">Select any dish on the left to edit its photo, price, badges, dietary flags, and recommended pairings.</p>
-        </div>
+        <h2 class="cms-section-title">Menu Items, Pictures & Pairings</h2>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddNewDishBtn">+ Add New Dish / Drink</button>
       </div>
 
@@ -1557,7 +1542,7 @@
 
               <div class="cms-field">
                 <label class="cms-label">
-                  <span>Seafood / Allergen Callout Tag (Leave blank if none)</span>
+                  <span>Seafood / Allergen Callout Tag</span>
                 </label>
                 <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
                   <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="">None</button>
@@ -1603,9 +1588,9 @@
               </div>
 
               <!-- Recommended Pairings Visual Selector -->
-              <div class="cms-field" style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1.5px dashed #e2d4bd;">
+              <div class="cms-field" style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1px solid #e2d4bd;">
                 <label class="cms-label">
-                  <span>Recommended Royal Pairings (${activePairings.length} linked dishes)</span>
+                  <span>Recommended Pairings</span>
                 </label>
                 <div class="cms-selected-pills">
                   ${activePairings
@@ -1902,10 +1887,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Menu Section Header & Categories</h2>
-          <p class="cms-section-desc">Edit the Menu section headline and customize all category tabs, Chinese titles, ranges, and spotlight banners.</p>
-        </div>
+        <h2 class="cms-section-title">Menu Categories</h2>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddCategoryBtn">+ Add Category</button>
       </div>
 
@@ -2085,10 +2067,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Kopi & Drink Bar Cup Decoder</h2>
-          <p class="cms-section-desc">Edit Drink Bar section texts, featured drinks, cup layer proportions, colors, and ideal food pairings.</p>
-        </div>
+        <h2 class="cms-section-title">Coffee & Tea Bar</h2>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddRitualDrinkBtn">+ Add Featured Drink</button>
       </div>
 
@@ -2105,7 +2084,7 @@
           <input type="text" class="cms-input" id="ritualCfgTitle" value="${escHtml(cfg.title)}" />
         </div>
         <div class="cms-field">
-          <label class="cms-label">Section Description (HTML allowed)</label>
+          <label class="cms-label">Section Description</label>
           <textarea class="cms-textarea" style="min-height: 56px;" id="ritualCfgDesc">${escHtml(cfg.description)}</textarea>
         </div>
       </div>
@@ -2165,7 +2144,7 @@
 
             <div class="cms-field">
               <label class="cms-label">
-                <span>Cup Proportions Layers (Top to Bottom)</span>
+                <span>Cup Proportions Layers</span>
                 <button type="button" class="cms-btn cms-btn--sm" data-rit-add-layer="${idx}">+ Add Layer</button>
               </label>
               ${(drink.layers || [])
@@ -2343,10 +2322,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Atmosphere & Vibes Bento Gallery (${photos.length} Photos)</h2>
-          <p class="cms-section-desc">Edit gallery header texts, filter zones, and upload/manage every photo card in the bento grid.</p>
-        </div>
+        <h2 class="cms-section-title">Photo Gallery</h2>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddGalleryPhotoBtn">+ Add Gallery Photo</button>
       </div>
 
@@ -2539,10 +2515,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Quick Facts & Guest FAQ</h2>
-          <p class="cms-section-desc">Customize the At-a-Glance Fact Sheet and the Guest FAQ Accordion questions & answers.</p>
-        </div>
+        <h2 class="cms-section-title">Visitor FAQ</h2>
       </div>
 
       <div class="cms-card">
@@ -2607,7 +2580,7 @@
               <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.45rem;">
                 <label style="display: flex; align-items: center; gap: 0.4rem; font-size: 0.76rem; font-weight: 800; color: #083b14;">
                   <input type="checkbox" data-faq-open="${idx}" ${item.open ? "checked" : ""} />
-                  <span>Expanded by default (FAQ #${idx + 1})</span>
+                  <span>Expanded by default</span>
                 </label>
                 <div style="display: flex; gap: 0.25rem;">
                   <button type="button" class="cms-btn cms-btn--sm" data-faq-up="${idx}">↑</button>
@@ -2741,10 +2714,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Visit Us, Address, Hours, Contacts & Map</h2>
-          <p class="cms-section-desc">Update your physical address, Google Maps link, embedded map URL, operating hours, WhatsApp number, and guest amenities.</p>
-        </div>
+        <h2 class="cms-section-title">Location & Hours</h2>
       </div>
 
       <div class="cms-card">
@@ -2823,11 +2793,11 @@
         </div>
         <div class="cms-grid-2">
           <div class="cms-field">
-            <label class="cms-label">Open Hour (24h, e.g. 7)</label>
+            <label class="cms-label">Open Hour</label>
             <input type="number" class="cms-input" id="hrOpen" value="${escHtml(info.hours.openHour24)}" min="0" max="23" />
           </div>
           <div class="cms-field">
-            <label class="cms-label">Close Hour (24h, e.g. 22)</label>
+            <label class="cms-label">Close Hour</label>
             <input type="number" class="cms-input" id="hrClose" value="${escHtml(info.hours.closeHour24)}" min="1" max="24" />
           </div>
           <div class="cms-field">
@@ -2840,13 +2810,13 @@
           </div>
         </div>
         <div class="cms-field">
-          <label class="cms-label">Morning Ritual / Hours Note</label>
+          <label class="cms-label">Hours Note</label>
           <input type="text" class="cms-input" id="hrNote" value="${escHtml(info.hours.breakfastNote)}" />
         </div>
 
         <div class="cms-grid-2">
           <div class="cms-field">
-            <label class="cms-label">WhatsApp Number (Digits Only for wa.me link)</label>
+            <label class="cms-label">WhatsApp Number</label>
             <input type="text" class="cms-input" id="cntWaNum" value="${escHtml(info.contact.whatsappNumber)}" />
           </div>
           <div class="cms-field">
@@ -2964,10 +2934,7 @@
 
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Reservation Modal & Site Footer</h2>
-          <p class="cms-section-desc">Customize the WhatsApp Table Reservation modal (guest count limits, hours, seating options) and the entire site footer.</p>
-        </div>
+        <h2 class="cms-section-title">Reservations & Footer</h2>
         <button type="button" class="cms-btn cms-btn--green" id="cmsTestResModalBtn">Test Reservation Modal</button>
       </div>
 
@@ -3017,7 +2984,7 @@
         </div>
 
         <div class="cms-field">
-          <label class="cms-label">Quick-Tap Hour Chips (Comma-separated, e.g. 08:00, 10:00, 12:00, 15:00, 19:00)</label>
+          <label class="cms-label">Quick-Tap Hour Chips</label>
           <input type="text" class="cms-input" id="resQuickHours" value="${escHtml(resCfg.quickHours.join(", "))}" />
         </div>
 
@@ -3084,7 +3051,7 @@
 
         <div class="cms-field">
           <label class="cms-label">
-            <span>Footer Signature Highlights List (One line per item)</span>
+            <span>Footer Signature Highlights</span>
           </label>
           <textarea class="cms-textarea" id="footHighlights" style="min-height: 110px;">${escHtml((fCfg.highlights || []).join("\n"))}</textarea>
         </div>
@@ -3185,18 +3152,12 @@
   function renderHistoryTab(ws) {
     ws.innerHTML = `
       <div class="cms-section-header">
-        <div>
-          <h2 class="cms-section-title">Save Configuration, Version History & Backups</h2>
-          <p class="cms-section-desc">Save named configuration snapshots, restore previous versions, or export/import siteData.js.</p>
-        </div>
+        <h2 class="cms-section-title">Save Configuration, Version History & Backups</h2>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
           <div class="cms-card__title">Save & Create Version Snapshot</div>
-          <span style="font-size: 0.74rem; font-weight: 800; color: ${cmsState.serverConnected ? "#0f5922" : "#b45309"};">
-            ${cmsState.serverConnected ? "Connected to Local Disk Server (siteData.js)" : "Browser Storage Mode"}
-          </span>
         </div>
         <div style="display: flex; gap: 0.55rem; flex-wrap: wrap;">
           <input
@@ -3546,15 +3507,16 @@
     const shell = document.createElement("aside");
     shell.id = "cmsStudioShell";
     shell.className = "cms-studio-Shell" + (isStandalonePage ? " is-open" : "");
-    shell.setAttribute("aria-label", "Royal Kopitiam Content Management System");
+    shell.setAttribute("aria-label", "Royal Kopitiam CMS");
     shell.innerHTML = `
       <div class="cms-topbar">
         <div class="cms-topbar__brand">
-          <span class="cms-topbar__badge">CMS STUDIO</span>
-          <div>
-            <div class="cms-topbar__title">Royal Kopitiam • Header-to-Footer Editor</div>
-            <div class="cms-topbar__status" id="cmsTopbarStatusText">Checking persistence mode...</div>
-          </div>
+          <img
+            src="assets/brand/logo_royal_kopitiam.png"
+            alt="Royal Kopitiam"
+            class="cms-topbar__logo"
+          />
+          <div class="cms-topbar__title">Royal Kopitiam CMS</div>
         </div>
         <div class="cms-topbar__actions">
           <button type="button" class="cms-top-btn cms-top-btn--save" id="cmsQuickSaveAllBtn">
@@ -3564,18 +3526,18 @@
             !isStandalonePage
               ? `
             <button type="button" class="cms-top-btn" id="cmsExpandWidthBtn">
-              ⇔ Expand Fullscreen
+              Full Width
             </button>
-            <a href="cms.html" class="cms-top-btn" title="Open Dedicated Admin Studio Page">
-              ↗ Admin Page
+            <a href="cms.html" class="cms-top-btn" title="Open Admin View">
+              Admin View
             </a>
             <button type="button" class="cms-top-btn cms-top-btn--close" id="cmsCloseStudioBtn">
-              × Close
+              Close
             </button>
           `
               : `
             <a href="index.html" class="cms-top-btn">
-              ← View Live Website
+              View Website
             </a>
           `
           }
@@ -3599,8 +3561,12 @@
       <div class="cms-asset-modal">
         <div class="cms-topbar">
           <div class="cms-topbar__brand">
-            <span class="cms-topbar__badge">ASSET LIBRARY</span>
-            <div class="cms-topbar__title">Choose a Photograph or Brand Graphic</div>
+            <img
+              src="assets/brand/logo_royal_kopitiam.png"
+              alt="Royal Kopitiam"
+              class="cms-topbar__logo"
+            />
+            <div class="cms-topbar__title">Asset Library</div>
           </div>
           <div style="display: flex; gap: 0.4rem; align-items: center;">
             <div id="cmsAssetFolderFilters" style="display: flex; gap: 0.3rem;"></div>
