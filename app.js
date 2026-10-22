@@ -19,8 +19,9 @@
   );
 
   // Load saved CMS override from localStorage if available
-  const CMS_STORAGE_KEY = "ROYAL_KOPITIAM_CMS_DATA_V1";
+  const CMS_STORAGE_KEY = "ROYAL_KOPITIAM_CMS_DATA_V2";
   try {
+    localStorage.removeItem("ROYAL_KOPITIAM_CMS_DATA_V1");
     const savedRaw = localStorage.getItem(CMS_STORAGE_KEY);
     if (savedRaw) {
       const parsed = JSON.parse(savedRaw);
@@ -187,13 +188,13 @@
     if (ctaRow) {
       ctaRow.innerHTML = `
         <a href="${hero.primaryCtaHref || "#menu"}" class="btn btn--primary">
-          ${hero.primaryCtaText || "Explore Menu →"}
+          ${hero.primaryCtaText || "View Menu"}
         </a>
         <button type="button" class="btn btn--green" data-open-reservation>
-          ${hero.reserveCtaText || "📅 Reserve a Table"}
+          ${hero.reserveCtaText || "Reserve a Table"}
         </button>
         <a href="${hero.secondaryCtaHref || "#vibes"}" class="btn btn--outline">
-          ${hero.secondaryCtaText || "See Restaurant Vibes"}
+          ${hero.secondaryCtaText || "Dining Room"}
         </a>
       `;
     }
@@ -319,7 +320,7 @@
       editorial.innerHTML = `
         <div class="story-editorial__eyebrow">
           ${floretHTML("floret-4--red")}
-          ${s.eyebrow || "OUR HERITAGE • 东方皇家"}
+          ${s.eyebrow || "OUR STORY • 东方皇家"}
         </div>
         <h2 class="story-editorial__title">${s.title || ""}</h2>
         <p class="story-editorial__lead">${s.leadParagraph || ""}</p>
@@ -358,7 +359,7 @@
             ${floretHTML("floret-4--cream")}
           </span>
           <h2 class="widescreen-section-head__title">
-            ${cfg.title || "All 61 Authentic Dishes, Toasts & Beverages"}
+            ${cfg.title || "Full Menu — Dishes, Toasts & Drinks"}
           </h2>
         </div>
         <p class="widescreen-section-head__desc">
@@ -446,7 +447,7 @@
                   <h3 class="combo-card__title">${pkg.title || ""}</h3>
                   ${
                     pkg.showReserveBtn
-                      ? `<button type="button" class="combo-reserve-link" data-open-reservation="${pkg.reservePax || 4}">${pkg.reserveBtnText || "Book Table →"}</button>`
+                      ? `<button type="button" class="combo-reserve-link" data-open-reservation="${pkg.reservePax || 4}">${pkg.reserveBtnText || "Reserve Table"}</button>`
                       : ""
                   }
                 </div>
@@ -480,11 +481,11 @@
         <div class="widescreen-section-head__left">
           <span class="royal-plaque-pill">
             ${floretHTML("floret-4--cream")}
-            ${f.plaqueText || "QUICK FACTS & GUEST FAQ"}
+            ${f.plaqueText || "INFORMATION & FAQ"}
             ${floretHTML("floret-4--cream")}
           </span>
           <h2 class="widescreen-section-head__title" id="faqSectionTitle">
-            ${f.title || "Everything You Need to Know Before Visiting"}
+            ${f.title || "Visitor Information & Common Questions"}
           </h2>
         </div>
         <p class="widescreen-section-head__desc">${f.description || ""}</p>
@@ -644,7 +645,7 @@
     if (bottomEl) {
       bottomEl.innerHTML = `
         <span>${f.copyrightText || ""}</span>
-        <span>${f.bottomRightText || "100% No Pork • No Lard"} • <a href="cms.html" style="text-decoration: underline; opacity: 0.9;">CMS Studio</a> • <a href="llms.txt" style="text-decoration: underline; opacity: 0.85;">AI/LLM Index</a></span>
+        <span>${f.bottomRightText || "100% No Pork • No Lard"} • <a href="cms.html" style="text-decoration: underline; opacity: 0.9;">CMS Studio</a></span>
       `;
     }
   }
@@ -723,10 +724,10 @@
 
   function getSeafoodLabel(item) {
     if (typeof item.seafoodLabel === "string") {
-      return item.seafoodLabel;
+      return item.seafoodLabel.replace(/^[^\w\s]+\s*/, "").trim();
     }
-    if (item.number === "53") return "🐟 Contains Tuna";
-    if (PRAWN_SEAFOOD_NUMBERS.has(item.number)) return "🦐 Contains Prawn/Seafood";
+    if (item.number === "53") return "Contains Tuna";
+    if (PRAWN_SEAFOOD_NUMBERS.has(item.number)) return "Contains Prawn";
     return "";
   }
 
@@ -749,7 +750,11 @@
       } else if (state.activeQuickFilter === "spicy") {
         if (!item.spicy) return false;
       } else if (state.activeQuickFilter === "wokhei") {
-        if (!badges.includes("Wok Hei")) return false;
+        const isWok =
+          badges.includes("Wok Hei") ||
+          badges.includes("Wok-Fried") ||
+          ["nasi-goreng", "char-kway-teow", "mee-goreng"].includes(item.category);
+        if (!isWok) return false;
       } else if (state.activeQuickFilter === "kidfriendly") {
         if (!isKidFriendly(item)) return false;
       } else if (state.activeQuickFilter === "seafood") {
@@ -758,7 +763,9 @@
         const isMorning =
           item.category === "toast" ||
           badges.includes("Morning Ritual") ||
+          badges.includes("Breakfast") ||
           badges.includes("Kopitiam Kopi") ||
+          badges.includes("Traditional Kopi") ||
           ["36", "37", "38", "39"].includes(item.number);
         if (!isMorning) return false;
       }
@@ -846,19 +853,19 @@
 
     const items = getFilteredMenuItems();
     if (summaryEl) {
-      summaryEl.textContent = `Showing ${items.length} of ${DATA.menuItems.length} authentic dishes & beverages (All prices in IDR • 100% No Pork No Lard)`;
+      summaryEl.textContent = `Showing ${items.length} of ${DATA.menuItems.length} dishes & beverages (Prices in IDR • No Pork, No Lard)`;
     }
 
     if (items.length === 0) {
       container.innerHTML = `
-        <div style="text-align: center; padding: 4rem 1.5rem; background: var(--royal-cream-light); border-radius: 20px; border: 2px dashed var(--border-warm);">
-          <p style="font-family: var(--font-display); font-size: 1.4rem; color: var(--royal-red); font-weight: 800; margin-bottom: 0.5rem;">
+        <div style="text-align: center; padding: 4rem 1.5rem; background: var(--royal-cream-light); border-radius: 16px; border: 1px solid var(--border-warm);">
+          <p style="font-family: var(--font-display); font-size: 1.35rem; color: var(--royal-red); font-weight: 800; margin-bottom: 0.5rem;">
             No menu items matched your filter
           </p>
           <p style="color: var(--ink-muted); margin-bottom: 1.25rem;">
-            Try clearing your search or switching back to "All Menu" to view all ${DATA.menuItems.length} Royal Kopitiam items.
+            Clear your search or switch back to "All Menu" to view all ${DATA.menuItems.length} items.
           </p>
-          <button type="button" class="btn btn--green" id="resetMenuFiltersBtn">Reset All Filters</button>
+          <button type="button" class="btn btn--green" id="resetMenuFiltersBtn">Reset Filters</button>
         </div>
       `;
       const resetBtn = document.getElementById("resetMenuFiltersBtn");
@@ -903,9 +910,7 @@
                           <span class="classic-item-row__num">${item.number}.</span>
                           <span class="classic-item-row__name">
                             ${item.name}
-                            ${item.spicy ? '<span title="Spicy" style="color: var(--royal-red); font-size: 0.78rem;">🌶</span>' : ""}
-                            ${getSeafoodLabel(item) ? '<span title="' + getSeafoodLabel(item) + '" style="font-size: 0.76rem;">🦐</span>' : ""}
-                            ${isKidFriendly(item) ? '<span title="Kid-Friendly (Non-Spicy)" style="font-size: 0.74rem;">👶</span>' : ""}
+                            ${item.spicy ? '<span class="board-spicy-label">Spicy</span>' : ""}
                           </span>
                           <span class="classic-item-row__price">${formatPriceK(item.priceK)}</span>
                         </div>
@@ -929,27 +934,20 @@
       <div class="menu-grid">
         ${items
           .map((item) => {
-            const seafoodLabel = getSeafoodLabel(item);
-            const kidFriendly = isKidFriendly(item);
             const badges = item.badges || [];
-            const badgesHTML = [
-              ...badges.slice(0, 2).map((b) => `<span class="dish-badge">${b}</span>`),
-              item.spicy ? `<span class="dish-badge dish-badge--spicy">🌶 Spicy</span>` : ""
-            ].join("");
-
-            const dietaryRowHTML = [
-              kidFriendly ? `<span class="dietary-tag dietary-tag--kid">👶 Kid-Friendly</span>` : "",
-              seafoodLabel ? `<span class="dietary-tag dietary-tag--seafood">${seafoodLabel}</span>` : "",
-              item.spicy ? `<span class="dietary-tag dietary-tag--spicy">🌶 Spicy</span>` : ""
-            ]
-              .filter(Boolean)
-              .join("");
+            const primaryBadge = badges[0]
+              ? `<span class="dish-badge">${badges[0]}</span>`
+              : "";
+            const spicyBadge = item.spicy
+              ? `<span class="dish-badge dish-badge--spicy">Spicy</span>`
+              : "";
+            const badgesHTML = `${primaryBadge}${spicyBadge}`;
 
             return `
               <article class="dish-card" data-dish-num="${item.number}" data-cms-dish="${item.number}" tabindex="0" role="button" aria-label="Inspect dish ${item.number}: ${item.name}">
                 <div class="dish-card__media">
                   <span class="dish-num-badge">${item.number}</span>
-                  <div class="dish-card__badges">${badgesHTML}</div>
+                  ${badgesHTML ? `<div class="dish-card__badges">${badgesHTML}</div>` : ""}
                   <img
                     src="${resolveImgSrc(item.image, "v=20261021")}"
                     alt="${item.number}. ${item.name}"
@@ -963,11 +961,10 @@
                     <h4 class="dish-card__title">${item.name}</h4>
                     <span class="dish-card__price">${formatPriceK(item.priceK)}</span>
                   </div>
-                  ${dietaryRowHTML ? `<div class="dish-dietary-row">${dietaryRowHTML}</div>` : ""}
                   <p class="dish-card__desc">${item.description || ""}</p>
                   <div class="dish-card__footer">
                     <span style="color: var(--royal-green);">${formatPriceIDR(item.priceK)}</span>
-                    <span>View Dish & Pairings →</span>
+                    <span>Details &amp; Pairings</span>
                   </div>
                 </div>
               </article>
@@ -1035,9 +1032,9 @@
         </div>
         <div style="display: flex; align-items: center; gap: 0.5rem;">
           <button type="button" class="btn btn--outline" data-cms-edit-dish="${item.number}" style="padding: 0.35rem 0.75rem; font-size: 0.75rem;">
-            ✏️ Edit in CMS
+            Edit in CMS
           </button>
-          <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal">✕</button>
+          <button type="button" class="modal-close-btn" data-close-modal aria-label="Close modal">×</button>
         </div>
       </div>
       <div class="modal-body">
@@ -1046,9 +1043,9 @@
             <img src="${resolveImgSrc(item.image, "v=20261021")}" alt="${item.name}" style="width: 100%; height: auto;" />
           </div>
           <div>
-            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 0.85rem; border-bottom: 2px dashed var(--border-warm); margin-bottom: 1rem;">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding-bottom: 0.85rem; border-bottom: 1px solid var(--border-warm); margin-bottom: 1rem;">
               <div>
-                <div style="font-size: 0.75rem; font-weight: 800; color: var(--ink-muted); text-transform: uppercase;">Official Menu Price</div>
+                <div style="font-size: 0.75rem; font-weight: 800; color: var(--ink-muted); text-transform: uppercase;">Price</div>
                 <div style="font-family: var(--font-display); font-size: 1.85rem; font-weight: 800; color: var(--royal-red);">
                   ${formatPriceK(item.priceK)}
                   <span style="font-size: 0.95rem; color: var(--royal-green); font-family: var(--font-body); font-weight: 700;">
@@ -1072,12 +1069,12 @@
                 .join("")}
               ${
                 item.spicy
-                  ? `<span style="background: var(--royal-red-tint); color: var(--royal-red); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid var(--royal-red);">🌶 Spicy Profile</span>`
+                  ? `<span style="background: var(--royal-red-tint); color: var(--royal-red); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid var(--royal-red);">Spicy</span>`
                   : ""
               }
               ${
                 isKidFriendly(item)
-                  ? `<span style="background: rgba(15, 89, 34, 0.09); color: var(--royal-green-deep); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid rgba(15, 89, 34, 0.3);">👶 Kid-Friendly (Non-Spicy)</span>`
+                  ? `<span style="background: rgba(15, 89, 34, 0.09); color: var(--royal-green-deep); font-weight: 800; font-size: 0.75rem; padding: 0.25rem 0.7rem; border-radius: 999px; border: 1px solid rgba(15, 89, 34, 0.3);">Non-Spicy</span>`
                   : ""
               }
               ${
@@ -1090,9 +1087,9 @@
             ${
               pairingItems.length > 0
                 ? `
-              <div style="background: var(--royal-cream); border: 1.5px solid var(--border-warm); border-radius: 14px; padding: 0.95rem;">
+              <div style="background: var(--royal-cream); border: 1px solid var(--border-warm); border-radius: 14px; padding: 0.95rem;">
                 <div style="font-size: 0.76rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.06em; color: var(--royal-green-deep); margin-bottom: 0.55rem;">
-                  Recommended Royal Pairings
+                  Recommended Pairings
                 </div>
                 <div style="display: grid; gap: 0.45rem;">
                   ${pairingItems
@@ -1103,7 +1100,7 @@
                           <img src="${resolveImgSrc(p.image, "v=20261021")}" alt="" style="width: 26px; height: 26px; border-radius: 50%; object-fit: cover; border: 1.5px solid var(--royal-green);" />
                           <span><strong style="color: var(--royal-red);">#${p.number}</strong> ${p.name}</span>
                         </span>
-                        <span style="color: var(--royal-green); font-weight: 800;">${formatPriceK(p.priceK)} →</span>
+                        <span style="color: var(--royal-green); font-weight: 800;">${formatPriceK(p.priceK)}</span>
                       </button>
                     `
                     )
@@ -1254,7 +1251,7 @@
 
         <div>
           <button type="button" class="btn btn--outline" id="inspectRitualDrinkBtn" style="padding: 0.52rem 1.15rem; font-size: 0.84rem;">
-            Inspect Drink #${current.menuNumber} in Menu →
+            View Drink #${current.menuNumber} Details
           </button>
         </div>
       </div>
@@ -1283,11 +1280,11 @@
           <div class="widescreen-section-head__left">
             <span class="royal-plaque-pill">
               ${floretHTML("floret-4--cream")}
-              ${vCfg.plaqueText || "ATMOSPHERE & VIBES GALLERY"}
+              ${vCfg.plaqueText || "DINING ROOM & ATMOSPHERE"}
               ${floretHTML("floret-4--cream")}
             </span>
             <h2 class="widescreen-section-head__title">
-              ${vCfg.title || "Sunlit Mornings, Warm Timber & Shared Tables"}
+              ${vCfg.title || "Inside Royal Kopitiam"}
             </h2>
           </div>
           <p class="widescreen-section-head__desc">
@@ -1385,24 +1382,24 @@
       <div class="modal-header">
         <div>
           <span style="font-size: 0.74rem; font-weight: 800; color: var(--royal-green); text-transform: uppercase; letter-spacing: 0.08em;">
-            ${item.slotLabel || "Atmosphere Showcase"} • ${state.lightboxIndex + 1} of ${state.filteredGallery.length}
+            ${item.slotLabel || "Atmosphere"} • ${state.lightboxIndex + 1} of ${state.filteredGallery.length}
           </span>
           <h3 style="font-family: var(--font-display); font-size: 1.2rem; color: var(--ink-dark);">
             ${item.title}
           </h3>
         </div>
-        <button type="button" class="modal-close-btn" data-close-lightbox aria-label="Close lightbox">✕</button>
+        <button type="button" class="modal-close-btn" data-close-lightbox aria-label="Close lightbox">×</button>
       </div>
       <div class="modal-body" style="text-align: center;">
-        <div style="position: relative; border-radius: 16px; overflow: hidden; border: 3px solid var(--royal-green); background: #14110f; max-height: 68vh; display: flex; align-items: center; justify-content: center;">
+        <div style="position: relative; border-radius: 16px; overflow: hidden; border: 2px solid var(--royal-green); background: #14110f; max-height: 68vh; display: flex; align-items: center; justify-content: center;">
           <img src="${resolveImgSrc(item.image)}" alt="${item.title}" style="max-height: 66vh; width: auto; max-width: 100%; object-fit: contain;" />
         </div>
         <p style="margin-top: 0.9rem; font-size: 0.95rem; color: var(--ink-body); max-width: 65ch; margin-inline: auto;">
           ${item.caption}
         </p>
         <div style="display: flex; align-items: center; justify-content: center; gap: 0.85rem; margin-top: 1.15rem;">
-          <button type="button" class="btn btn--outline" id="lightboxPrevBtn" style="padding: 0.5rem 1.1rem;">← Previous Photo</button>
-          <button type="button" class="btn btn--primary" id="lightboxNextBtn" style="padding: 0.5rem 1.1rem;">Next Photo →</button>
+          <button type="button" class="btn btn--outline" id="lightboxPrevBtn" style="padding: 0.5rem 1.1rem;">Previous</button>
+          <button type="button" class="btn btn--primary" id="lightboxNextBtn" style="padding: 0.5rem 1.1rem;">Next</button>
         </div>
       </div>
     `;
@@ -1623,10 +1620,10 @@
       if (headerDiv) {
         headerDiv.innerHTML = `
           <span style="font-size: 0.72rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.08em; color: var(--royal-red);">
-            ${cfg.eyebrow || "INSTANT WHATSAPP TABLE BOOKING • 东方皇家"}
+            ${cfg.eyebrow || "TABLE RESERVATION • 东方皇家"}
           </span>
           <h3 style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink-dark); line-height: 1.15;">
-            ${cfg.title || "Reserve Your Table at Royal Kopitiam"}
+            ${cfg.title || "Reserve a Table"}
           </h3>
         `;
       }

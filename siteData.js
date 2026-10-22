@@ -1,7 +1,7 @@
 /**
  * ============================================================================
  * ROYAL KOPITIAM (KEDAI KOPITIAM • 东方皇家 • ROYAL ORIENTAL)
- * Central Website Configuration, Header-to-Footer Template Content & 61-Item Menu
+ * Central Website Configuration & 61-Item Menu Data
  * ============================================================================
  */
 
@@ -31,27 +31,31 @@ window.ROYAL_KOPITIAM_DATA = {
     "brandTitle": "ROYAL KOPITIAM",
     "brandSubtitle": "东方皇家 • No Pork No Lard",
     "customStatusText": "",
-    "ctaText": "Explore Menu",
+    "ctaText": "View Menu",
     "ctaHref": "#menu",
     "navLinks": [
       {
-        "label": "Our Story",
+        "label": "About",
         "href": "#story"
       },
       {
-        "label": "Kopi & Drink Bar",
+        "label": "Menu",
+        "href": "#menu"
+      },
+      {
+        "label": "Coffee & Tea",
         "href": "#ritual"
       },
       {
-        "label": "Atmosphere & Vibes",
+        "label": "Gallery",
         "href": "#vibes"
       },
       {
-        "label": "FAQ",
+        "label": "Information",
         "href": "#faq"
       },
       {
-        "label": "Visit Us",
+        "label": "Location",
         "href": "#visit"
       }
     ]
@@ -59,123 +63,123 @@ window.ROYAL_KOPITIAM_DATA = {
   "heroSection": {
     "sealChinese": "东方皇家",
     "sealText": "Kedai Kopitiam • Royal Oriental",
-    "assuranceChip": "✦ 100% NO PORK • NO LARD ✦",
+    "assuranceChip": "100% NO PORK • NO LARD",
     "logoImage": "assets/brand/logo_royal_kopitiam.png",
     "sealImage": "assets/brand/chinese-seal.png",
-    "titlePrefix": "Where Classic",
-    "titleItalic": "Kopi & Toast",
-    "titleMiddle": "Meets",
-    "titleHighlight": "Royal Oriental Flavors.",
-    "subtitle": "Step into the warm, sunlit embrace of <strong>Royal Kopitiam</strong>. From morning soft-boiled kampung eggs, charcoal-grilled Kaya Toast, and sock-brewed Kopi O to smoky high-flame Char Kway Teow, silky Hainan Chicken Rice, and steaming bamboo dim sum — every dish on our menu is crafted strictly <strong>No Pork &amp; No Lard</strong>.",
-    "primaryCtaText": "Explore Menu →",
+    "titlePrefix": "Traditional",
+    "titleItalic": "Kopi & Kaya Toast",
+    "titleMiddle": "and",
+    "titleHighlight": "Oriental Comfort Food.",
+    "subtitle": "Served daily from 07:00 to 22:00. Sock-brewed coffee, house-made srikaya butter toast, soft-boiled kampung eggs, Hainan chicken rice, wok-fried noodles, and steamed dim sum — prepared strictly with <strong>no pork and no lard</strong>.",
+    "primaryCtaText": "Browse Menu",
     "primaryCtaHref": "#menu",
-    "reserveCtaText": "📅 Reserve a Table",
-    "secondaryCtaText": "See Restaurant Vibes",
-    "secondaryCtaHref": "#vibes",
+    "reserveCtaText": "Reserve a Table",
+    "secondaryCtaText": "Location & Hours",
+    "secondaryCtaHref": "#visit",
     "stats": [
       {
-        "value": "61 Dishes",
-        "label": "9 Official Menu Categories"
+        "value": "61 Items",
+        "label": "9 Menu Categories"
       },
       {
-        "value": "100% Halal-Friendly",
-        "label": "Strictly No Pork • No Lard"
+        "value": "No Pork, No Lard",
+        "label": "100% Halal-Friendly Kitchen"
       },
       {
-        "value": "10K – 55K",
-        "label": "Warm Everyday Kopitiam Pricing"
+        "value": "Rp 10K – 55K",
+        "label": "Everyday Kopitiam Pricing"
       }
     ],
     "visualPanels": [
       {
         "image": "assets/gallery/atmo-interior-hall.png",
-        "alt": "Royal Kopitiam Sunlit Dining Hall",
-        "title": "The Royal Oriental Dining Hall",
-        "subtitle": "Warm timber arches, heritage green louvers & classic marble tables",
+        "alt": "Royal Kopitiam Dining Room",
+        "title": "Main Dining Room",
+        "subtitle": "Indoor air-conditioned seating and semi-outdoor terrace tables",
         "tag": "东方皇家",
         "dishNumber": "02"
       },
       {
         "image": "assets/food/dish-51-kaya-toast.jpg",
-        "alt": "Charcoal-Grilled Kaya Butter Toast and Kopi",
-        "title": "#51 Kaya Toast & Kopi",
-        "subtitle": "Morning Kopitiam Ritual",
+        "alt": "Kaya Butter Toast and Kopi",
+        "title": "#51 Kaya Toast",
+        "subtitle": "Pandan srikaya jam & cold butter",
         "tag": "26 K",
         "dishNumber": "51"
       },
       {
         "image": "assets/food/dish-02-hainan-white-chicken.jpg",
-        "alt": "Silky Hainanese Chicken Rice",
+        "alt": "Hainanese Chicken Rice",
         "title": "#02 Hainan Chicken Rice",
-        "subtitle": "Poached White Chicken & Ginger Rice",
+        "subtitle": "Poached white chicken & ginger rice",
         "tag": "40 K",
         "dishNumber": "02"
       }
     ],
     "signatureStrip": [
       {
-        "label": "TOAST & KOPI:",
+        "label": "MORNING:",
         "text": "#51 Kaya Toast • #56 Soft Boiled Egg • #36 Kopi O"
       },
       {
-        "label": "SIGNATURE DISHES:",
+        "label": "MAINS:",
         "text": "#01 Nasi Lemak Cutlet • #02 Hainan Chicken Rice • #14 Char Kway Teow Prawn"
       },
       {
-        "label": "STARTER & DIM SUM:",
+        "label": "DIM SUM:",
         "text": "#24 Siomay • #25 Hakau Prawn • #26 Lumpia Kulit Tahu"
       }
     ]
   },
   "storySection": {
     "mainPhoto": "assets/gallery/atmo-family-table.png",
-    "mainPhotoAlt": "Round marble kopitiam table set with bamboo dim sum, Hainan chicken rice, kaya toast and teh tarik",
+    "mainPhotoAlt": "Round marble kopitiam table set with dim sum, Hainan chicken rice, kaya toast and teh tarik",
     "subPhoto": "assets/gallery/atmo-kopi-pour.png",
-    "subPhotoAlt": "High-pour Kopi O from brass pot into floral porcelain cup",
+    "subPhotoAlt": "Kopi O poured from a brass pot into a porcelain cup",
     "crestImage": "assets/brand/royal-oriental-crest.png",
     "noPorkImage": "assets/brand/no-pork-no-lard.png",
     "lineartImage": "assets/brand/kopitiam-lineart.png",
-    "eyebrow": "OUR HERITAGE • 东方皇家",
-    "title": "A Modern Sanctuary for Classic Kopitiam Culture & Royal Oriental Flavors",
-    "leadParagraph": "At <strong>Royal Kopitiam (Kedai Kopitiam Royal Oriental)</strong>, we bring together the enduring charm of classic kopitiam coffeehouses and authentic Oriental comfort dishes — where mornings begin with the clink of porcelain cups and evenings unfold around steaming plates shared with family and friends.",
-    "bodyParagraph": "Designed with breezy louvered shutters, warm natural daylight, classic marble-topped bistro tables, and deep heritage green accents, our space is built to slow down time. Whether you are dropping by for a quick <strong>#51 Kaya Toast</strong> and <strong>#36 Kopi O</strong> or gathering over <strong>#02 Hainan Chicken Rice</strong>, <strong>#14 Char Kway Teow Prawn</strong>, and bamboo dim sum baskets, every dish is prepared fresh to order.",
+    "eyebrow": "ABOUT US • 东方皇家",
+    "title": "Everyday Kopitiam Classics, Prepared Fresh to Order",
+    "leadParagraph": "<strong>Royal Kopitiam (Kedai Kopitiam Royal Oriental)</strong> is a neighbourhood kopitiam and Oriental dining room serving traditional breakfast sets alongside hearty rice, noodle, curry, and dim sum dishes.",
+    "bodyParagraph": "Whether you are stopping by at 07:00 for <strong>#51 Kaya Toast</strong>, <strong>#56 Soft Boiled Eggs</strong>, and hot <strong>#36 Kopi O</strong>, or sitting down with family for <strong>#02 Hainan Chicken Rice</strong>, <strong>#14 Char Kway Teow Prawn</strong>, and steamed dim sum baskets, everything is cooked fresh in a pork-free and lard-free kitchen.",
     "pillars": [
       {
-        "title": "100% No Pork • No Lard",
-        "description": "Complete peace of mind — every stock, dim sum dumpling, wok sauce, and marinade is prepared strictly without pork or lard."
+        "title": "Strictly No Pork & No Lard",
+        "description": "All broths, dim sum fillings, wok sauces, and marinades are prepared exclusively with chicken, beef, prawn, and vegetables."
       },
       {
-        "title": "Roaring Wok Hei Craft",
-        "description": "Our Char Kway Teow, Nasi Goreng, and Mee Goreng are seared to order over high flames for authentic smoky depth."
+        "title": "Cooked to Order on the Wok",
+        "description": "Our Nasi Goreng, Char Kway Teow, and Mee Goreng are stir-fried to order over high heat."
       },
       {
-        "title": "Sock-Brewed Kopi & Teh",
-        "description": "Traditional dark-roast kopitiam coffee beans and Ceylon tea dust pulled high for a rich, velvety crema."
+        "title": "Sock-Brewed Coffee & Pulled Tea",
+        "description": "Traditional dark-roast kopitiam coffee and Ceylon black tea prepared hot or iced throughout the day."
       },
       {
-        "title": "Sunlit, Breezy Comfort",
-        "description": "Airy indoor and semi-outdoor seating bathed in natural light — ideal for morning rituals, remote work, or family feasts."
+        "title": "Indoor & Terrace Seating",
+        "description": "Air-conditioned main dining hall, semi-outdoor veranda tables, and private VIP room seating for groups."
       }
     ]
   },
   "menuSectionConfig": {
-    "plaqueText": "OFFICIAL ROYAL ORIENTAL MENU (01 – 61)",
-    "title": "All 61 Authentic Dishes, Toasts & Beverages",
-    "description": "Browse our full-width interactive dish gallery with recommended pairings, or switch to the classic multi-column kopitiam board list.",
-    "searchPlaceholder": "Search #01–#61, Kaya, Hainan, Prawn, Kopi..."
+    "plaqueText": "MENU 01 – 61",
+    "title": "Complete Food & Drink Menu",
+    "description": "Browse all 61 dishes and beverages by category, or switch to the compact text menu.",
+    "searchPlaceholder": "Search by dish number or name..."
   },
   "curatedPackages": [
     {
       "id": "pkg-morning",
-      "eyebrow": "☀️ MORNING RITUAL • SOLO SET",
-      "title": "The Classic Kopitiam Morning",
+      "eyebrow": "BREAKFAST SET • 1 PAX",
+      "title": "Classic Kopitiam Morning Set",
       "priceK": 66,
       "autoPrice": true,
       "featured": false,
       "showReserveBtn": false,
-      "reserveBtnText": "Book Table →",
+      "reserveBtnText": "Reserve Table",
       "reservePax": 2,
-      "description": "Our quintessential breakfast trio — crisp charcoal-grilled pandan srikaya butter toast, velvety kampung soft-boiled eggs, and aromatic dark sock-brewed Kopi O.",
+      "description": "Toasted pandan kaya butter bread, two soft-boiled kampung eggs, and a cup of black sock-brewed Kopi O.",
       "items": [
         "51",
         "56",
@@ -184,15 +188,15 @@ window.ROYAL_KOPITIAM_DATA = {
     },
     {
       "id": "pkg-hainan",
-      "eyebrow": "★ ALL-DAY FAVORITE • SOLO SET",
-      "title": "The Royal Hainan Signature",
+      "eyebrow": "ALL-DAY SET • 1 PAX",
+      "title": "Hainan Chicken Rice & Kopi C Set",
       "priceK": 70,
       "autoPrice": true,
       "featured": false,
       "showReserveBtn": false,
-      "reserveBtnText": "Book Table →",
+      "reserveBtnText": "Reserve Table",
       "reservePax": 2,
-      "description": "Silky poached white chicken over fragrant ginger-garlic rice with clear broth and house chili-ginger dip, paired with a smooth cup of evaporated-milk Kopi C.",
+      "description": "Poached white chicken with ginger rice, clear broth, and house chili dip, paired with evaporated-milk Kopi C.",
       "items": [
         "02",
         "37"
@@ -200,15 +204,15 @@ window.ROYAL_KOPITIAM_DATA = {
     },
     {
       "id": "pkg-family",
-      "eyebrow": "🏮 SHARED TABLE FEAST • 3–4 PAX",
-      "title": "The Royal Family Gathering",
+      "eyebrow": "SHARING TABLE • 3–4 PAX",
+      "title": "Family Sharing Table Set",
       "priceK": 204,
       "autoPrice": true,
       "featured": true,
       "showReserveBtn": true,
-      "reserveBtnText": "Book Table →",
+      "reserveBtnText": "Reserve Table",
       "reservePax": 4,
-      "description": "Built for sharing around the marble table — crispy Ayam Goreng Kampung, smoky Wok Hei Char Kway Teow Prawn, three bamboo dim sum favorites, and Crispy Mushroom.",
+      "description": "For 3 to 4 guests: Ayam Goreng Kampung, Char Kway Teow Prawn, three steamed and fried dim sum baskets, and Crispy Mushroom.",
       "items": [
         "06",
         "14",
@@ -224,16 +228,16 @@ window.ROYAL_KOPITIAM_DATA = {
     "officialTitle": "Kedai Kopitiam Royal Oriental",
     "chineseTitle": "东方皇家",
     "chinesePinyin": "Dōng Fāng Huáng Jiā",
-    "tagline": "Classic Kopitiam & Royal Oriental Culinary Craft",
+    "tagline": "Traditional Kopitiam & Oriental Dining",
     "halalAssurance": "NO PORK • NO LARD",
     "establishedNote": "Kedai Kopitiam • Royal Oriental",
-    "shortStory": "Rooted in the warmth of classic kopitiam coffeehouses and Royal Oriental culinary craftsmanship, Royal Kopitiam brings people together over aromatic sock-brewed kopi, golden Kaya Toast, and wok-seared signatures in a breezy, sunlit sanctuary.",
+    "shortStory": "Royal Kopitiam serves traditional sock-brewed coffee, Kaya Toast, Hainan Chicken Rice, wok-fried noodles, and steamed dim sum in a 100% pork-free and lard-free kitchen.",
     "address": {
       "street": "Jl. Boulevard Raya No. 88, Blok RK-01",
       "district": "Kelapa Gading / Senopati Area",
       "city": "Jakarta, Indonesia",
       "postalCode": "14240",
-      "landmark": "Main Boulevard Corner — Easy Valet & Courtyard Parking",
+      "landmark": "Main Boulevard Corner — Courtyard & Valet Parking Available",
       "googleMapsUrl": "https://maps.google.com/?q=Royal+Kopitiam+Indonesia",
       "mapEmbedUrl": "https://www.openstreetmap.org/export/embed.html?bbox=106.815%2C-6.235%2C106.845%2C-6.215&layer=mapnik"
     },
@@ -242,7 +246,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "closeHour24": 22,
       "weekdayLabel": "Monday – Friday: 07:00 – 22:00 WIB",
       "weekendLabel": "Saturday – Sunday & Holidays: 06:30 – 23:00 WIB",
-      "breakfastNote": "Morning Kopi & Toast Ritual served from opening until late"
+      "breakfastNote": "Breakfast toast, eggs, and kopi served from opening"
     },
     "contact": {
       "whatsappNumber": "6281288889999",
@@ -260,7 +264,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "全部菜单",
       "rangeLabel": "01 – 61",
       "bannerImage": "assets/food/dish-hainan-white.jpg",
-      "description": "Explore all 61 official Royal Oriental dishes, toasts, bamboo dim sum starters, and signature drinks."
+      "description": "Complete menu of 61 dishes, toasts, dim sum starters, and drinks."
     },
     {
       "id": "signature",
@@ -268,7 +272,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "招牌名菜",
       "rangeLabel": "01 – 06",
       "bannerImage": "assets/food/dish-hainan-white.jpg",
-      "description": "Our house signatures — fragrant Nasi Lemak, silky Hainan Chicken Rice, handmade Ban Mee, and crispy Ayam Goreng Kampung."
+      "description": "House specialties including Nasi Lemak, Hainan Chicken Rice, handmade Ban Mee, and Ayam Goreng Kampung."
     },
     {
       "id": "nasi-goreng",
@@ -276,7 +280,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "特色炒饭",
       "rangeLabel": "07 – 11",
       "bannerImage": "assets/food/dish-nasgor-kampung.jpg",
-      "description": "High-heat wok-fried rice infused with smoky wok hei, aromatic spices, and generous proteins."
+      "description": "Wok-fried rice cooked to order with chicken, beef, prawn, or kampung spices."
     },
     {
       "id": "char-kway-teow",
@@ -284,7 +288,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "炒粿条",
       "rangeLabel": "12 – 14",
       "bannerImage": "assets/food/dish-ckt-prawn.jpg",
-      "description": "Flat rice noodles seared over roaring flames with dark soy, chives, bean sprouts, and your choice of chicken, beef, or prawn."
+      "description": "Flat rice noodles stir-fried over high heat with dark soy, garlic chives, bean sprouts, and egg."
     },
     {
       "id": "mee-goreng",
@@ -292,7 +296,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "招牌炒面",
       "rangeLabel": "15 – 17",
       "bannerImage": "assets/food/dish-meegoreng.jpg",
-      "description": "Springy yellow noodles tossed in our savory-sweet house spice paste with crisp greens and kerupuk."
+      "description": "Yellow wheat noodles stir-fried with savory house seasoning, greens, and crackers."
     },
     {
       "id": "curry-prata",
@@ -300,7 +304,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "咖喱与印度煎饼",
       "rangeLabel": "18 – 20",
       "bannerImage": "assets/food/dish-pratha-curry.jpg",
-      "description": "Rich, slow-simmered golden chicken curry paired with flaky layered pratha, fragrant Nasi Lemak, or warm noodles."
+      "description": "Braised chicken and potato curry served with flaky roti pratha, coconut rice, or noodles."
     },
     {
       "id": "starter",
@@ -308,7 +312,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "精选小食与点心",
       "rangeLabel": "21 – 35",
       "bannerImage": "assets/food/dish-dimsum-siomay-hakau.jpg",
-      "description": "Steamed bamboo dim sum, Har Cheong Gai chicken wings, Lumpia Semarang, flaky pratha, and crispy sharing plates."
+      "description": "Steamed dim sum baskets, prawn-paste chicken wings, Lumpia Semarang, pratha, and small plates."
     },
     {
       "id": "drink",
@@ -316,7 +320,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "传统咖啡与特饮",
       "rangeLabel": "36 – 50",
       "bannerImage": "assets/food/drink-kopi-o-c.jpg",
-      "description": "Traditional sock-brewed Kopi O & Kopi C, frothy Teh Tarik, Yuan Yang, Aren & Pandan Lattes, and refreshing house teas."
+      "description": "Sock-brewed Kopi O and Kopi C, Teh Tarik, Yuan Yang, espresso lattes, and iced teas."
     },
     {
       "id": "toast",
@@ -324,7 +328,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "传统烤面包与半熟蛋",
       "rangeLabel": "51 – 56",
       "bannerImage": "assets/food/dish-kaya-toast.jpg",
-      "description": "Crisp golden toast layered with house srikaya jam, chilled butter, Milo, peanut butter, or savory tuna mayo, plus soft-boiled eggs."
+      "description": "Toasted bread with pandan kaya, butter, Milo, peanut butter, or tuna mayo, plus soft-boiled eggs."
     },
     {
       "id": "dessert",
@@ -332,7 +336,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "精选甜品",
       "rangeLabel": "57 – 61",
       "bannerImage": "assets/food/dish-taro-grassjelly.jpg",
-      "description": "Velvety Taro Sago, silky Grass Jelly Milk, golden Fried Banana, and classic ice cream scoops."
+      "description": "Chilled Taro Sago, Grass Jelly Milk, Fried Banana, and ice cream."
     }
   ],
   "menuItems": [
@@ -349,14 +353,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Best Seller"
       ],
       "spicy": true,
-      "description": "Fragrant coconut milk rice served with a golden-crispy marinated chicken cutlet, house-made sweet-spicy sambal, crisp cucumber slices, and warm savory broth.",
+      "description": "Coconut milk rice served with a crispy marinated chicken cutlet, house sambal, sliced cucumber, and clear soup.",
       "pairings": [
         "36",
         "38",
         "51"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "02",
@@ -367,11 +371,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-02-hainan-white-chicken.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Chef's Pick"
+        "Signature"
       ],
       "spicy": false,
-      "description": "Silky poached Hainan white chicken topped with crispy golden garlic bits, served alongside aromatic ginger-poached rice, dark soy chili dip, and clear chicken soup.",
+      "description": "Poached white chicken topped with fried garlic and sesame soy, served with ginger-poached rice, chili-ginger dip, and chicken broth.",
       "pairings": [
         "37",
         "24",
@@ -389,11 +392,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-03-hainan-fried-chicken.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Best Seller"
+        "Signature"
       ],
       "spicy": false,
-      "description": "Crispy-skinned golden fried chicken cutlet over fragrant Hainan ginger-garlic rice, accompanied by tangy chili sauce and comforting broth.",
+      "description": "Crispy fried chicken cutlet served over Hainan ginger rice with house chili sauce, dark soy, and clear chicken soup.",
       "pairings": [
         "38",
         "25",
@@ -411,11 +413,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-04-ban-mee-soup.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Comfort Bowl"
+        "Signature"
       ],
       "spicy": false,
-      "description": "Handmade flat Ban Mee noodles in a rich, slow-simmered broth topped with bouncy chicken meatballs, braised mushrooms, greens, and sliced red chilies.",
+      "description": "Flat handmade wheat noodles in slow-simmered broth with chicken meatballs, braised mushrooms, greens, and sliced chili.",
       "pairings": [
         "26",
         "46",
@@ -433,18 +434,17 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-05-dry-chilli-oil-ban-mee.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Spicy"
+        "Signature"
       ],
       "spicy": true,
-      "description": "Springy Ban Mee noodles tossed dry in our aromatic house-infused roasted chilli oil, savory soy glaze, tender chicken meatballs, and crisp greens.",
+      "description": "Flat Ban Mee noodles tossed dry in roasted chili oil and soy glaze with chicken meatballs, greens, and a bowl of soup on the side.",
       "pairings": [
         "38",
         "40",
         "27"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "06",
@@ -455,11 +455,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-06-ayam-goreng-kampung.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Royal Special"
+        "Signature"
       ],
       "spicy": true,
-      "description": "Traditional spice-marinated free-range kampung chicken fried to golden perfection and topped with crunchy rempah crumbs (kremesan), steamed rice, fresh lalapan, and fiery sambal terasi.",
+      "description": "Spice-marinated free-range kampung chicken fried with crispy spiced crumbs (kremesan), served with steamed rice, fresh vegetables, and sambal.",
       "pairings": [
         "47",
         "38",
@@ -481,14 +480,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": true,
-      "description": "Homestyle kampung fried rice wok-tossed with aromatic shallots, bird's eye chili, long beans, egg, and crisp prawn crackers.",
+      "description": "Traditional kampung-style fried rice wok-tossed with shallots, green chili, long beans, egg, and prawn crackers.",
       "pairings": [
         "36",
         "47",
         "21"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "08",
@@ -502,14 +501,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "Singapore-style fragrant wok-fried rice with light golden seasoning, tender chicken, egg ribbons, and crisp seasonal vegetables.",
+      "description": "Lightly seasoned Singapore-style wok-fried rice with diced chicken, egg, and mixed vegetables.",
       "pairings": [
         "37",
         "25",
         "46"
       ],
       "kidFriendly": true,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "09",
@@ -523,7 +522,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "Smoky wok-seared fried rice loaded with tender marinated chicken slices, egg, crisp greens, pickled acar, and crackers.",
+      "description": "Wok-fried rice with sliced chicken, egg, greens, pickled cucumber acar, and crackers.",
       "pairings": [
         "38",
         "22",
@@ -541,11 +540,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-10-nasgor-beef.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Chef's Pick",
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "Rich, savory fried rice seared over high flame with tender sliced beef, caramelized soy, egg, fresh lettuce, and crispy kerupuk.",
+      "description": "Savory wok-fried rice with tender sliced beef, sweet soy, egg, lettuce, and crackers.",
       "pairings": [
         "39",
         "24",
@@ -567,14 +565,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "High-flame wok-fried rice with plump, juicy prawns, garlic, egg, scallions, and crisp crackers.",
+      "description": "Wok-fried rice with whole prawns, garlic, egg, scallions, and crisp crackers.",
       "pairings": [
         "47",
         "25",
         "57"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "12",
@@ -588,7 +586,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "Silky flat rice noodles wok-fried at high heat with tender chicken, crunchy bean sprouts, chives, egg, and our signature sweet-savory dark soy glaze.",
+      "description": "Flat rice noodles stir-fried over high heat with chicken, bean sprouts, garlic chives, egg, and dark soy sauce.",
       "pairings": [
         "36",
         "47",
@@ -610,7 +608,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "Smoky flat kway teow noodles seared with succulent sliced beef, egg, garlic chives, and crisp bean sprouts.",
+      "description": "Flat kway teow noodles wok-seared with sliced beef, egg, garlic chives, and bean sprouts.",
       "pairings": [
         "38",
         "26",
@@ -633,14 +631,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": true,
-      "description": "High-flame Char Kway Teow crowned with plump seared prawns, smoky caramelized dark soy, egg, garlic chives, and bean sprouts.",
+      "description": "Flat rice noodles wok-fried with prawns, dark soy glaze, egg, garlic chives, and bean sprouts.",
       "pairings": [
         "37",
         "25",
         "58"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "15",
@@ -654,7 +652,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": false,
-      "description": "Wok-tossed yellow noodles coated in savory house seasoning with tender chicken, egg, greens, pickled acar, and crackers.",
+      "description": "Yellow wheat noodles stir-fried with sliced chicken, egg, greens, pickled acar, and crackers.",
       "pairings": [
         "38",
         "27",
@@ -675,7 +673,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Wok Hei"
       ],
       "spicy": true,
-      "description": "Full-flavored wok-seared yellow noodles with sliced beef, aromatic spices, crisp vegetables, and prawn crackers.",
+      "description": "Wok-fried yellow noodles with sliced beef, house spice paste, vegetables, and crackers.",
       "pairings": [
         "39",
         "21",
@@ -697,14 +695,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Seafood"
       ],
       "spicy": true,
-      "description": "Springy yellow noodles wok-fried with succulent prawns, savory-spicy house sauce, choy sum, tomatoes, and crackers.",
+      "description": "Yellow noodles stir-fried with prawns, savory-spicy house sauce, choy sum, tomatoes, and crackers.",
       "pairings": [
         "47",
         "25",
         "57"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "18",
@@ -715,11 +713,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-18-nasi-lemak-curry.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Chef's Pick"
+        "Signature"
       ],
       "spicy": true,
-      "description": "Aromatic pandan-coconut Nasi Lemak paired with slow-braised chicken leg & potato curry in rich, velvety coconut rempah gravy.",
+      "description": "Pandan coconut rice served with braised chicken and potato curry in spiced coconut gravy.",
       "pairings": [
         "38",
         "45",
@@ -737,11 +734,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-19-chicken-curry-noodle.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Comfort Bowl",
         "Spicy"
       ],
       "spicy": true,
-      "description": "Warm noodles bathed in our fragrant, creamy golden curry broth with tender bone-in chicken and soft-braised potatoes.",
+      "description": "Yellow noodles served in warm coconut curry broth with bone-in chicken and braised potatoes.",
       "pairings": [
         "46",
         "47",
@@ -762,7 +758,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Best Seller"
       ],
       "spicy": true,
-      "description": "Flaky, golden-crisp layered roti pratha served hot with a generous bowl of rich house chicken curry and sambal on the side.",
+      "description": "Flaky pan-seared roti pratha served with a bowl of house chicken and potato curry.",
       "pairings": [
         "38",
         "37",
@@ -780,18 +776,17 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-21-har-cheong-gai.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Best Seller",
-        "Crispy"
+        "Best Seller"
       ],
       "spicy": false,
-      "description": "Signature fermented prawn-paste chicken wings fried to an ultra-shattering golden crunch while staying juicy inside.",
+      "description": "Crispy deep-fried chicken wings marinated in fermented prawn paste.",
       "pairings": [
         "02",
         "14",
         "47"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "22",
@@ -805,7 +800,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Crispy"
       ],
       "spicy": false,
-      "description": "Golden-crisp Oriental spring rolls stuffed with seasoned vegetables and chicken, served with sweet-tangy dipping sauce.",
+      "description": "Crispy spring rolls filled with seasoned vegetables and minced chicken, served with sweet chili dip.",
       "pairings": [
         "04",
         "38",
@@ -823,11 +818,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-23-cakwe-ice-cream.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Chef's Pick",
-        "Sweet & Savory"
+        "Sweet"
       ],
       "spicy": false,
-      "description": "Warm, crispy fried Chinese crullers (cakwe) paired with a cool, creamy scoop of vanilla ice cream and caramel drizzle.",
+      "description": "Warm fried Chinese crullers (cakwe) served with a scoop of vanilla ice cream.",
       "pairings": [
         "36",
         "41",
@@ -848,14 +842,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Dim Sum"
       ],
       "spicy": false,
-      "description": "Steamed open-top chicken & prawn dim sum dumplings served piping hot in a traditional bamboo basket.",
+      "description": "Steamed chicken and prawn dumplings served in a bamboo basket with chili oil.",
       "pairings": [
         "25",
         "36",
         "46"
       ],
       "kidFriendly": true,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "25",
@@ -870,14 +864,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Best Seller"
       ],
       "spicy": false,
-      "description": "Delicate translucent crystal dumplings filled with whole, snappy seasoned prawns, steamed fresh in bamboo baskets.",
+      "description": "Steamed translucent dumplings filled with whole seasoned prawns.",
       "pairings": [
         "24",
         "26",
         "46"
       ],
       "kidFriendly": true,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "26",
@@ -888,18 +882,17 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-26-lumpia-kulit-tahu.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Dim Sum",
-        "Crispy"
+        "Dim Sum"
       ],
       "spicy": false,
-      "description": "Savory chicken and prawn filling wrapped in delicate beancurd skin and fried until golden and flaky.",
+      "description": "Seasoned chicken and prawn wrapped in beancurd skin and fried crisp.",
       "pairings": [
         "24",
         "25",
         "37"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🦐 Contains Prawn/Seafood"
+      "seafoodLabel": "Contains Prawn"
     },
     {
       "number": "27",
@@ -913,7 +906,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Crispy"
       ],
       "spicy": false,
-      "description": "Crispy golden wonton parcels with savory seasoned filling, served with sweet chili dipping sauce.",
+      "description": "Deep-fried wonton dumplings filled with minced chicken, served with sweet chili sauce.",
       "pairings": [
         "04",
         "19",
@@ -931,10 +924,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-28-onde-onde-kacang-hijau.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Heritage Snack"
+        "Sweet"
       ],
       "spicy": false,
-      "description": "Warm sesame-crusted glutinous rice balls with a fragrant, sweet mung bean (kacang hijau) center.",
+      "description": "Sesame-coated glutinous rice balls filled with sweet mung bean paste.",
       "pairings": [
         "36",
         "37",
@@ -955,7 +948,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Kopitiam Classic"
       ],
       "spicy": false,
-      "description": "Pan-griddled flaky layered flatbread, crisp on the outside and tender within.",
+      "description": "Pan-griddled flaky layered flatbread served warm.",
       "pairings": [
         "38",
         "37",
@@ -973,11 +966,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-30-pratha-condensed-milk.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Kopitiam Classic",
         "Sweet"
       ],
       "spicy": false,
-      "description": "Hot, flaky pan-seared pratha generously drizzled with sweet creamy condensed milk.",
+      "description": "Warm flaky pratha drizzled with sweetened condensed milk.",
       "pairings": [
         "36",
         "38",
@@ -995,11 +987,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-31-lumpia-semarang.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Chef's Pick",
-        "Heritage Snack"
+        "Best Seller"
       ],
       "spicy": false,
-      "description": "Authentic Semarang-style crispy spring rolls filled with savory braised bamboo shoots (rebung) and chicken, served with sweet garlic sauce and pickled shallots.",
+      "description": "Semarang-style fried spring rolls filled with braised bamboo shoots and chicken, served with garlic sauce and pickled shallots.",
       "pairings": [
         "36",
         "46",
@@ -1017,11 +1008,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-32-crispy-mushroom.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Crispy",
         "Vegetarian Friendly"
       ],
       "spicy": false,
-      "description": "Lightly battered oyster mushrooms fried to golden crispness and tossed with savory seasoning.",
+      "description": "Battered oyster mushrooms fried crisp and lightly seasoned.",
       "pairings": [
         "47",
         "48",
@@ -1039,11 +1029,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-33-crispy-cassava.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Heritage Snack",
         "Vegetarian Friendly"
       ],
       "spicy": false,
-      "description": "Fluffy inside, golden-crisp outside — traditional fried singkong wedges ideal for sharing over kopi.",
+      "description": "Seasoned fried cassava wedges, crisp outside and soft inside.",
       "pairings": [
         "36",
         "37",
@@ -1064,7 +1053,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Crispy"
       ],
       "spicy": false,
-      "description": "Crisp golden shoestring fries lightly salted and served hot with chili and tomato dipping sauces.",
+      "description": "Salted shoestring fries served with chili and tomato sauces.",
       "pairings": [
         "40",
         "49",
@@ -1085,7 +1074,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Crispy"
       ],
       "spicy": false,
-      "description": "Thick-cut skin-on potato wedges seasoned with herbs and fried to a fluffy golden crunch.",
+      "description": "Seasoned skin-on potato wedges fried crisp.",
       "pairings": [
         "40",
         "44",
@@ -1107,7 +1096,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Kopitiam Kopi"
       ],
       "spicy": false,
-      "description": "Traditional dark-roasted kopitiam coffee pulled through a cloth sock filter for a bold, full-bodied, caramelized aroma.",
+      "description": "Traditional dark-roast kopitiam coffee brewed through a cloth filter and sweetened with cane sugar.",
       "pairings": [
         "51",
         "56",
@@ -1129,7 +1118,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Kopitiam Kopi"
       ],
       "spicy": false,
-      "description": "Smooth sock-brewed kopitiam coffee mellowed with silky evaporated milk and balanced sweetness.",
+      "description": "Sock-brewed kopitiam coffee with evaporated milk and sugar.",
       "pairings": [
         "51",
         "56",
@@ -1151,7 +1140,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Kopitiam Classic"
       ],
       "spicy": false,
-      "description": "Fragrant Ceylon black tea pulled high with creamy condensed and evaporated milk for a velvety, frothy crown.",
+      "description": "Pulled Ceylon black tea with condensed and evaporated milk.",
       "pairings": [
         "20",
         "01",
@@ -1173,7 +1162,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Kopitiam Kopi"
       ],
       "spicy": false,
-      "description": "The beloved kopitiam marriage of bold sock-brewed coffee and aromatic milk tea — rich, complex, and silky smooth.",
+      "description": "Blend of sock-brewed kopitiam coffee and pulled black milk tea.",
       "pairings": [
         "51",
         "55",
@@ -1194,7 +1183,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Best Seller"
       ],
       "spicy": false,
-      "description": "Iced creamy chocolate malt drink crowned with a generous mountain of crunchy, unblended Milo powder.",
+      "description": "Iced chocolate malt milk topped with extra Milo powder.",
       "pairings": [
         "52",
         "30",
@@ -1215,7 +1204,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Espresso Bar"
       ],
       "spicy": false,
-      "description": "Clean, aromatic double-shot espresso over hot water or ice for a crisp coffee finish.",
+      "description": "Double-shot espresso served hot or over ice.",
       "pairings": [
         "51",
         "54",
@@ -1236,7 +1225,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Espresso Bar"
       ],
       "spicy": false,
-      "description": "Rich espresso topped with velvety steamed milk and microfoam latte art.",
+      "description": "Espresso with steamed milk and textured milk foam.",
       "pairings": [
         "51",
         "55",
@@ -1257,7 +1246,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Espresso Bar"
       ],
       "spicy": false,
-      "description": "Smooth espresso blended with creamy steamed milk, served hot or over ice.",
+      "description": "Espresso with steamed or chilled fresh milk.",
       "pairings": [
         "51",
         "53",
@@ -1279,7 +1268,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Best Seller"
       ],
       "spicy": false,
-      "description": "Creamy iced latte ribboned with caramel-like Indonesian organic palm sugar (gula aren) and bold espresso.",
+      "description": "Iced espresso latte sweetened with Indonesian palm sugar (gula aren).",
       "pairings": [
         "51",
         "33",
@@ -1297,11 +1286,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/drink-45-pandan-latte.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
-        "Chef's Pick"
+        "Signature"
       ],
       "spicy": false,
-      "description": "Layered iced latte infused with fragrant house-extracted pandan leaf syrup, fresh milk, and roasted espresso.",
+      "description": "Iced espresso latte made with house pandan syrup and fresh milk.",
       "pairings": [
         "51",
         "28",
@@ -1322,7 +1310,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Refreshing"
       ],
       "spicy": false,
-      "description": "Freshly brewed aromatic house tea served hot or chilled over ice, sweetened to your preference.",
+      "description": "Freshly brewed house black tea, served hot or iced, sweet or unsweetened.",
       "pairings": [
         "02",
         "24",
@@ -1340,11 +1328,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/drink-47-ice-lemon-tea.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Refreshing",
-        "Best Seller"
+        "Refreshing"
       ],
       "spicy": false,
-      "description": "Brisk brewed black tea chilled over ice with fresh-squeezed lemon wheels for a bright, zesty lift.",
+      "description": "Iced black tea with fresh lemon juice and sliced lemon.",
       "pairings": [
         "06",
         "07",
@@ -1362,11 +1349,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/drink-48-secret-garden.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Signature",
         "Refreshing"
       ],
       "spicy": false,
-      "description": "Our signature specialty iced tea infusion blending fragrant floral notes and crisp citrus refreshment.",
+      "description": "Specialty iced tea infused with floral and citrus notes.",
       "pairings": [
         "01",
         "13",
@@ -1387,7 +1373,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Refreshing"
       ],
       "spicy": false,
-      "description": "Chilled classic carbonated soft drinks served with ice.",
+      "description": "Chilled carbonated soft drink served with ice.",
       "pairings": [
         "34",
         "35",
@@ -1404,11 +1390,9 @@ window.ROYAL_KOPITIAM_DATA = {
       "priceK": 10,
       "image": "assets/food/drink-50-bottle-water.jpg",
       "hasIndividualPhoto": true,
-      "badges": [
-        "Pure"
-      ],
+      "badges": [],
       "spicy": false,
-      "description": "Chilled or room-temperature pure mineral water.",
+      "description": "Chilled or room-temperature mineral water.",
       "pairings": [
         "01",
         "02",
@@ -1431,7 +1415,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Morning Ritual"
       ],
       "spicy": false,
-      "description": "Double-layered golden-toasted bread generously spread with slow-cooked pandan-coconut srikaya jam and slabs of cold salted butter.",
+      "description": "Toasted bread layered with house-made pandan coconut kaya jam and slices of cold salted butter.",
       "pairings": [
         "56",
         "36",
@@ -1449,11 +1433,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-52-milo-toast.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Best Seller",
         "Sweet"
       ],
       "spicy": false,
-      "description": "Warm, thick-cut toast draped in creamy condensed milk glaze and buried under a mountain of malty Milo powder.",
+      "description": "Thick-cut toast topped with condensed milk and Milo chocolate malt powder.",
       "pairings": [
         "40",
         "37",
@@ -1474,14 +1457,14 @@ window.ROYAL_KOPITIAM_DATA = {
         "Savory"
       ],
       "spicy": false,
-      "description": "Hearty toasted sandwich packed with seasoned flaky tuna, creamy mayo, melted cheese, and scallions.",
+      "description": "Toasted sandwich filled with seasoned tuna, mayonnaise, cheese, and scallions.",
       "pairings": [
         "41",
         "47",
         "34"
       ],
       "kidFriendly": false,
-      "seafoodLabel": "🐟 Contains Tuna"
+      "seafoodLabel": "Contains Tuna"
     },
     {
       "number": "54",
@@ -1495,7 +1478,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Kopitiam Classic"
       ],
       "spicy": false,
-      "description": "Crisp golden toast slathered with rich, roasted chunky peanut butter and a dusting of cocoa-cinnamon.",
+      "description": "Crisp toast spread with roasted chunky peanut butter and condensed milk.",
       "pairings": [
         "36",
         "37",
@@ -1513,10 +1496,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-55-pb-jelly-toast.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Sweet & Nutty"
+        "Sweet"
       ],
       "spicy": false,
-      "description": "Golden toasted bread layered with creamy peanut butter and bright ruby fruit preserve.",
+      "description": "Toasted bread layered with peanut butter and fruit jam.",
       "pairings": [
         "39",
         "42",
@@ -1538,7 +1521,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Morning Ritual"
       ],
       "spicy": false,
-      "description": "Two kampung-style eggs coddled to velvety perfection with runny golden yolks — season with white pepper and dark soy for dipping your Kaya Toast.",
+      "description": "Two soft-boiled kampung eggs served warm with dark soy sauce and white pepper.",
       "pairings": [
         "51",
         "36",
@@ -1560,7 +1543,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Best Seller"
       ],
       "spicy": false,
-      "description": "Chilled, velvety taro cream soup studded with translucent, chewy sago pearls.",
+      "description": "Chilled sweet taro cream with sago pearls.",
       "pairings": [
         "14",
         "06",
@@ -1581,7 +1564,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Refreshing"
       ],
       "spicy": false,
-      "description": "Cooling herbal grass jelly cubes (cincau) swimming in sweet, chilled creamy milk over crushed ice.",
+      "description": "Grass jelly cubes (cincau) served in chilled sweetened milk over ice.",
       "pairings": [
         "01",
         "18",
@@ -1599,11 +1582,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "image": "assets/food/dish-59-fried-banana.jpg",
       "hasIndividualPhoto": true,
       "badges": [
-        "Best Seller",
-        "Warm Dessert"
+        "Best Seller"
       ],
       "spicy": false,
-      "description": "Caramelized ripe bananas fried in a lacy, shattering-crisp batter — an irresistible companion to afternoon kopi.",
+      "description": "Ripe banana coated in crisp batter and fried golden.",
       "pairings": [
         "36",
         "44",
@@ -1624,7 +1606,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Sweet"
       ],
       "spicy": false,
-      "description": "A single generous scoop of classic creamy ice cream.",
+      "description": "Single scoop of classic ice cream.",
       "pairings": [
         "59",
         "51",
@@ -1645,7 +1627,7 @@ window.ROYAL_KOPITIAM_DATA = {
         "Sweet"
       ],
       "spicy": false,
-      "description": "Double scoops of chilled, creamy ice cream to finish your meal.",
+      "description": "Two scoops of classic ice cream.",
       "pairings": [
         "59",
         "52",
@@ -1656,9 +1638,9 @@ window.ROYAL_KOPITIAM_DATA = {
     }
   ],
   "ritualSectionConfig": {
-    "plaqueText": "ROYAL KOPITIAM DRINK BAR • #36 – #50",
-    "title": "Decode Your Royal Kopitiam Cup",
-    "description": "Every kopitiam regular has their signature call. Select any of our classic kopitiam brews (#36–#39) or signature iced lattes (#44–#45) from our <strong>Drink</strong> menu below to inspect its exact cup proportion and ideal food pairing."
+    "plaqueText": "COFFEE & TEA GUIDE • #36 – #45",
+    "title": "Traditional Kopitiam Coffee & Tea",
+    "description": "How our classic kopitiam cups (#36–#39) and house iced lattes (#44–#45) are prepared."
   },
   "kopiRitualGuide": [
     {
@@ -1668,24 +1650,24 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "咖啡乌",
       "price": "25 K",
       "pronunciation": "Koh-Pee Oh",
-      "tagline": "Bold, Dark & Aromatic",
+      "tagline": "Black Coffee with Sugar",
       "layers": [
         {
-          "shortLabel": "85% Dark Kopi",
-          "label": "Sock-Brewed Kopitiam Dark Roast",
+          "shortLabel": "85% Black Kopi",
+          "label": "Sock-Brewed Dark Roast Coffee",
           "pct": 80,
           "color": "#2A160D",
           "textColor": "#FFFDF8"
         },
         {
           "shortLabel": "15% Cane Sugar",
-          "label": "Aromatic Cane Sugar",
+          "label": "Cane Sugar",
           "pct": 20,
           "color": "#8B5A2B",
           "textColor": "#FFFDF8"
         }
       ],
-      "notes": "Roasted with rich caramel notes and pulled through a traditional cloth sock filter. Pure, bold, and deeply aromatic without dairy.",
+      "notes": "Dark-roast kopitiam coffee brewed through a traditional cloth filter and sweetened with cane sugar, served without milk.",
       "pairWith": "51. Kaya Toast + 56. Soft Boiled Egg (2 Pcs)"
     },
     {
@@ -1695,10 +1677,10 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "咖啡丝",
       "price": "30 K",
       "pronunciation": "Koh-Pee See",
-      "tagline": "Silky Evaporated Milk Balance",
+      "tagline": "Coffee with Evaporated Milk",
       "layers": [
         {
-          "shortLabel": "65% Sock Kopi",
+          "shortLabel": "65% Black Kopi",
           "label": "Sock-Brewed Kopitiam Coffee",
           "pct": 60,
           "color": "#3A2012",
@@ -1706,20 +1688,20 @@ window.ROYAL_KOPITIAM_DATA = {
         },
         {
           "shortLabel": "25% Evap Milk",
-          "label": "Silky Evaporated Milk",
+          "label": "Unsweetened Evaporated Milk",
           "pct": 22,
           "color": "#E8D5B7",
           "textColor": "#1D1714"
         },
         {
           "shortLabel": "10% Sugar",
-          "label": "Light Sugar Syrup",
+          "label": "Sugar Syrup",
           "pct": 18,
           "color": "#9E6B35",
           "textColor": "#FFFDF8"
         }
       ],
-      "notes": "The 'C' honours classic Hainanese kopitiam tradition (evaporated milk), creating a smoother, lighter-bodied cup than condensed milk kopi.",
+      "notes": "Prepared with evaporated milk rather than condensed milk for a smoother, less sweet cup.",
       "pairWith": "02. Hainan Chicken Rice White Chicken"
     },
     {
@@ -1729,11 +1711,11 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "拉茶",
       "price": "22 K",
       "pronunciation": "Teh Tah-Rik",
-      "tagline": "High-Pulled Frothy Milk Tea",
+      "tagline": "Pulled Milk Tea",
       "layers": [
         {
-          "shortLabel": "20% Pulled Froth",
-          "label": "Aerated Pulled Tea Foam",
+          "shortLabel": "20% Tea Foam",
+          "label": "Aerated Pulled Tea Froth",
           "pct": 22,
           "color": "#F7EBCD",
           "textColor": "#1D1714"
@@ -1746,14 +1728,14 @@ window.ROYAL_KOPITIAM_DATA = {
           "textColor": "#FFFDF8"
         },
         {
-          "shortLabel": "25% Rich Milk",
+          "shortLabel": "25% Milk",
           "label": "Condensed & Evaporated Milk",
           "pct": 24,
           "color": "#EED9AD",
           "textColor": "#1D1714"
         }
       ],
-      "notes": "Poured back and forth from a height to cool the tea and whip up a cloud-like frothy head with rich caramel-milk depth.",
+      "notes": "Black tea poured between two vessels to cool the tea and create a light frothy top.",
       "pairWith": "20. Pratha with Chicken Curry"
     },
     {
@@ -1763,7 +1745,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "鸳鸯",
       "price": "30 K",
       "pronunciation": "Yuen Yang",
-      "tagline": "Harmony of Kopi & Teh",
+      "tagline": "Coffee & Milk Tea Blend",
       "layers": [
         {
           "shortLabel": "45% Milk Tea",
@@ -1773,7 +1755,7 @@ window.ROYAL_KOPITIAM_DATA = {
           "textColor": "#FFFDF8"
         },
         {
-          "shortLabel": "35% Dark Kopi",
+          "shortLabel": "35% Black Kopi",
           "label": "Sock-Brewed Kopitiam Coffee",
           "pct": 34,
           "color": "#341C0F",
@@ -1781,13 +1763,13 @@ window.ROYAL_KOPITIAM_DATA = {
         },
         {
           "shortLabel": "20% Sweet Milk",
-          "label": "Creamy Sweetened Milk",
+          "label": "Condensed & Evaporated Milk",
           "pct": 22,
           "color": "#EFE0BF",
           "textColor": "#1D1714"
         }
       ],
-      "notes": "Fifty-fifty marriage of fragrant black milk tea and bold kopitiam coffee — floral tea briskness meets deep roasted cocoa-coffee notes.",
+      "notes": "Equal parts black milk tea and dark kopitiam coffee, served hot or over ice.",
       "pairWith": "14. Char Kway Teow Prawn"
     },
     {
@@ -1797,7 +1779,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "椰糖拿铁",
       "price": "35 K",
       "pronunciation": "Ah-Ren Lah-Tay",
-      "tagline": "Caramel Gula Aren Espresso",
+      "tagline": "Palm Sugar Iced Espresso",
       "layers": [
         {
           "shortLabel": "25% Espresso",
@@ -1808,20 +1790,20 @@ window.ROYAL_KOPITIAM_DATA = {
         },
         {
           "shortLabel": "50% Fresh Milk",
-          "label": "Chilled Creamy Fresh Milk",
+          "label": "Chilled Fresh Milk",
           "pct": 50,
           "color": "#F8EFE0",
           "textColor": "#1D1714"
         },
         {
           "shortLabel": "25% Gula Aren",
-          "label": "Organic Indonesian Palm Sugar",
+          "label": "Indonesian Palm Sugar",
           "pct": 25,
           "color": "#7A4419",
           "textColor": "#FFFDF8"
         }
       ],
-      "notes": "Creamy iced latte ribboned with smoky, caramel-like Indonesian organic palm sugar (gula aren) and a bold double espresso shot.",
+      "notes": "Iced latte made with double-shot espresso, fresh milk, and Indonesian palm sugar.",
       "pairWith": "59. Fried Banana or 33. Crispy Cassava"
     },
     {
@@ -1831,7 +1813,7 @@ window.ROYAL_KOPITIAM_DATA = {
       "chinese": "斑兰拿铁",
       "price": "25 K",
       "pronunciation": "Pan-Dan Lah-Tay",
-      "tagline": "Fragrant Pandan & Espresso",
+      "tagline": "Pandan Leaf Iced Espresso",
       "layers": [
         {
           "shortLabel": "25% Espresso",
@@ -1842,48 +1824,48 @@ window.ROYAL_KOPITIAM_DATA = {
         },
         {
           "shortLabel": "50% Fresh Milk",
-          "label": "Velvety Chilled Fresh Milk",
+          "label": "Chilled Fresh Milk",
           "pct": 50,
           "color": "#F8EFE0",
           "textColor": "#1D1714"
         },
         {
           "shortLabel": "25% Pandan",
-          "label": "House-Extracted Pandan Reduction",
+          "label": "House Pandan Syrup",
           "pct": 25,
           "color": "#1B6B32",
           "textColor": "#FFFDF8"
         }
       ],
-      "notes": "Three-layer iced specialty latte infused with aromatic house-extracted pandan leaf reduction, chilled milk, and roasted espresso.",
+      "notes": "Iced espresso latte layered with house-made pandan reduction and fresh milk.",
       "pairWith": "51. Kaya Toast or 28. Onde Onde Kacang Hijau"
     }
   ],
   "vibesSectionConfig": {
-    "plaqueText": "ATMOSPHERE & VIBES GALLERY",
-    "title": "Sunlit Mornings, Warm Timber & Shared Tables",
-    "description": "Experience the space, architecture, and table moments that define Royal Kopitiam. Click any photo to open the full-screen lightbox viewer."
+    "plaqueText": "GALLERY",
+    "title": "Dining Room & Dishes",
+    "description": "Photos of our indoor dining room, terrace seating, and dishes from the kitchen."
   },
   "galleryZones": [
     {
       "id": "all",
-      "label": "All Moments"
+      "label": "All Photos"
     },
     {
       "id": "space",
-      "label": "Space & Architecture"
+      "label": "Dining Room"
     },
     {
       "id": "morning",
-      "label": "Morning Rituals"
+      "label": "Breakfast & Kopi"
     },
     {
       "id": "culinary",
-      "label": "Wok & Table Spread"
+      "label": "Mains & Wok"
     },
     {
       "id": "evening",
-      "label": "Warm Gatherings"
+      "label": "Dim Sum & Desserts"
     }
   ],
   "galleryPhotos": [
@@ -1892,8 +1874,8 @@ window.ROYAL_KOPITIAM_DATA = {
       "zone": "space",
       "span": "wide-tall",
       "image": "assets/gallery/atmo-interior-hall.png",
-      "title": "The Royal Oriental Dining Hall",
-      "caption": "Warm timber framing, heritage green accents, and natural daylight welcoming every guest.",
+      "title": "Main Dining Room",
+      "caption": "Timber arches, louvered shutters, and marble tables in the main dining hall.",
       "slotLabel": "01 • Main Hall"
     },
     {
@@ -1901,80 +1883,80 @@ window.ROYAL_KOPITIAM_DATA = {
       "zone": "morning",
       "span": "tall",
       "image": "assets/gallery/atmo-morning-sunlight.png",
-      "title": "Morning Sunlight & Kopi Ritual",
-      "caption": "Golden Kaya Toast, soft-boiled kampung eggs, and aromatic Kopi O on classic marble tables.",
-      "slotLabel": "02 • Morning Table"
+      "title": "Morning Kaya Toast & Kopi",
+      "caption": "Kaya Toast, soft-boiled eggs, and Kopi O served from 07:00.",
+      "slotLabel": "02 • Breakfast"
     },
     {
       "id": "gal-03",
       "zone": "space",
       "span": "wide",
       "image": "assets/gallery/atmo-veranda-seating.png",
-      "title": "Sunlit Veranda & Louvered Terrace",
-      "caption": "Breezy semi-outdoor seating with tall heritage green timber shutters, dappled daylight, and marble bistro tables.",
-      "slotLabel": "03 • Veranda Seating"
+      "title": "Veranda Terrace Seating",
+      "caption": "Semi-outdoor terrace tables along the louvered corridor.",
+      "slotLabel": "03 • Terrace"
     },
     {
       "id": "gal-04",
       "zone": "morning",
       "span": "normal",
       "image": "assets/gallery/atmo-kopi-pour.png",
-      "title": "High-Pour Kopitiam Kopi Craft",
-      "caption": "Rich dark-roasted coffee poured hot from a long-spout brass pot into classic floral porcelain cups.",
-      "slotLabel": "04 • Kopi Craft"
+      "title": "Sock-Brewed Kopi",
+      "caption": "Hot kopitiam coffee poured from a long-spout brass pot into porcelain cups.",
+      "slotLabel": "04 • Kopi Bar"
     },
     {
       "id": "gal-05",
       "zone": "evening",
       "span": "normal",
       "image": "assets/gallery/atmo-family-table.png",
-      "title": "Round-Table Gathering Feast",
-      "caption": "Steaming bamboo dim sum baskets, Hainan Chicken Rice, Teh Tarik, and Kaya Toast shared around the marble table.",
-      "slotLabel": "05 • Shared Table"
+      "title": "Sharing Table",
+      "caption": "Dim sum baskets, Hainan Chicken Rice, Teh Tarik, and Kaya Toast for the table.",
+      "slotLabel": "05 • Sharing Table"
     },
     {
       "id": "gal-06",
       "zone": "culinary",
       "span": "wide",
       "image": "assets/food/dish-hainan-white.jpg",
-      "title": "Silky Hainan Chicken Rice (#02)",
-      "caption": "Poached white chicken drizzled with fragrant sesame soy and crispy garlic alongside ginger rice and soup.",
-      "slotLabel": "06 • Royal Signature"
+      "title": "Hainan Chicken Rice (#02)",
+      "caption": "Poached white chicken with sesame soy, fried garlic, ginger rice, and clear broth.",
+      "slotLabel": "06 • Dish #02"
     },
     {
       "id": "gal-07",
       "zone": "morning",
       "span": "normal",
       "image": "assets/food/dish-kaya-toast.jpg",
-      "title": "Charcoal-Grilled Kaya Butter Toast (#51)",
-      "caption": "Crisp golden toast layered with house-steamed pandan srikaya jam and thick slabs of cold butter.",
-      "slotLabel": "07 • Morning Toast"
+      "title": "Kaya Butter Toast (#51)",
+      "caption": "Toasted bread with pandan srikaya jam and cold salted butter.",
+      "slotLabel": "07 • Dish #51"
     },
     {
       "id": "gal-08",
       "zone": "morning",
       "span": "normal",
       "image": "assets/food/dish-soft-boiled-eggs.jpg",
-      "title": "Kampung Soft-Boiled Eggs (#56)",
-      "caption": "Velvety runny yolks seasoned with dark soy sauce and white pepper on a porcelain saucer.",
-      "slotLabel": "08 • Morning Ritual"
+      "title": "Soft-Boiled Kampung Eggs (#56)",
+      "caption": "Served warm with dark soy sauce and white pepper.",
+      "slotLabel": "08 • Dish #56"
     },
     {
       "id": "gal-09",
       "zone": "culinary",
       "span": "wide",
       "image": "assets/food/dish-ckt-prawn.jpg",
-      "title": "High-Flame Wok Hei Char Kway Teow (#14)",
-      "caption": "Flat rice noodles seared over roaring flames with plump prawns, dark soy glaze, garlic chives, and bean sprouts.",
-      "slotLabel": "09 • Wok Hei Craft"
+      "title": "Char Kway Teow Prawn (#14)",
+      "caption": "Flat rice noodles stir-fried with prawns, dark soy, garlic chives, and bean sprouts.",
+      "slotLabel": "09 • Dish #14"
     },
     {
       "id": "gal-10",
       "zone": "evening",
       "span": "normal",
       "image": "assets/food/dish-dimsum-siomay-hakau.jpg",
-      "title": "Steaming Bamboo Dim Sum Baskets (#24–#26)",
-      "caption": "Translucent Prawn Hakau, Chicken-Prawn Siomay, and crispy Lumpia Kulit Tahu with house chili oil.",
+      "title": "Steamed Dim Sum (#24–#26)",
+      "caption": "Prawn Hakau, Chicken-Prawn Siomay, and crispy Lumpia Kulit Tahu.",
       "slotLabel": "10 • Dim Sum"
     },
     {
@@ -1982,18 +1964,18 @@ window.ROYAL_KOPITIAM_DATA = {
       "zone": "culinary",
       "span": "normal",
       "image": "assets/food/dish-pratha-curry.jpg",
-      "title": "Flaky Layered Pratha & Golden Curry (#20)",
-      "caption": "Pan-griddled crisp roti pratha paired with a rich bowl of slow-simmered chicken and potato curry.",
-      "slotLabel": "11 • Curry & Prata"
+      "title": "Pratha with Chicken Curry (#20)",
+      "caption": "Flaky layered roti pratha served with chicken and potato curry.",
+      "slotLabel": "11 • Dish #20"
     },
     {
       "id": "gal-12",
       "zone": "morning",
       "span": "wide",
       "image": "assets/food/drink-kopi-o-c.jpg",
-      "title": "Traditional Floral Porcelain Kopi O & Kopi C (#36–#37)",
-      "caption": "Sock-brewed dark kopitiam coffee served steaming hot in classic green-and-white porcelain cups.",
-      "slotLabel": "12 • Kopitiam Cups"
+      "title": "Kopi O & Kopi C (#36–#37)",
+      "caption": "Traditional kopitiam coffee served in classic porcelain cups.",
+      "slotLabel": "12 • Drinks #36–#37"
     },
     {
       "id": "gal-13",
@@ -2001,133 +1983,133 @@ window.ROYAL_KOPITIAM_DATA = {
       "span": "normal",
       "image": "assets/food/dish-ayam-kampung.jpg",
       "title": "Nasi Ayam Goreng Kampung (#06)",
-      "caption": "Spice-marinated kampung chicken crowned with airy golden rempah crumbs and fiery sambal terasi.",
-      "slotLabel": "13 • Kampung Special"
+      "caption": "Fried kampung chicken with spiced crumbs, rice, vegetables, and sambal.",
+      "slotLabel": "13 • Dish #06"
     },
     {
       "id": "gal-14",
       "zone": "culinary",
       "span": "normal",
       "image": "assets/food/dish-meegoreng.jpg",
-      "title": "Savory Mee Goreng Prawn (#17)",
-      "caption": "Springy yellow noodles wok-tossed with juicy prawns, choy sum greens, tomatoes, and crispy kerupuk.",
-      "slotLabel": "14 • Wok Noodles"
+      "title": "Mee Goreng Prawn (#17)",
+      "caption": "Stir-fried yellow noodles with prawns, greens, tomatoes, and crackers.",
+      "slotLabel": "14 • Dish #17"
     },
     {
       "id": "gal-15",
       "zone": "evening",
       "span": "normal",
       "image": "assets/food/drink-aren-pandan-latte.jpg",
-      "title": "Layered Aren & Pandan Iced Lattes (#44–#45)",
-      "caption": "House-crafted iced espresso lattes layered with organic Gula Aren palm sugar and fragrant pandan.",
-      "slotLabel": "15 • Specialty Lattes"
+      "title": "Aren & Pandan Iced Lattes (#44–#45)",
+      "caption": "Iced espresso lattes made with palm sugar and pandan leaf syrup.",
+      "slotLabel": "15 • Drinks #44–#45"
     },
     {
       "id": "gal-16",
       "zone": "evening",
       "span": "normal",
       "image": "assets/food/dish-taro-grassjelly.jpg",
-      "title": "Chilled Taro Sago & Grass Jelly Milk (#57–#58)",
-      "caption": "Velvety purple taro sago pearls and cooling herbal grass jelly in sweet milk to finish the evening.",
-      "slotLabel": "16 • Sweet Finishes"
+      "title": "Taro Sago & Grass Jelly Milk (#57–#58)",
+      "caption": "Chilled taro sago cream and herbal grass jelly in sweetened milk.",
+      "slotLabel": "16 • Desserts #57–#58"
     }
   ],
   "faqSection": {
-    "plaqueText": "QUICK FACTS & GUEST FAQ",
-    "title": "Everything You Need to Know Before Visiting",
-    "description": "At-a-glance dining facts, halal-friendly assurance, price guide, and answers to common guest questions about Royal Kopitiam.",
+    "plaqueText": "INFORMATION",
+    "title": "Dining Information & Common Questions",
+    "description": "Details on our dietary policy, menu pricing, seating, and facilities.",
     "factCard": {
-      "eyebrow": "AT-A-GLANCE OVERVIEW",
+      "eyebrow": "DINING DETAILS",
       "title": "Kedai Kopitiam • 东方皇家 • Royal Oriental",
       "badge": "NO PORK • NO LARD",
       "facts": [
         {
           "label": "Dietary Policy",
-          "value": "<strong>100% No Pork &amp; No Lard</strong> across all 61 dishes, dim sum, and broths"
+          "value": "<strong>100% No Pork &amp; No Lard</strong> across all 61 food and drink items"
         },
         {
-          "label": "Menu Size & Categories",
+          "label": "Menu Categories",
           "value": "61 items across 9 categories (Signature Dishes, Nasi Goreng, Char Kway Teow, Mee Goreng, Curry &amp; Prata, Starter, Drink, Toast, Dessert)"
         },
         {
-          "label": "Price Range (IDR)",
-          "value": "<strong>Rp 10.000 – Rp 55.000</strong> (10 K – 55 K • Mains 35 K–55 K • Drinks 10 K–35 K)"
+          "label": "Price Range",
+          "value": "<strong>Rp 10.000 – Rp 55.000</strong> (Mains 35K–55K • Starters 20K–42K • Drinks 10K–35K)"
         },
         {
-          "label": "Morning Favorites",
-          "value": "#51 Kaya Toast (26 K), #56 Soft Boiled Egg (15 K), #36 Kopi O (25 K), #37 Kopi C (30 K)"
+          "label": "Breakfast Items",
+          "value": "#51 Kaya Toast (26K), #56 Soft Boiled Egg (15K), #36 Kopi O (25K), #37 Kopi C (30K)"
         },
         {
-          "label": "Signature Mains",
-          "value": "#01 Nasi Lemak Cutlet (40 K), #02 Hainan Chicken Rice (40 K), #06 Ayam Goreng Kampung (55 K), #14 Char Kway Teow Prawn (45 K)"
+          "label": "Popular Mains",
+          "value": "#01 Nasi Lemak Cutlet (40K), #02 Hainan Chicken Rice (40K), #06 Ayam Goreng Kampung (55K), #14 Char Kway Teow Prawn (45K)"
         },
         {
-          "label": "Bamboo Dim Sum",
-          "value": "#24 Siomay (25 K), #25 Hakau Prawn (25 K), #26 Lumpia Kulit Tahu (25 K)"
+          "label": "Dim Sum",
+          "value": "#24 Siomay (25K), #25 Hakau Prawn (25K), #26 Lumpia Kulit Tahu (25K)"
         },
         {
-          "label": "Guest Amenities",
-          "value": "Air-conditioned dining hall, sunlit veranda, free Wi-Fi &amp; power outlets, Musholla, and courtyard parking"
+          "label": "Facilities",
+          "value": "Indoor AC dining room, outdoor terrace, VIP room, Wi-Fi, power outlets, Musholla, and parking"
         }
       ]
     },
     "faqs": [
       {
-        "question": "Is Royal Kopitiam 100% Halal-Friendly (No Pork, No Lard)?",
-        "answer": "Yes. Every single item on the <strong>Royal Kopitiam (Kedai Kopitiam Royal Oriental)</strong> menu (#01 through #61) is prepared strictly <strong>100% No Pork and No Lard</strong>. Our dim sum dumplings (<strong>#24 Siomay</strong>, <strong>#25 Hakau Prawn</strong>, <strong>#26 Lumpia Kulit Tahu</strong>), slow-simmered Ban Mee broths, and high-flame wok sauces are crafted exclusively with chicken, beef, prawn, and fresh vegetables.",
+        "question": "Is Royal Kopitiam 100% No Pork and No Lard?",
+        "answer": "Yes. Every item on our menu (#01 through #61) is prepared strictly without pork or lard. All dim sum (#24 Siomay, #25 Hakau Prawn, #26 Lumpia Kulit Tahu), broths, and wok sauces use only chicken, beef, prawn, and vegetable ingredients.",
         "open": true
       },
       {
-        "question": "What are the must-order signature dishes for first-time guests?",
-        "answer": "For a classic morning visit, start with <strong>#51 Kaya Toast (26 K)</strong>, <strong>#56 Soft Boiled Egg 2 Pcs (15 K)</strong>, and <strong>#36 Kopi O (25 K)</strong> or <strong>#37 Kopi C (30 K)</strong>. For lunch or dinner, our top-ordered mains are <strong>#01 Nasi Lemak with Fried Chicken Cutlet (40 K)</strong>, <strong>#02 Hainan Chicken Rice White Chicken (40 K)</strong>, <strong>#06 Nasi Ayam Goreng Kampung (55 K)</strong>, smoky <strong>#14 Char Kway Teow Prawn (45 K)</strong>, and <strong>#20 Pratha with Chicken Curry (42 K)</strong>.",
+        "question": "What dishes do you recommend for first-time guests?",
+        "answer": "For breakfast, we recommend #51 Kaya Toast (26K), #56 Soft Boiled Egg (15K), and #36 Kopi O (25K). For lunch or dinner, our most ordered dishes are #01 Nasi Lemak with Fried Chicken Cutlet (40K), #02 Hainan Chicken Rice White Chicken (40K), #06 Nasi Ayam Goreng Kampung (55K), #14 Char Kway Teow Prawn (45K), and #20 Pratha with Chicken Curry (42K).",
         "open": false
       },
       {
-        "question": "How much does a typical meal cost at Royal Kopitiam?",
-        "answer": "Our menu ranges from <strong>10 K to 55 K (Rp 10.000 – Rp 55.000)</strong>. A complete morning breakfast set of Kaya Toast, Soft Boiled Eggs, and Kopi O is just <strong>66 K (Rp 66.000)</strong>, while a hearty lunch or dinner main dish with a specialty drink typically costs between <strong>60 K and 80 K (Rp 60.000 – Rp 80.000)</strong> per person.",
+        "question": "How much does a meal cost per person?",
+        "answer": "Individual items range from Rp 10.000 to Rp 55.000. A breakfast set of Kaya Toast, Soft Boiled Eggs, and Kopi O is Rp 66.000, and a main dish with a drink typically comes to Rp 60.000–Rp 80.000 per person.",
         "open": false
       },
       {
         "question": "What is the difference between Kopi O, Kopi C, Teh Tarik, and Yuan Yang?",
-        "answer": "<strong>#36 Kopi O (25 K)</strong> is dark sock-brewed coffee sweetened with cane sugar (no dairy). <strong>#37 Kopi C (30 K)</strong> adds silky evaporated milk for a smooth, balanced cup. <strong>#38 Teh Tarik (22 K)</strong> is Ceylon black tea pulled high with condensed and evaporated milk for a frothy top. <strong>#39 Yuan Yang (30 K)</strong> combines rich sock-brewed coffee with pulled milk tea in one cup. We also serve modern iced signatures like <strong>#44 Aren Latte (35 K)</strong> and <strong>#45 Pandan Latte (25 K)</strong>.",
+        "answer": "#36 Kopi O (25K) is black sock-brewed coffee with sugar and no milk. #37 Kopi C (30K) is coffee with evaporated milk and sugar. #38 Teh Tarik (22K) is pulled black tea with condensed and evaporated milk. #39 Yuan Yang (30K) combines sock-brewed coffee and milk tea.",
         "open": false
       },
       {
-        "question": "Does Royal Kopitiam have Wi-Fi, power outlets, a Musholla, and group seating?",
-        "answer": "Yes. We offer both an air-conditioned Royal Oriental dining hall and a breezy, sunlit veranda with round marble family tables and 2–4 person bistro tables. Guests enjoy complimentary high-speed Wi-Fi, accessible power outlets, a clean Musholla (prayer room), and convenient courtyard parking.",
+        "question": "Do you have Wi-Fi, a Musholla, and private group seating?",
+        "answer": "Yes. We provide indoor air-conditioned seating, outdoor terrace tables, a private VIP room, free Wi-Fi, power outlets, a Musholla (prayer room), and on-site parking.",
         "open": false
       }
     ]
   },
   "visitSectionConfig": {
-    "plaqueText": "VISIT ROYAL KOPITIAM",
-    "title": "Your Table Is Waiting — Morning Until Night",
-    "description": "Drop by for early-morning Kopi O and Kaya Toast, a midday Hainan Chicken Rice lunch, or an unhurried evening feast with family and friends.",
-    "reserveBtnText": "📅 Reserve a Table (10s)",
-    "mapsBtnText": "Open in Google Maps ↗",
-    "whatsappBtnText": "Chat via WhatsApp",
+    "plaqueText": "LOCATION & HOURS",
+    "title": "Visit Royal Kopitiam",
+    "description": "Open daily for morning kopi and toast, lunch, afternoon tea, and dinner.",
+    "reserveBtnText": "Reserve a Table",
+    "mapsBtnText": "Open in Google Maps",
+    "whatsappBtnText": "Contact via WhatsApp",
     "amenities": [
       {
-        "title": "✦ 100% No Pork • No Lard",
-        "description": "Every dish, broth, dim sum, and wok sauce is strictly pork-free and lard-free."
+        "title": "100% No Pork • No Lard",
+        "description": "All dishes, broths, dim sum, and sauces are prepared without pork or lard."
       },
       {
-        "title": "☀️ Indoor & Breezy Veranda",
-        "description": "Air-conditioned heritage dining hall plus sunlit semi-outdoor terrace tables."
+        "title": "Indoor, Outdoor & VIP Room",
+        "description": "Air-conditioned main hall, semi-outdoor terrace, and private room for groups."
       },
       {
-        "title": "📶 Wi-Fi & Power Outlets",
-        "description": "Comfortable marble tables with high-speed Wi-Fi for morning work or casual meetings."
+        "title": "Wi-Fi & Power Outlets",
+        "description": "High-speed Wi-Fi and accessible power sockets at dining tables."
       },
       {
-        "title": "🕌 Musholla & Easy Parking",
-        "description": "Clean prayer room facilities and generous car & motorcycle parking space."
+        "title": "Musholla & Parking",
+        "description": "Clean prayer room on site with car and motorcycle parking."
       }
     ]
   },
   "reservationModalConfig": {
-    "eyebrow": "INSTANT WHATSAPP TABLE BOOKING • 东方皇家",
-    "title": "Reserve Your Table at Royal Kopitiam",
+    "eyebrow": "TABLE RESERVATION • 东方皇家",
+    "title": "Reserve a Table",
     "defaultPax": 4,
     "minPax": 1,
     "maxPax": 100,
@@ -2144,62 +2126,62 @@ window.ROYAL_KOPITIAM_DATA = {
     "seatingOptions": [
       {
         "value": "Indoor",
-        "label": "❄️ Indoor"
+        "label": "Indoor"
       },
       {
         "value": "Outdoor",
-        "label": "🌿 Outdoor"
+        "label": "Outdoor"
       },
       {
         "value": "VIP Room",
-        "label": "👑 VIP Room"
+        "label": "VIP Room"
       }
     ],
-    "notesPlaceholder": "e.g., Need 1 baby chair, pre-order #02 Hainan Chicken Rice...",
-    "greetingLine": "Hello Royal Kopitiam (东方皇家)! I would like to reserve a table:",
-    "closingLine": "Please let me know if this table is available. Thank you!"
+    "notesPlaceholder": "Optional: baby chair, high chair, or dish pre-order...",
+    "greetingLine": "Hello Royal Kopitiam (东方皇家), I would like to reserve a table:",
+    "closingLine": "Please let me know if this table is available. Thank you."
   },
   "footerConfig": {
     "logo": "assets/brand/logo_royal_kopitiam.png",
     "title": "Royal Kopitiam",
     "subtitle": "东方皇家 • KEDAI KOPITIAM ROYAL ORIENTAL",
-    "description": "Celebrating the warmth of classic kopitiam traditions and Royal Oriental culinary craftsmanship — from morning Kaya Toast & Kopi O to smoky wok-fired favorites.",
+    "description": "Traditional kopitiam coffee, Kaya Toast, Hainan Chicken Rice, wok-fried noodles, and steamed dim sum. Strictly 100% No Pork, No Lard.",
     "badgeText": "NO PORK • NO LARD",
-    "navColumnTitle": "Quick Navigation",
+    "navColumnTitle": "Navigation",
     "navLinks": [
       {
-        "label": "Our Story & Heritage",
+        "label": "About Us",
         "href": "#story"
       },
       {
-        "label": "Explore Full Menu (01–61)",
+        "label": "Full Menu (01–61)",
         "href": "#menu"
       },
       {
-        "label": "Kopi, Teh & Drink Bar",
+        "label": "Coffee & Tea Guide",
         "href": "#ritual"
       },
       {
-        "label": "Atmosphere & Vibes Gallery",
+        "label": "Dining Room Gallery",
         "href": "#vibes"
       },
       {
-        "label": "Quick Facts & Guest FAQ",
+        "label": "Information & FAQ",
         "href": "#faq"
       },
       {
-        "label": "Location & Operating Hours",
+        "label": "Location & Hours",
         "href": "#visit"
       }
     ],
-    "highlightsColumnTitle": "Signature Highlights",
+    "highlightsColumnTitle": "Menu Highlights",
     "highlights": [
-      "#01 Nasi Lemak Fried Chicken Cutlet — 40 K",
-      "#02 Hainan Chicken Rice White — 40 K",
-      "#06 Nasi Ayam Goreng Kampung — 55 K",
-      "#14 Char Kway Teow Prawn — 45 K",
-      "#36 Kopi O (25 K) & #37 Kopi C (30 K)",
-      "#51 Kaya Toast (26 K) & #56 Soft Boiled Egg (15 K)"
+      "#01 Nasi Lemak Fried Chicken Cutlet — 40K",
+      "#02 Hainan Chicken Rice White — 40K",
+      "#06 Nasi Ayam Goreng Kampung — 55K",
+      "#14 Char Kway Teow Prawn — 45K",
+      "#36 Kopi O (25K) & #37 Kopi C (30K)",
+      "#51 Kaya Toast (26K) & #56 Soft Boiled Egg (15K)"
     ],
     "copyrightText": "© 2026 Royal Kopitiam (Kedai Kopitiam 东方皇家 Royal Oriental). All rights reserved.",
     "bottomRightText": "100% No Pork • No Lard"

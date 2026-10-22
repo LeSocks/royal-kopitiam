@@ -1535,10 +1535,24 @@ a {
   justify-content: space-between;
   gap: 0.5rem;
   padding-top: 0.65rem;
-  border-top: 1px dashed var(--border-warm);
+  border-top: 1px solid var(--border-warm);
   font-size: 0.78rem;
   font-weight: 700;
   color: var(--royal-red);
+}
+
+.board-spicy-label {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.06rem 0.38rem;
+  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--royal-red-tint);
+  color: var(--royal-red);
+  vertical-align: middle;
 }
 
 /* Mode 2: Classic Kopitiam Menu Board List View */
@@ -2551,8 +2565,8 @@ dialog.royal-modal::backdrop {
 
 .res-preview-box {
   background: var(--royal-cream);
-  border: 1.5px dashed var(--royal-green);
-  border-radius: 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: 12px;
   padding: 0.8rem 1rem;
 }
 

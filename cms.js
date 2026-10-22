@@ -9,25 +9,18 @@
 (function () {
   "use strict";
 
-  const CMS_STORAGE_KEY = "ROYAL_KOPITIAM_CMS_DATA_V1";
-  const CMS_LOCAL_HISTORY_KEY = "ROYAL_KOPITIAM_CMS_HISTORY_V1";
+  const CMS_STORAGE_KEY = "ROYAL_KOPITIAM_CMS_DATA_V2";
+  const CMS_LOCAL_HISTORY_KEY = "ROYAL_KOPITIAM_CMS_HISTORY_V2";
 
   const BADGE_PRESETS = [
     "Signature",
     "Best Seller",
     "Chef's Pick",
-    "Wok Hei",
     "Seafood",
-    "Morning Ritual",
-    "Kopitiam Kopi",
-    "Kopitiam Classic",
+    "Breakfast",
+    "Traditional Kopi",
     "Dim Sum",
-    "Comfort Bowl",
-    "Royal Special",
     "Crispy",
-    "Refreshing",
-    "Heritage Snack",
-    "Espresso Bar",
     "Sweet",
     "Savory",
     "Vegetarian Friendly"
@@ -211,7 +204,7 @@
         const json = await res.json();
         if (json.ok) {
           await fetchHistoryList();
-          showToast("✅ Saved to siteData.js on disk & published live!");
+          showToast("Saved to siteData.js on disk & published live!");
           if (cmsState.activeTab === "history") renderActiveTab();
           return;
         }
@@ -219,7 +212,7 @@
         console.warn("Server save fallback:", err);
       }
     }
-    showToast("✅ Saved to browser storage & updated live!");
+    showToast("Saved to browser storage & updated live!");
     if (cmsState.activeTab === "history") renderActiveTab();
   }
 
@@ -250,7 +243,7 @@
               if (Array.isArray(json.assets)) {
                 cmsState.projectAssets = json.assets;
               }
-              showToast(`📸 Uploaded & saved to ${json.path}`);
+              showToast(`Uploaded & saved to ${json.path}`);
               resolve(json.path);
               return;
             }
@@ -258,7 +251,7 @@
             console.warn("Image upload fallback to Data URL:", e);
           }
         }
-        showToast("📸 Image loaded into template!");
+        showToast("Image loaded into template!");
         resolve(dataUrl);
       };
       reader.readAsDataURL(file);
@@ -293,7 +286,7 @@
             />
             <div class="cms-img-picker__btns">
               <label class="cms-btn cms-btn--green cms-btn--sm" style="cursor: pointer;">
-                📁 Upload Photo
+                Upload Photo
                 <input
                   type="file"
                   accept="image/*"
@@ -309,7 +302,7 @@
                 data-open-asset-lib="${escHtml(id)}"
                 data-asset-folder="${escHtml(folder)}"
               >
-                🖼️ Choose from Library
+                Choose from Library
               </button>
             </div>
           </div>
@@ -454,14 +447,14 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">🎨 Header, Navigation & Brand Theme</h2>
+          <h2 class="cms-section-title">Header, Navigation & Brand Theme</h2>
           <p class="cms-section-desc">Customize the top navigation bar, brand logo, section visibility, and color palette.</p>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🏛️ Header Brand Identity & Status Bar</div>
+          <div class="cms-card__title">Header Brand Identity & Status Bar</div>
         </div>
         ${renderImagePickerField({
           id: "headerLogo",
@@ -504,7 +497,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🧭 Top Navigation Bar Links</div>
+          <div class="cms-card__title">Top Navigation Bar Links</div>
           <button type="button" class="cms-btn cms-btn--green cms-btn--sm" id="cmsAddHeaderNavBtn">+ Add Nav Link</button>
         </div>
         <div id="cmsHeaderNavList">
@@ -517,7 +510,7 @@
                 <div style="display: flex; gap: 0.25rem;">
                   <button type="button" class="cms-btn cms-btn--sm" data-hnav-up="${idx}" title="Move Up">↑</button>
                   <button type="button" class="cms-btn cms-btn--sm" data-hnav-down="${idx}" title="Move Down">↓</button>
-                  <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-hnav-del="${idx}" title="Remove">✕</button>
+                  <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-hnav-del="${idx}" title="Remove">×</button>
                 </div>
               </div>
             `
@@ -528,7 +521,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">👁️ Page Section Visibility (Show / Hide Sections)</div>
+          <div class="cms-card__title">Page Section Visibility (Show / Hide Sections)</div>
         </div>
         <div class="cms-grid-2">
           ${sectionsList
@@ -546,7 +539,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🎨 Brand Color Palette</div>
+          <div class="cms-card__title">Brand Color Palette</div>
           <button type="button" class="cms-btn cms-btn--sm" id="cmsResetColorsBtn">Reset Default Colors</button>
         </div>
         <div class="cms-grid-3">
@@ -611,7 +604,7 @@
       t.royalCreamLight = "#fdfaf3";
       triggerLiveSiteUpdate();
       renderHeaderTab(ws);
-      showToast("🎨 Restored default Royal Kopitiam color palette");
+      showToast("Restored default Royal Kopitiam color palette");
     });
 
     ws.querySelectorAll("[data-vis-toggle]").forEach((chk) => {
@@ -696,14 +689,14 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">🏛️ Hero Banner & Visual Stage</h2>
+          <h2 class="cms-section-title">Hero Banner & Visual Stage</h2>
           <p class="cms-section-desc">Edit the top hero copy, badges, CTA buttons, key stats, 3 showcase photos, and bottom strip.</p>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🏷️ Hero Badges, Logos & Headline</div>
+          <div class="cms-card__title">Hero Badges, Logos & Headline</div>
         </div>
         <div class="cms-grid-3">
           <div class="cms-field">
@@ -779,7 +772,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🖼️ Hero 3 Visual Stage Photo Panels</div>
+          <div class="cms-card__title">Hero 3 Visual Stage Photo Panels</div>
         </div>
         ${hero.visualPanels
           .map(
@@ -823,7 +816,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📊 Hero Key Stats & Bottom Signature Strip</div>
+          <div class="cms-card__title">Hero Key Stats & Bottom Signature Strip</div>
         </div>
         <div class="cms-label" style="margin-bottom: 0.45rem;">3 Hero Stat Counters</div>
         ${hero.stats
@@ -949,14 +942,14 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">📜 Our Story, Collage Photos & Heritage Pillars</h2>
+          <h2 class="cms-section-title">Our Story, Collage Photos & Heritage Pillars</h2>
           <p class="cms-section-desc">Edit the editorial story text, 5 collage images/crests, and 4 pillar cards.</p>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">✍️ Story Editorial Copy</div>
+          <div class="cms-card__title">Story Editorial Copy</div>
         </div>
         <div class="cms-field">
           <label class="cms-label">Eyebrow Label</label>
@@ -978,7 +971,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📸 Left Photographic Collage & Brand Crests</div>
+          <div class="cms-card__title">Left Photographic Collage & Brand Crests</div>
         </div>
         ${renderImagePickerField({
           id: "storyMainPhoto",
@@ -1021,7 +1014,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🏛️ Story Pillar Cards</div>
+          <div class="cms-card__title">Story Pillar Cards</div>
           <button type="button" class="cms-btn cms-btn--green cms-btn--sm" id="cmsAddStoryPillarBtn">+ Add Pillar</button>
         </div>
         ${s.pillars
@@ -1105,7 +1098,7 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">🍱 Curated Packages & Combos</h2>
+          <h2 class="cms-section-title">Curated Packages & Combos</h2>
           <p class="cms-section-desc">Create, edit, or reorder combo packages. Pick included dishes visually — the photo mosaic and item pills update automatically!</p>
         </div>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddPackageBtn">+ Add New Package</button>
@@ -1123,7 +1116,7 @@
             <div class="cms-card">
               <div class="cms-card__head">
                 <div class="cms-card__title">
-                  <span>📦 Package #${idx + 1}: ${escHtml(pkg.title)}</span>
+                  <span>Package #${idx + 1}: ${escHtml(pkg.title)}</span>
                   <span style="background: #0f5922; color: #fff; padding: 0.15rem 0.5rem; border-radius: 999px; font-size: 0.72rem;">
                     ${displayPrice} K
                   </span>
@@ -1171,7 +1164,7 @@
 
                 <label style="display: flex; align-items: center; gap: 0.45rem; font-size: 0.78rem; font-weight: 800; padding: 0.5rem; background: #f9f4e8; border-radius: 8px; border: 1px solid #dfd0b8; cursor: pointer;">
                   <input type="checkbox" data-pkg-featured="${idx}" ${pkg.featured ? "checked" : ""} />
-                  <span>★ Featured Gold Border</span>
+                  <span>Featured Gold Border</span>
                 </label>
               </div>
 
@@ -1182,7 +1175,7 @@
                 </label>
                 <div class="cms-field" style="margin-bottom: 0;">
                   <label class="cms-label">Book Button Label</label>
-                  <input type="text" class="cms-input" data-pkg-reslabel="${idx}" value="${escHtml(pkg.reserveBtnText || "Book Table →")}" />
+                  <input type="text" class="cms-input" data-pkg-reslabel="${idx}" value="${escHtml(pkg.reserveBtnText || "Reserve Table")}" />
                 </div>
                 <div class="cms-field" style="margin-bottom: 0;">
                   <label class="cms-label">Preset Guests (Pax)</label>
@@ -1203,7 +1196,7 @@
                         <span>#${escHtml(dish.number)} ${escHtml(dish.name)} (${dish.priceK}K)</span>
                         <button type="button" data-pkg-item-left="${idx}:${dIdx}" title="Move Earlier">←</button>
                         <button type="button" data-pkg-item-right="${idx}:${dIdx}" title="Move Later">→</button>
-                        <button type="button" data-pkg-item-rm="${idx}:${dish.number}" title="Remove Dish">✕</button>
+                        <button type="button" data-pkg-item-rm="${idx}:${dish.number}" title="Remove Dish">×</button>
                       </span>
                     `
                     )
@@ -1230,20 +1223,20 @@
     ws.querySelector("#cmsAddPackageBtn")?.addEventListener("click", () => {
       pkgs.push({
         id: "pkg-" + Date.now(),
-        eyebrow: "✨ SPECIAL PACKAGE SET",
+        eyebrow: "SPECIAL PACKAGE SET",
         title: "New Royal Kopitiam Set",
         priceK: 65,
         autoPrice: true,
         featured: false,
         showReserveBtn: true,
-        reserveBtnText: "Book Table →",
+        reserveBtnText: "Reserve Table",
         reservePax: 2,
         description: "Curated combination of our signature dishes and classic kopitiam drinks.",
         items: ["01", "38"]
       });
       triggerLiveSiteUpdate();
       renderPackagesTab(ws);
-      showToast("🍱 Added new Curated Package!");
+      showToast("Added new Curated Package!");
     });
 
     ws.querySelectorAll("[data-pkg-eyebrow]").forEach((el) => {
@@ -1445,7 +1438,7 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">🍽️ Menu Items, Pictures & Pairings (${items.length} Items)</h2>
+          <h2 class="cms-section-title">Menu Items, Pictures & Pairings (${items.length} Items)</h2>
           <p class="cms-section-desc">Select any dish on the left to edit its photo, price, badges, dietary flags, and recommended pairings.</p>
         </div>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddNewDishBtn">+ Add New Dish / Drink</button>
@@ -1456,7 +1449,7 @@
           type="search"
           class="cms-input"
           id="cmsMenuSearchInput"
-          placeholder="🔍 Search dish #01–#61, name, keyword..."
+          placeholder="Search dish #01–#61, name, keyword..."
           value="${escHtml(cmsState.menuSearch)}"
         />
         <select class="cms-select" id="cmsMenuCatFilter">
@@ -1503,7 +1496,7 @@
                   <span>Editing Dish #${escHtml(activeDish.number)} — ${escHtml(activeDish.name)}</span>
                 </div>
                 <div style="display: flex; gap: 0.35rem;">
-                  <button type="button" class="cms-btn cms-btn--sm" id="cmsPreviewDishModalBtn">👁️ View Modal</button>
+                  <button type="button" class="cms-btn cms-btn--sm" id="cmsPreviewDishModalBtn">View Modal</button>
                   <button type="button" class="cms-btn cms-btn--sm" id="cmsDuplicateDishBtn">Duplicate</button>
                   <button type="button" class="cms-btn cms-btn--red cms-btn--sm" id="cmsDeleteDishBtn">Delete</button>
                 </div>
@@ -1553,12 +1546,12 @@
               <div class="cms-grid-2" style="margin-bottom: 0.75rem;">
                 <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 800; padding: 0.55rem 0.7rem; background: #fff1f2; border: 1px solid #fecdd3; border-radius: 9px; color: #9f1239; cursor: pointer;">
                   <input type="checkbox" id="dishEditSpicy" ${activeDish.spicy ? "checked" : ""} />
-                  <span>🌶 Spicy Dish Profile</span>
+                  <span>Spicy Dish Profile</span>
                 </label>
 
                 <label style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; font-weight: 800; padding: 0.55rem 0.7rem; background: #eef6f0; border: 1px solid #bbf7d0; border-radius: 9px; color: #083b14; cursor: pointer;">
                   <input type="checkbox" id="dishEditKidFriendly" ${activeDish.kidFriendly ? "checked" : ""} />
-                  <span>👶 Kid-Friendly (Non-Spicy)</span>
+                  <span>Kid-Friendly (Non-Spicy)</span>
                 </label>
               </div>
 
@@ -1568,11 +1561,11 @@
                 </label>
                 <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-bottom: 0.35rem;">
                   <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="">None</button>
-                  <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="🦐 Contains Prawn/Seafood">🦐 Contains Prawn/Seafood</button>
-                  <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="🐟 Contains Tuna">🐟 Contains Tuna</button>
-                  <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="🥜 Contains Peanuts">🥜 Contains Peanuts</button>
+                  <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="Contains Prawn">Contains Prawn/Seafood</button>
+                  <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="Contains Tuna">Contains Tuna</button>
+                  <button type="button" class="cms-btn cms-btn--sm" data-allergen-preset="Contains Peanuts">Contains Peanuts</button>
                 </div>
-                <input type="text" class="cms-input" id="dishEditSeafood" value="${escHtml(activeDish.seafoodLabel || "")}" placeholder="e.g., 🦐 Contains Prawn/Seafood" />
+                <input type="text" class="cms-input" id="dishEditSeafood" value="${escHtml(activeDish.seafoodLabel || "")}" placeholder="e.g., Contains Prawn/Seafood" />
               </div>
 
               <!-- Badges Editor -->
@@ -1584,7 +1577,7 @@
                       (b) => `
                       <span class="cms-selected-pill">
                         <span>${escHtml(b)}</span>
-                        <button type="button" data-rm-badge="${escHtml(b)}">✕</button>
+                        <button type="button" data-rm-badge="${escHtml(b)}">×</button>
                       </span>
                     `
                     )
@@ -1612,7 +1605,7 @@
               <!-- Recommended Pairings Visual Selector -->
               <div class="cms-field" style="margin-top: 0.9rem; padding-top: 0.85rem; border-top: 1.5px dashed #e2d4bd;">
                 <label class="cms-label">
-                  <span>🤝 Recommended Royal Pairings (${activePairings.length} linked dishes)</span>
+                  <span>Recommended Royal Pairings (${activePairings.length} linked dishes)</span>
                 </label>
                 <div class="cms-selected-pills">
                   ${activePairings
@@ -1623,7 +1616,7 @@
                         <span>#${escHtml(p.number)} ${escHtml(p.name)} (${p.priceK}K)</span>
                         <button type="button" data-pair-left="${pIdx}" title="Move Earlier">←</button>
                         <button type="button" data-pair-right="${pIdx}" title="Move Later">→</button>
-                        <button type="button" data-pair-rm="${escHtml(p.number)}" title="Remove Pairing">✕</button>
+                        <button type="button" data-pair-rm="${escHtml(p.number)}" title="Remove Pairing">×</button>
                       </span>
                     `
                     )
@@ -1712,7 +1705,7 @@
       cmsState.selectedDishNumber = nextNum;
       triggerLiveSiteUpdate();
       renderMenuTab(ws);
-      showToast(`🍽️ Added Dish #${nextNum}`);
+      showToast(`Added Dish #${nextNum}`);
     });
 
     if (!activeDish) return;
@@ -1739,7 +1732,7 @@
       cmsState.selectedDishNumber = nextNum;
       triggerLiveSiteUpdate();
       renderMenuTab(ws);
-      showToast(`📋 Duplicated as Dish #${nextNum}`);
+      showToast(`Duplicated as Dish #${nextNum}`);
     });
 
     ws.querySelector("#cmsDeleteDishBtn")?.addEventListener("click", () => {
@@ -1749,7 +1742,7 @@
         cmsState.selectedDishNumber = items[0]?.number || "";
         triggerLiveSiteUpdate();
         renderMenuTab(ws);
-        showToast("🗑️ Dish removed from menu");
+        showToast("Dish removed from menu");
       }
     });
 
@@ -1910,7 +1903,7 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">🗂️ Menu Section Header & Categories</h2>
+          <h2 class="cms-section-title">Menu Section Header & Categories</h2>
           <p class="cms-section-desc">Edit the Menu section headline and customize all category tabs, Chinese titles, ranges, and spotlight banners.</p>
         </div>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddCategoryBtn">+ Add Category</button>
@@ -1918,7 +1911,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📝 Menu Section Header Texts</div>
+          <div class="cms-card__title">Menu Section Header Texts</div>
         </div>
         <div class="cms-grid-2">
           <div class="cms-field">
@@ -2093,7 +2086,7 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">☕ Kopi & Drink Bar Cup Decoder</h2>
+          <h2 class="cms-section-title">Kopi & Drink Bar Cup Decoder</h2>
           <p class="cms-section-desc">Edit Drink Bar section texts, featured drinks, cup layer proportions, colors, and ideal food pairings.</p>
         </div>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddRitualDrinkBtn">+ Add Featured Drink</button>
@@ -2101,7 +2094,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📝 Drink Bar Section Header</div>
+          <div class="cms-card__title">Drink Bar Section Header</div>
         </div>
         <div class="cms-field">
           <label class="cms-label">Plaque Pill Text</label>
@@ -2183,7 +2176,7 @@
                     <input type="text" class="cms-input" data-rlayer-lbl="${idx}:${lIdx}" value="${escHtml(layer.label)}" placeholder="Full layer description" />
                     <input type="number" class="cms-input" data-rlayer-pct="${idx}:${lIdx}" value="${escHtml(layer.pct)}" min="5" max="100" title="Height %" />
                     <input type="color" class="cms-input" style="height: 36px; padding: 0.15rem;" data-rlayer-col="${idx}:${lIdx}" value="${escHtml(layer.color || "#3A2012")}" title="Layer Color" />
-                    <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-rlayer-del="${idx}:${lIdx}">✕</button>
+                    <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-rlayer-del="${idx}:${lIdx}">×</button>
                   </div>
                 `
                 )
@@ -2351,7 +2344,7 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">🖼️ Atmosphere & Vibes Bento Gallery (${photos.length} Photos)</h2>
+          <h2 class="cms-section-title">Atmosphere & Vibes Bento Gallery (${photos.length} Photos)</h2>
           <p class="cms-section-desc">Edit gallery header texts, filter zones, and upload/manage every photo card in the bento grid.</p>
         </div>
         <button type="button" class="cms-btn cms-btn--green" id="cmsAddGalleryPhotoBtn">+ Add Gallery Photo</button>
@@ -2359,7 +2352,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📝 Gallery Section Header</div>
+          <div class="cms-card__title">Gallery Section Header</div>
         </div>
         <div class="cms-field">
           <label class="cms-label">Plaque Pill Text</label>
@@ -2547,14 +2540,14 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">❓ Quick Facts & Guest FAQ</h2>
+          <h2 class="cms-section-title">Quick Facts & Guest FAQ</h2>
           <p class="cms-section-desc">Customize the At-a-Glance Fact Sheet and the Guest FAQ Accordion questions & answers.</p>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📝 FAQ Section Header</div>
+          <div class="cms-card__title">FAQ Section Header</div>
         </div>
         <div class="cms-field">
           <label class="cms-label">Plaque Pill Text</label>
@@ -2572,7 +2565,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📋 At-a-Glance Fact Sheet Rows</div>
+          <div class="cms-card__title">At-a-Glance Fact Sheet Rows</div>
           <button type="button" class="cms-btn cms-btn--green cms-btn--sm" id="cmsAddFactRowBtn">+ Add Fact Row</button>
         </div>
         <div class="cms-grid-3">
@@ -2595,7 +2588,7 @@
             <div style="display: grid; grid-template-columns: 180px 1fr auto; gap: 0.45rem; margin-bottom: 0.45rem; align-items: start;">
               <input type="text" class="cms-input" data-fact-lbl="${idx}" value="${escHtml(row.label)}" placeholder="Fact Label" />
               <input type="text" class="cms-input" data-fact-val="${idx}" value="${escHtml(row.value)}" placeholder="Fact Value (HTML allowed)" />
-              <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-fact-del="${idx}">✕</button>
+              <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-fact-del="${idx}">×</button>
             </div>
           `
           )
@@ -2604,7 +2597,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">💬 Guest FAQ Accordion Items</div>
+          <div class="cms-card__title">Guest FAQ Accordion Items</div>
           <button type="button" class="cms-btn cms-btn--green cms-btn--sm" id="cmsAddFaqItemBtn">+ Add FAQ Question</button>
         </div>
         ${f.faqs
@@ -2749,14 +2742,14 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">📍 Visit Us, Address, Hours, Contacts & Map</h2>
+          <h2 class="cms-section-title">Visit Us, Address, Hours, Contacts & Map</h2>
           <p class="cms-section-desc">Update your physical address, Google Maps link, embedded map URL, operating hours, WhatsApp number, and guest amenities.</p>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📝 Visit Section Headline & Buttons</div>
+          <div class="cms-card__title">Visit Section Headline & Buttons</div>
         </div>
         <div class="cms-grid-2">
           <div class="cms-field">
@@ -2790,7 +2783,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🗺️ Street Address & Map Links</div>
+          <div class="cms-card__title">Street Address & Map Links</div>
         </div>
         <div class="cms-grid-2">
           <div class="cms-field">
@@ -2826,7 +2819,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🕒 Operating Hours & Contact Channels</div>
+          <div class="cms-card__title">Operating Hours & Contact Channels</div>
         </div>
         <div class="cms-grid-2">
           <div class="cms-field">
@@ -2873,7 +2866,7 @@
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">✨ Guest Amenity Cards</div>
+          <div class="cms-card__title">Guest Amenity Cards</div>
           <button type="button" class="cms-btn cms-btn--green cms-btn--sm" id="cmsAddAmenityBtn">+ Add Amenity</button>
         </div>
         ${vCfg.amenities
@@ -2882,7 +2875,7 @@
             <div style="display: grid; grid-template-columns: 1fr 1.6fr auto; gap: 0.45rem; margin-bottom: 0.45rem; align-items: start;">
               <input type="text" class="cms-input" data-am-title="${idx}" value="${escHtml(am.title)}" placeholder="Amenity Title" />
               <input type="text" class="cms-input" data-am-desc="${idx}" value="${escHtml(am.description)}" placeholder="Amenity Description" />
-              <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-am-del="${idx}">✕</button>
+              <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-am-del="${idx}">×</button>
             </div>
           `
           )
@@ -2945,7 +2938,7 @@
     });
     ws.querySelector("#cmsAddAmenityBtn")?.addEventListener("click", () => {
       vCfg.amenities.push({
-        title: "✨ New Guest Comfort",
+        title: "New Guest Comfort",
         description: "Describe this facility or guest benefit."
       });
       triggerLiveSiteUpdate();
@@ -2961,9 +2954,9 @@
     const resCfg = (d.reservationModalConfig = d.reservationModalConfig || {});
     resCfg.quickHours = resCfg.quickHours || ["08:00", "10:00", "12:00", "15:00", "19:00"];
     resCfg.seatingOptions = resCfg.seatingOptions || [
-      { value: "Indoor", label: "❄️ Indoor" },
-      { value: "Outdoor", label: "🌿 Outdoor" },
-      { value: "VIP Room", label: "👑 VIP Room" }
+      { value: "Indoor", label: "Indoor" },
+      { value: "Outdoor", label: "Outdoor" },
+      { value: "VIP Room", label: "VIP Room" }
     ];
     const fCfg = (d.footerConfig = d.footerConfig || {});
     fCfg.navLinks = fCfg.navLinks || [];
@@ -2972,15 +2965,15 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">📅 Reservation Modal & Site Footer</h2>
+          <h2 class="cms-section-title">Reservation Modal & Site Footer</h2>
           <p class="cms-section-desc">Customize the WhatsApp Table Reservation modal (guest count limits, hours, seating options) and the entire site footer.</p>
         </div>
-        <button type="button" class="cms-btn cms-btn--green" id="cmsTestResModalBtn">📅 Test Reservation Modal</button>
+        <button type="button" class="cms-btn cms-btn--green" id="cmsTestResModalBtn">Test Reservation Modal</button>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📅 Table Reservation Modal Settings</div>
+          <div class="cms-card__title">Table Reservation Modal Settings</div>
         </div>
         <div class="cms-grid-2">
           <div class="cms-field">
@@ -3038,8 +3031,8 @@
               (opt, idx) => `
               <div style="display: grid; grid-template-columns: 1fr 1fr auto; gap: 0.45rem; margin-bottom: 0.4rem;">
                 <input type="text" class="cms-input" data-seat-val="${idx}" value="${escHtml(opt.value)}" placeholder="Value (e.g. Indoor)" />
-                <input type="text" class="cms-input" data-seat-lbl="${idx}" value="${escHtml(opt.label)}" placeholder="Button Label (e.g. ❄️ Indoor)" />
-                <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-seat-del="${idx}">✕</button>
+                <input type="text" class="cms-input" data-seat-lbl="${idx}" value="${escHtml(opt.label)}" placeholder="Button Label (e.g. Indoor)" />
+                <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-seat-del="${idx}">×</button>
               </div>
             `
             )
@@ -3061,7 +3054,7 @@
       <!-- Footer Customizer -->
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🦶 Site Footer Customizer</div>
+          <div class="cms-card__title">Site Footer Customizer</div>
         </div>
         ${renderImagePickerField({
           id: "footerLogoImg",
@@ -3166,7 +3159,7 @@
       });
     });
     ws.querySelector("#cmsAddSeatOptBtn")?.addEventListener("click", () => {
-      resCfg.seatingOptions.push({ value: "Terrace", label: "☀️ Terrace" });
+      resCfg.seatingOptions.push({ value: "Terrace", label: "Terrace" });
       triggerLiveSiteUpdate();
       renderReservationAndFooterTab(ws);
     });
@@ -3193,16 +3186,16 @@
     ws.innerHTML = `
       <div class="cms-section-header">
         <div>
-          <h2 class="cms-section-title">💾 Save Configuration, Version History & Backups</h2>
+          <h2 class="cms-section-title">Save Configuration, Version History & Backups</h2>
           <p class="cms-section-desc">Save named configuration snapshots, restore previous versions, or export/import siteData.js.</p>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🚀 Save & Create Version Snapshot</div>
+          <div class="cms-card__title">Save & Create Version Snapshot</div>
           <span style="font-size: 0.74rem; font-weight: 800; color: ${cmsState.serverConnected ? "#0f5922" : "#b45309"};">
-            ${cmsState.serverConnected ? "🟢 Connected to Local Disk Server (siteData.js)" : "🟡 Browser Storage Mode"}
+            ${cmsState.serverConnected ? "Connected to Local Disk Server (siteData.js)" : "Browser Storage Mode"}
           </span>
         </div>
         <div style="display: flex; gap: 0.55rem; flex-wrap: wrap;">
@@ -3214,35 +3207,35 @@
             style="flex: 1; min-width: 220px;"
           />
           <button type="button" class="cms-btn cms-btn--green" id="cmsSaveSnapshotNowBtn">
-            💾 Save & Publish Snapshot
+            Save & Publish Snapshot
           </button>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">📦 Export, Import & Factory Reset</div>
+          <div class="cms-card__title">Export, Import & Factory Reset</div>
         </div>
         <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
           <button type="button" class="cms-btn cms-btn--green" id="cmsDownloadSiteDataJsBtn">
-            📥 Download siteData.js
+            Download siteData.js
           </button>
           <button type="button" class="cms-btn" id="cmsDownloadJsonBtn">
-            📄 Download JSON Backup
+            Download JSON Backup
           </button>
           <label class="cms-btn" style="cursor: pointer;">
-            📂 Import JSON / siteData.js
+            Import JSON / siteData.js
             <input type="file" id="cmsImportFileInput" accept=".json,.js" style="display: none;" />
           </label>
           <button type="button" class="cms-btn cms-btn--red" id="cmsFactoryResetBtn">
-            🔄 Reset to Factory Default
+            Reset to Factory Default
           </button>
         </div>
       </div>
 
       <div class="cms-card">
         <div class="cms-card__head">
-          <div class="cms-card__title">🕰️ Saved Version History (${cmsState.historyList.length} Snapshots)</div>
+          <div class="cms-card__title">Saved Version History (${cmsState.historyList.length} Snapshots)</div>
         </div>
         ${
           cmsState.historyList.length === 0
@@ -3256,7 +3249,7 @@
                       ${escHtml(entry.note || "Configuration Snapshot")}
                     </div>
                     <div style="font-size: 0.72rem; color: #6e5d4f;">
-                      🕒 ${escHtml(entry.timestamp)} • ${entry.menuCount || 61} Menu Items • ${entry.packageCount || 3} Packages
+                      ${escHtml(entry.timestamp)} • ${entry.menuCount || 61} Menu Items • ${entry.packageCount || 3} Packages
                     </div>
                   </div>
                   <div style="display: flex; gap: 0.35rem;">
@@ -3264,7 +3257,7 @@
                       ⏪ Restore
                     </button>
                     <button type="button" class="cms-btn cms-btn--red cms-btn--sm" data-hist-del="${idx}">
-                      ✕
+                      ×
                     </button>
                   </div>
                 </div>
@@ -3294,7 +3287,7 @@
       a.download = "siteData.js";
       a.click();
       URL.revokeObjectURL(url);
-      showToast("📥 Downloaded siteData.js");
+      showToast("Downloaded siteData.js");
     });
 
     ws.querySelector("#cmsDownloadJsonBtn")?.addEventListener("click", () => {
@@ -3307,7 +3300,7 @@
       a.download = `royal-kopitiam-backup-${new Date().toISOString().slice(0, 10)}.json`;
       a.click();
       URL.revokeObjectURL(url);
-      showToast("📄 Downloaded JSON backup");
+      showToast("Downloaded JSON backup");
     });
 
     ws.querySelector("#cmsImportFileInput")?.addEventListener("change", (e) => {
@@ -3329,12 +3322,12 @@
             window.ROYAL_KOPITIAM_DATA = parsed;
             saveAndPublishAll(`Imported ${file.name}`, true);
             renderActiveTab();
-            showToast(`✅ Imported configuration from ${file.name}`);
+            showToast(`Imported configuration from ${file.name}`);
           } else {
-            showToast("⚠️ Invalid configuration file format");
+            showToast("Invalid configuration file format");
           }
         } catch (err) {
-          showToast("⚠️ Could not parse imported file");
+          showToast("Could not parse imported file");
         }
       };
       reader.readAsText(file);
@@ -3348,7 +3341,7 @@
       );
       saveAndPublishAll("Reset to Factory Default", true);
       renderActiveTab();
-      showToast("🔄 Restored factory default configuration");
+      showToast("Restored factory default configuration");
     });
 
     ws.querySelectorAll("[data-hist-restore]").forEach((btn) => {
@@ -3390,18 +3383,18 @@
   // CMS SHELL & NAVIGATION CONTROLLER
   // ==========================================================================
   const TABS_CONFIG = [
-    { id: "menu", icon: "🍽️", label: "Menu & Pairings", group: "Culinary & Packages" },
-    { id: "packages", icon: "🍱", label: "Curated Packages", group: "Culinary & Packages" },
-    { id: "categories", icon: "🗂️", label: "Menu Categories", group: "Culinary & Packages" },
-    { id: "ritual", icon: "☕", label: "Kopi & Drink Bar", group: "Culinary & Packages" },
-    { id: "header", icon: "🎨", label: "Header & Theme", group: "Template Sections" },
-    { id: "hero", icon: "🏛️", label: "Hero Banner", group: "Template Sections" },
-    { id: "story", icon: "📜", label: "Our Story & Pillars", group: "Template Sections" },
-    { id: "vibes", icon: "🖼️", label: "Atmosphere Gallery", group: "Template Sections" },
-    { id: "faq", icon: "❓", label: "Quick Facts & FAQ", group: "Template Sections" },
-    { id: "visit", icon: "📍", label: "Visit Us & Map", group: "Template Sections" },
-    { id: "reservation", icon: "📅", label: "Reservation & Footer", group: "Template Sections" },
-    { id: "history", icon: "💾", label: "Save & History", group: "System" }
+    { id: "menu", icon: "01", label: "Menu & Pairings", group: "Menu & Sets" },
+    { id: "packages", icon: "02", label: "Set Menus", group: "Menu & Sets" },
+    { id: "categories", icon: "03", label: "Categories", group: "Menu & Sets" },
+    { id: "ritual", icon: "04", label: "Coffee & Tea Bar", group: "Menu & Sets" },
+    { id: "header", icon: "05", label: "Header & Theme", group: "Page Sections" },
+    { id: "hero", icon: "06", label: "Hero Section", group: "Page Sections" },
+    { id: "story", icon: "07", label: "Our Story", group: "Page Sections" },
+    { id: "vibes", icon: "08", label: "Photo Gallery", group: "Page Sections" },
+    { id: "faq", icon: "09", label: "Visitor FAQ", group: "Page Sections" },
+    { id: "visit", icon: "10", label: "Location & Hours", group: "Page Sections" },
+    { id: "reservation", icon: "11", label: "Reservations & Footer", group: "Page Sections" },
+    { id: "history", icon: "12", label: "Save & History", group: "System" }
   ];
 
   function updateTopbarStatusUI() {
@@ -3517,8 +3510,8 @@
     if (btn) {
       btn.classList.toggle("is-active", cmsState.inspectMode);
       btn.innerHTML = cmsState.inspectMode
-        ? "🎯 Inspecting Page (Click Any Element)"
-        : "✏️ Click-to-Edit Page";
+        ? "Inspecting Page (Click Any Element)"
+        : "Edit on Page";
     }
   }
 
@@ -3532,10 +3525,10 @@
       dock.className = "cms-floating-dock";
       dock.innerHTML = `
         <button type="button" class="cms-dock-btn cms-dock-btn--inspect" id="cmsToggleInspectBtn">
-          ✏️ Click-to-Edit Page
+          Click-to-Edit Page
         </button>
         <button type="button" class="cms-dock-btn cms-dock-btn--primary" id="cmsOpenStudioBtn">
-          ⚙️ CMS Studio
+          CMS Studio
         </button>
       `;
       document.body.appendChild(dock);
@@ -3543,7 +3536,7 @@
       const banner = document.createElement("div");
       banner.className = "cms-inspect-banner";
       banner.innerHTML = `
-        <span>🎯 Click any section, package, or dish card on the page to edit it in the CMS!</span>
+        <span>Click any section, package, or dish card on the page to edit it in the CMS!</span>
         <button type="button" class="cms-btn cms-btn--sm" id="cmsExitInspectBannerBtn">Exit</button>
       `;
       document.body.appendChild(banner);
@@ -3565,7 +3558,7 @@
         </div>
         <div class="cms-topbar__actions">
           <button type="button" class="cms-top-btn cms-top-btn--save" id="cmsQuickSaveAllBtn">
-            💾 Save & Publish
+            Save & Publish
           </button>
           ${
             !isStandalonePage
@@ -3577,7 +3570,7 @@
               ↗ Admin Page
             </a>
             <button type="button" class="cms-top-btn cms-top-btn--close" id="cmsCloseStudioBtn">
-              ✕ Close
+              × Close
             </button>
           `
               : `
@@ -3611,7 +3604,7 @@
           </div>
           <div style="display: flex; gap: 0.4rem; align-items: center;">
             <div id="cmsAssetFolderFilters" style="display: flex; gap: 0.3rem;"></div>
-            <button type="button" class="cms-top-btn cms-top-btn--close" id="cmsCloseAssetModalBtn">✕</button>
+            <button type="button" class="cms-top-btn cms-top-btn--close" id="cmsCloseAssetModalBtn">×</button>
           </div>
         </div>
         <div class="cms-asset-grid" id="cmsAssetModalGrid"></div>
@@ -3635,8 +3628,8 @@
       shell.classList.toggle("is-expanded", cmsState.isExpanded);
       document.body.classList.toggle("cms-drawer-expanded", cmsState.isExpanded);
       e.currentTarget.textContent = cmsState.isExpanded
-        ? "⇒ Dock Split-View"
-        : "⇔ Expand Fullscreen";
+        ? "Split View"
+        : "Full Width";
     });
 
     document.getElementById("cmsQuickSaveAllBtn")?.addEventListener("click", () => {
@@ -3679,7 +3672,7 @@
           const num = dishCard.getAttribute("data-cms-dish");
           toggleInspectMode(false);
           openCMS("menu", num);
-          showToast(`✏️ Editing Dish #${num}`);
+          showToast(`Editing Dish #${num}`);
           return;
         }
 
@@ -3689,7 +3682,7 @@
           e.stopPropagation();
           toggleInspectMode(false);
           openCMS("packages");
-          showToast("✏️ Editing Curated Packages");
+          showToast("Editing Curated Packages");
           return;
         }
 
@@ -3712,7 +3705,7 @@
           };
           toggleInspectMode(false);
           openCMS(tabMap[secId] || "menu");
-          showToast(`✏️ Editing ${secId.toUpperCase()} section`);
+          showToast(`Editing ${secId.toUpperCase()} section`);
         }
       },
       true
